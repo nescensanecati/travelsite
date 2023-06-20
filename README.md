@@ -1,2 +1,2 @@
 # brainstation.io
-Bootcamp Projects Folder
+Software Engineering Bootcamp - Bootcamp Projects Folder
