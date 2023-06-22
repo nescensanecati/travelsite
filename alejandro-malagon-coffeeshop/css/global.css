@@ -1,3 +1,9 @@
+/* colors:
+nitro-blue #5BACC3
+nitro-pink #FFF0ED
+graphite #393939 
+light gray #F7F7F7 */
+
 body {
     font-family: 'Open Sans';
     font-weight: 400;
@@ -13,45 +19,45 @@ body {
 }
 
 .icons {
-    width: 50px;
+    width: 3.125rem;
 }
 
 .logos {
-    width: 50px;
+    width: 3.125rem;
 }
 
 .button {
     background-color: #5BACC3;
     color: white;
     border: none;
-    padding: 0;
+    padding: 0rem;
 }
 
 
-h1, h2 {
-    font-size: 60px;
+h1,
+h2 {
+    font-size: 3.75rem;
     font-weight: 300;
     color: #393939;
 }
 
-h3, nav-heading, footer-heading {
-    font-size: 33px;
+h3,
+nav-heading,
+footer-heading {
+    font-size: 2.0625rem;
     font-weight: 300;
     color: #393939;
 }
 
 
 p {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
     color: #393939;
 }
 
 p.italic {
-    font-size: 18px;
-    font-weight: 400;
     font-style: italic;
-    color: #393939;
 }
 
 
