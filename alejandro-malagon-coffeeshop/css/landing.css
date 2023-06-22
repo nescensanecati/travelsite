@@ -1,0 +1,14 @@
+.our-products img {
+    height: 280px;
+}
+
+
+.discount-banner-text {
+    font-size: 45px;
+    font-weight: 400;
+    color: #393939;
+    text-align: center;
+    width: 90%;
+    background-color: #393939;
+    color: white;
+}

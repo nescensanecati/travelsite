@@ -1,0 +1,60 @@
+body {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    color: #393939;
+}
+
+.nitro-pink {
+    background-color: #FFF0ED;
+}
+
+.nitro-blue-font {
+    color: #5BACC3;
+}
+
+.icons {
+    width: 50px;
+}
+
+.logos {
+    width: 50px;
+}
+
+.button {
+    background-color: #5BACC3;
+    color: white;
+    border: none;
+    padding: 0;
+}
+
+
+h1, h2 {
+    font-size: 60px;
+    font-weight: 300;
+    color: #393939;
+}
+
+h3, nav-heading, footer-heading {
+    font-size: 33px;
+    font-weight: 300;
+    color: #393939;
+}
+
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #393939;
+}
+
+p.italic {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: #393939;
+}
+
+
+.bold {
+    font-weight: 700;
+}
