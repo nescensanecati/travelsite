@@ -12,38 +12,47 @@
 </head>
 
 <body>
-
     <header>
-
-        <div class="nitro-pink">
+        <div class="nitro-pink inline-block">
             <nav>
-                <a href="./index.html"><img src="./assets/logos/coffee-beans-logo-and-footer.svg"
-                        alt="coffee bean logo"></a>
+                <a href="./index.html">
+                    <img src="./assets/logos/coffee-beans-logo-and-footer.svg" alt="coffee bean logo">
+                </a>
                 <h2>nitro</h2>
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./pages/menu.html">MENU</a></li>
-                    <li><a href="./pages/menu.html">SHOP NOW</a></li>
-                    <li><a href="./index.html">ABOUT</a></li>
+                <ul class="nav-text">
+                    <li>
+                        <a class="graphite-font" href="./index.html">ABOUT</a>
+                    </li>
+                    <li>
+                        <a class="graphite-font" href="./pages/menu.html">MENU</a>
+                    </li>
+                    <li>
+                        <a class="nitro-blue-font" href="./pages/menu.html">SHOP NOW</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
-        <div class="nitro-pink">
-            <h1>Nitro Coffee</h1>
-
-            <p>Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain coffee
-                species.</p>
-
-            <button type="button" class="button" onclick="window.location.href='./pages/menu.html'">SHOP NOW</button>
-
-            <img src="./assets/images/coffeebeans-hero.png" alt="coffee bag">
+        <div class="nitro-pink hero">
+            <table>
+                <tr>
+                    <td>
+                        <div class="hero-text">
+                            <h1 class="lower-padding">Nitro Coffee</h1>
+                            <p>Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from
+                                certain coffee species.</p>
+                            <button type="button" class="button" onclick="window.location.href='./pages/menu.html'">SHOP
+                                NOW</button>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="./assets/images/coffeebeans-hero.png" alt="coffee bag">
+                    </td>
+                </tr>
+            </table>
         </div>
     </header>
-
     <section class="our-products">
         <h2>Our Products</h2>
-
         <div class="card">
             <img src="./assets/images/coffeebeans.png" alt="coffee beans">
             <div>
@@ -51,7 +60,6 @@
                 <p class="nitro-blue-font">$18.99</p>
             </div>
         </div>
-
         <div class="card">
             <img src="./assets/images/coldbrew.png" alt="cold brew">
             <div>
@@ -59,7 +67,6 @@
                 <p class="nitro-blue-font">$4.99</p>
             </div>
         </div>
-
         <div class="card">
             <img src="./assets/images/inhousebrew.png" alt="in-house brew">
             <div>
@@ -67,44 +74,49 @@
                 <p class="nitro-blue-font">$2.99</p>
             </div>
         </div>
-
         <button type="button" class="button" onclick="window.location.href='./pages/menu.html'">VIEW ALL</button>
-
     </section>
-
-    <section class="Discount Section">
-
-        <p class="discount-banner-text">Get 20% off your first order with code: <span class="bold">FirstNitro</span></p>
-
+    <section class="discount-section">
+        <p class="discount-banner-text">Get 20% off your first order with code: <span class="bold">FirstNitro</span>
+        </p>
     </section>
-
     <footer class="nitro-pink">
-
-        <div class="Address">
-            <h3 class="footer-heading">Address</h3>
-
-            <p>503 Broadway Penthouse</p>
-            <p>New York</p>
-        </div>
-
-        <div class="Hours">
-            <h3 class="footer-heading">Hours</h3>
-
-            <p><span class="bold">Monday - Friday:</span> 9am - 7pm</p>
-            <p><span class="bold">Saturday - Sunday:</span> 10am - 5pm</p>
-        </div>
-
-        <div class="Social">
-            <h3 class="footer-heading">Social</h3>
-
-
-            <a href="https://www.facebook.com/"><img src="./assets/logos/Facebook-Icon.svg" alt="Facebook"
-                    class="logos"></a>
-            <a href="https://www.yelp.com/"><img src="./assets/logos/Yelp-Icon.svg" alt="Yelp" class="logos"></a>
-            <a href="https://www.instagram.com/"> <img src="./assets/logos/Instagram-Icon.svg" alt="Instagram"
-                    class="logos"></a>
-
-        </div>
+        <table>
+            <tr>
+                <td>
+                    <div class="Address">
+                        <h3 class="footer-heading">Address</h3>
+                        <p>503 Broadway Penthouse</p>
+                        <p>New York</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="Hours">
+                        <h3 class="footer-heading">Hours</h3>
+                        <p>
+                            <span class="bold">Monday - Friday:</span> 9am - 7pm
+                        </p>
+                        <p>
+                            <span class="bold">Saturday - Sunday:</span> 10am - 5pm
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    <div class="Social">
+                        <h3 class="footer-heading">Social</h3>
+                        <a href="https://www.facebook.com/">
+                            <img src="./assets/logos/Facebook-Icon.svg" alt="Facebook" class="logos">
+                        </a>
+                        <a href="https://www.yelp.com/">
+                            <img src="./assets/logos/Yelp-Icon.svg" alt="Yelp" class="logos">
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img src="./assets/logos/Instagram-Icon.svg" alt="Instagram" class="logos">
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </footer>
 </body>
 

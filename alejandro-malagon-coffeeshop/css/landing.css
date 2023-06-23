@@ -4,10 +4,26 @@ nitro-pink #FFF0ED
 graphite #393939 
 light gray #F7F7F7 */
 
+.our-products {
+    background-color: #f7f7f7;
+    width: 100%;
+    text-align: center;
+    padding: 2.5rem;
+}
+
 .our-products img {
     height: 17.5rem;
 }
 
+.our-products button {
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
+.discount-section {
+    margin: 6.25rem;
+}
 
 .discount-banner-text {
     font-size: 2.8125rem;
@@ -17,4 +33,64 @@ light gray #F7F7F7 */
     width: 90%;
     background-color: #393939;
     color: white;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+
+.hero {
+    display: block;
+}
+
+.hero img {
+    text-align: left;
+}
+
+.hero-text * {
+    text-align: left;
+    width: 60%;
+}
+
+.hero p {
+    padding-bottom: 1.25rem;
+}
+
+.card {
+    display: inline-block;
+    padding: 2.5rem;
+    text-align: center;
+    width: 20.625rem;
+    height: 27.5rem;
+    border-radius: 0.625rem;
+    box-shadow: 0rem 0.3125rem 0.5625rem -0.0625rem rgba(0, 0, 0, 0.25);
+    margin: 3.125rem;
+}
+
+.card * {
+    margin-bottom: 0.625rem;
+}
+
+p {
+    padding-bottom: 1.25rem;
+}
+
+table {
+    width: 100%;
+}
+
+table div {
+    display: block;
+    position: relative;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+    padding-left: 20%;
+}
+
+table h3 {
+    margin-bottom: 1.25rem;
+}
+
+table p {
+    padding: 0rem;
+    margin: 0rem;
 }

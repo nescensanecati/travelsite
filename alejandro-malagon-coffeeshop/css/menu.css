@@ -4,24 +4,37 @@ nitro-pink #FFF0ED
 graphite #393939 
 light gray #F7F7F7 */
 
-
 .nitro-pink-background {
-    background-color: #FFF0ED;
+    background-color: #fff0ed;
 }
 
 .light-gray-background {
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
+}
+
+.menu-local-nav-outter-box {
+    display: block;
+    width: 100%;
+    background-color: #393939;
+    text-align: center;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
 }
 
 .menu-local-nav * {
     width: 100%;
     background-color: #393939;
     color: white;
-    text-decoration: none;
-    text-align: center;
     list-style-type: none;
+    margin: 0.3125rem;
+    padding-left: 1.25rem;
+    border-left: solid #5bacc3 0.25rem;
 }
 
+.background-container {
+    width: 100%;
+    position: relative;
+}
 
 .menu-title {
     width: 18.75rem;
@@ -29,14 +42,15 @@ light gray #F7F7F7 */
     background-color: #393939;
     color: white;
     text-align: center;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
-
-.background-image {
+.background-container img {
     width: 100%;
-    height: 43.75rem;
-    background-position: center;
-    display: inline-block;
+    height: auto;
 }
 
 .centered {
@@ -45,6 +59,21 @@ light gray #F7F7F7 */
 }
 
 .special-h2s {
-    text-decoration: none;
     color: #393939;
+    margin-top: 0.625rem;
+    margin-bottom: 6.25rem;
+}
+
+.centered-paragraphs {
+    width: 40%;
+    position: relative;
+    margin: auto;
+}
+
+p {
+    padding-bottom: 0.625rem;
+}
+
+h3 {
+    padding-bottom: 0.3125rem;
 }

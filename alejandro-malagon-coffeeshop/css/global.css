@@ -4,18 +4,29 @@ nitro-pink #FFF0ED
 graphite #393939 
 light gray #F7F7F7 */
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
 body {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-weight: 400;
     color: #393939;
 }
 
 .nitro-pink {
-    background-color: #FFF0ED;
+    background-color: #fff0ed;
+}
+
+.graphite-font {
+    color: #393939;
 }
 
 .nitro-blue-font {
-    color: #5BACC3;
+    color: #5bacc3;
 }
 
 .icons {
@@ -27,12 +38,12 @@ body {
 }
 
 .button {
-    background-color: #5BACC3;
+    background-color: #5bacc3;
     color: white;
     border: none;
-    padding: 0rem;
+    width: 11.25rem;
+    padding: 0.625rem 1.25rem 0.625rem 1.25rem;
 }
-
 
 h1,
 h2 {
@@ -41,14 +52,11 @@ h2 {
     color: #393939;
 }
 
-h3,
-nav-heading,
-footer-heading {
+h3 {
     font-size: 2.0625rem;
     font-weight: 300;
     color: #393939;
 }
-
 
 p {
     font-size: 1.125rem;
@@ -60,7 +68,22 @@ p.italic {
     font-style: italic;
 }
 
-
 .bold {
     font-weight: 700;
+}
+
+.inline-block * {
+    display: inline-block;
+}
+
+.inline * {
+    display: inline;
+}
+
+.nav-text * {
+    margin: 0rem 0rem 0.625rem 1.25rem;
+}
+
+.lower-padding {
+    padding-bottom: 1.25rem;
 }
