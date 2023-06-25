@@ -4,15 +4,15 @@ nitro-pink #FFF0ED
 graphite #393939 
 light gray #F7F7F7 */
 
-.nitro-pink-background {
+.main__background--nitro-pink {
     background-color: #fff0ed;
 }
 
-.light-gray-background {
+.main__background--light-gray {
     background-color: #f7f7f7;
 }
 
-.menu-local-nav-outter-box {
+.main__menu--local-nav-outter-box {
     display: block;
     width: 100%;
     background-color: #393939;
@@ -31,12 +31,12 @@ light gray #F7F7F7 */
     border-left: solid #5bacc3 0.25rem;
 }
 
-.background-container {
+.main__background--container {
     width: 100%;
     position: relative;
 }
 
-.menu-title {
+.main__h1--menu-title {
     width: 18.75rem;
     height: 12.5rem;
     background-color: #393939;
@@ -48,23 +48,23 @@ light gray #F7F7F7 */
     transform: translate(-50%, 0%);
 }
 
-.background-container img {
+.main__background--container img {
     width: 100%;
     height: auto;
 }
 
-.centered {
+.main__text--centered {
     width: 100%;
     text-align: center;
 }
 
-.special-h2s {
+.body__text--special-h2s {
     color: #393939;
     margin-top: 0.625rem;
     margin-bottom: 6.25rem;
 }
 
-.centered-paragraphs {
+.main__paragraphs--centered {
     width: 40%;
     position: relative;
     margin: auto;

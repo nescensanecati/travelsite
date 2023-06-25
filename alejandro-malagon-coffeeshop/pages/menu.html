@@ -2,91 +2,99 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
-    <title>Coffee Shop - Menu</title>
-    <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" href="../css/global.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <title>Coffee Shop - Menu</title>
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/global.css">
 </head>
 
 <body>
-    <header>
-        <div class="nitro-pink inline-block">
-            <nav>
-                <a href="../index.html">
-                    <img src="../assets/logos/coffee-beans-logo-and-footer.svg" alt="coffee bean logo">
-                </a>
-                <h2>nitro</h2>
-                <ul class="nav-text">
-                    <li>
-                        <a class="graphite-font" href="../index.html">ABOUT</a>
-                    </li>
-                    <li>
-                        <a class="graphite-font" href="menu.html">MENU</a>
-                    </li>
-                    <li>
-                        <a class="nitro-blue-font" href="menu.html">SHOP NOW</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="background-container">
-            <h1 class="menu-title">Menu</h1>
-            <img src="../assets/images/coffee-circle.jpg" alt="banner">
-        </div>
-        <div class="menu-local-nav-outter-box">
-            <div class="menu-local-nav">
-                <a href="#hotdrinks" class="">HOT DRINKS</a>
-                <a href="#colddrinks">COLD DRINKS</a>
-                <a href="#pastries">PASTRIES</a>
-            </div>
-        </div>
-        <div class="centered">
-            <section class="nitro-pink-background">
-                <h2 class="lower-padding">
-                    <a href="#hotdrinks" class="special-h2s">Hot Drinks</a>
-                </h2>
-                <h3>In-house Brew</h3>
-                <p class="italic centered-paragraphs">Our in-house medium roast is a classic balance between sweet
-                    vanlila, nutty hazelnut, and a smooth low acidity to bring everything together.</p>
-                <p class="nitro-blue-font lower-padding">$2.99</p>
-                <h3>Espresso</h3>
-                <p class="italic centered-paragraphs">A balance between bold and smooth, powerful and sweet, our
-                    signature espresso blend is a complex flavor proflie. It features strong notes of semi-sweet
-                    chocolate and caramel, with mlid acidity and a bright floral finish.</p>
-                <p class="nitro-blue-font lower-padding">$4.99</p>
-            </section>
-            <section class="light-gray-background">
-                <h2 class="lower-padding">
-                    <a href="#colddrinks" class="special-h2s">Cold Drinks</a>
-                </h2>
-                <h3>Cold Brew</h3>
-                <p class="italic centered-paragraphs">Our bright and delicious coffee blend, brewed over ice to give you
-                    a cold coffee freshness with all the flavor of our amazing in-house coffee.</p>
-                <p class="nitro-blue-font lower-padding">$3.99</p>
-                <h3>Iced Chai Latte</h3>
-                <p class="italic centered-paragraphs">A creamy drink with a kick, this drink features spicy chai tea
-                    blended with your choice of mlik and poured over ice.</p>
-                <p class="nitro-blue-font lower-padding">$6.99</p>
-            </section>
-            <section class="nitro-pink-background">
-                <h2 class="lower-padding">
-                    <a href="#pastries" class="special-h2s">Pastries</a>
-                </h2>
-                <h3>Bacon Oatmeal Raisin Cookie</h3>
-                <p class="italic centered-paragraphs">An infused bacon, sugar and egg mixture is folded into a perfect
-                    blend of oats, flour, raisins and cinnamon to create a soft and chewy textured cookie.</p>
-                <p class="nitro-blue-font lower-padding">$3.50</p>
-                <h3>Blueberry, Lemon and Thyme Muffin</h3>
-                <p class="italic centered-paragraphs">Tart and sweet, this classic blueberry and lemon combination comes
-                    with an earthy twist.</p>
-                <p class="nitro-blue-font lower-padding">$2.50</p>
-            </section>
-        </div>
-    </main>
+  <header>
+    <div class="header__text--nitro-pink inline-block">
+      <nav>
+        <a href="../index.html">
+          <img class="header__logos--format" src="../assets/logos/coffee-beans-logo-and-footer.svg"
+            alt="coffee bean logo">
+        </a>
+        <h2>nitro</h2>
+        <ul class="header__nav--text">
+          <li>
+            <a class="header__text--graphite-font" href="../index.html">ABOUT</a>
+          </li>
+          <li>
+            <a class="header__text--graphite-font" href="menu.html">MENU</a>
+          </li>
+          <li>
+            <a class="header__text--nitro-blue-font" href="menu.html">SHOP NOW</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="main__background--container">
+      <h1 class="main__h1--menu-title">Menu</h1>
+      <img src="../assets/images/coffee-circle.jpg" alt="banner">
+    </div>
+    <div class="main__menu--local-nav-outter-box">
+      <div class="menu-local-nav">
+        <a href="#hotdrinks">HOT DRINKS</a>
+        <a href="#colddrinks">COLD DRINKS</a>
+        <a href="#pastries">PASTRIES</a>
+      </div>
+    </div>
+    <div class="main__text--centered">
+      <a id="hotdrinks">
+        <section class="main__background--nitro-pink">
+          <h2 class="main__text--lower-padding">
+            <a href="#hotdrinks" class="body__text--special-h2s">Hot Drinks</a>
+          </h2>
+          <h3>In-house Brew</h3>
+          <p class="body__text--italic main__paragraphs--centered">Our in-house medium roast is a classic balance
+            between sweet vanlila, nutty hazelnut, and a smooth low acidity to bring everything together.</p>
+          <p class="body__text--nitro-blue-font main__text--lower-padding">$2.99</p>
+          <h3>Espresso</h3>
+          <p class="body__text--italic main__paragraphs--centered">A balance between bold and smooth, powerful and
+            sweet, our signature espresso blend is a complex flavor proflie. It features strong notes of semi-sweet
+            chocolate and caramel, with mlid acidity and a bright floral finish.</p>
+          <p class="body__text--nitro-blue-font main__text--lower-padding">$4.99</p>
+        </section>
+      </a>
+      <a id="colddrinks">
+        <section class="main__background--light-gray">
+          <h2 class="main__text--lower-padding">
+            <a href="#colddrinks" class="body__text--special-h2s">Cold Drinks</a>
+          </h2>
+          <h3>Cold Brew</h3>
+          <p class="body__text--italic main__paragraphs--centered">Our bright and delicious coffee blend, brewed over
+            ice to give you a cold coffee freshness with all the flavor of our amazing in-house coffee.</p>
+          <p class="body__text--nitro-blue-font main__text--lower-padding">$3.99</p>
+          <h3>Iced Chai Latte</h3>
+          <p class="body__text--italic main__paragraphs--centered">A creamy drink with a kick, this drink features spicy
+            chai tea blended with your choice of mlik and poured over ice.</p>
+          <p class="body__text--nitro-blue-font main__text--lower-padding">$6.99</p>
+        </section>
+      </a>
+      <a id="pastries">
+        <section class="main__background--nitro-pink">
+          <h2 class="main__text--lower-padding">
+            <a href="#pastries" class="body__text--special-h2s">Pastries</a>
+          </h2>
+          <h3>Bacon Oatmeal Raisin Cookie</h3>
+          <p class="body__text--italic main__paragraphs--centered">An infused bacon, sugar and egg mixture is folded
+            into a perfect blend of oats, flour, raisins and cinnamon to create a soft and chewy textured cookie.</p>
+          <p class="body__text--nitro-blue-font main__text--lower-padding">$3.50</p>
+          <h3>Blueberry, Lemon and Thyme Muffin</h3>
+          <p class="body__text--italic main__paragraphs--centered">Tart and sweet, this classic blueberry and lemon
+            combination comes with an earthy twist.</p>
+          <p class="body__text--nitro-blue-font main__text--lower-padding">$2.50</p>
+        </section>
+      </a>
+    </div>
+  </main>
 </body>
 
 </html>

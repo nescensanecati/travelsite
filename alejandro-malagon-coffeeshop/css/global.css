@@ -17,12 +17,31 @@ body {
     color: #393939;
 }
 
-.nitro-pink {
+.header__text--nitro-pink {
     background-color: #fff0ed;
 }
 
+.footer__text--nitro-pink {
+    background-color: #fff0ed;
+}
+
+.header__text--graphite-font {
+    color: #393939;
+}
+
+
 .graphite-font {
     color: #393939;
+}
+
+
+.header__text--nitro-blue-font {
+    color: #5bacc3;
+}
+
+
+.body__text--nitro-blue-font {
+    color: #5bacc3;
 }
 
 .nitro-blue-font {
@@ -33,7 +52,13 @@ body {
     width: 3.125rem;
 }
 
-.logos {
+
+.header__logos--format {
+    width: 3.125rem;
+}
+
+
+.footer__logos--format {
     width: 3.125rem;
 }
 
@@ -64,11 +89,11 @@ p {
     color: #393939;
 }
 
-p.italic {
+p.body__text--italic {
     font-style: italic;
 }
 
-.bold {
+.body__text--bold {
     font-weight: 700;
 }
 
@@ -80,10 +105,7 @@ p.italic {
     display: inline;
 }
 
-.nav-text * {
+.header__nav--text * {
     margin: 0rem 0rem 0.625rem 1.25rem;
 }
 
-.lower-padding {
-    padding-bottom: 1.25rem;
-}

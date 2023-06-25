@@ -4,28 +4,28 @@ nitro-pink #FFF0ED
 graphite #393939 
 light gray #F7F7F7 */
 
-.our-products {
+.body__section--our-products {
     background-color: #f7f7f7;
     width: 100%;
     text-align: center;
     padding: 2.5rem;
 }
 
-.our-products img {
+.body__section--our-products img {
     height: 17.5rem;
 }
 
-.our-products button {
+.body__section--our-products button {
     display: block;
     position: relative;
     margin: auto;
 }
 
-.discount-section {
+.discount__section--format {
     margin: 6.25rem;
 }
 
-.discount-banner-text {
+.discount__section--banner-text {
     font-size: 2.8125rem;
     font-weight: 400;
     color: #393939;
@@ -33,7 +33,6 @@ light gray #F7F7F7 */
     width: 90%;
     background-color: #393939;
     color: white;
-    text-align: center;
     position: relative;
     margin: auto;
 }
@@ -46,16 +45,16 @@ light gray #F7F7F7 */
     text-align: left;
 }
 
-.hero-text * {
+.hero__text--format * {
     text-align: left;
     width: 60%;
 }
 
-.hero p {
+.hero__block p {
     padding-bottom: 1.25rem;
 }
 
-.card {
+.ourproducts__card--format {
     display: inline-block;
     padding: 2.5rem;
     text-align: center;
@@ -66,7 +65,7 @@ light gray #F7F7F7 */
     margin: 3.125rem;
 }
 
-.card * {
+.ourproducts__card--format * {
     margin-bottom: 0.625rem;
 }
 
@@ -93,4 +92,26 @@ table h3 {
 table p {
     padding: 0rem;
     margin: 0rem;
+}
+
+.ourproducts__card--nitro-blue-font {
+    color: #5bacc3;
+}
+
+.hero__h1--lower-padding {
+    padding-bottom: 1.25rem;
+}
+
+.hero__text--nitro-pink {
+    background-color: #fff0ed;
+}
+
+
+.body__button-blue-button
+{
+    background-color: #5bacc3;
+    color: white;
+    border: none;
+    width: 11.25rem;
+    padding: 0.625rem 1.25rem 0.625rem 1.25rem;
 }
