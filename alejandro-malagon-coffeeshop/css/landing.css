@@ -54,21 +54,6 @@ light gray #F7F7F7 */
     padding-bottom: 1.25rem;
 }
 
-.ourproducts__card--format {
-    display: inline-block;
-    padding: 2.5rem;
-    text-align: center;
-    width: 20.625rem;
-    height: 27.5rem;
-    border-radius: 0.625rem;
-    box-shadow: 0rem 0.3125rem 0.5625rem -0.0625rem rgba(0, 0, 0, 0.25);
-    margin: 3.125rem;
-}
-
-.ourproducts__card--format * {
-    margin-bottom: 0.625rem;
-}
-
 p {
     padding-bottom: 1.25rem;
 }
