@@ -5,6 +5,14 @@
   text-decoration: none;
 }
 
+header {
+  background-color: #FFFFFF;
+}
+
+footer{
+  background-color: #FEFAF5;
+}
+
 body {
   font-family: Verdana
 }
