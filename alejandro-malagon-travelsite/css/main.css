@@ -3,6 +3,38 @@
     height: 18.75rem;
     background-color:#FEFAF5    ;
     border: 5px dashed black;
+    display: flex;
+    flex-direction: row;
+}
+
+.body__hero--left-text-container {
+    width: 50%;
+    text-align: left;
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.body__hero--left-text-container p {
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+.body__hero--button-format{
+    background-color: #DB7A4E;
+    color:  white;
+    text-decoration:none; 
+    border-radius: 6.25rem;
+    padding: .3125rem 1.5625rem .3125rem 1.5625rem;
+}
+
+.body__hero--right-image-container {
+    width: 50%;
+    text-align: center;
+}
+
+.body__hero--right-image-format {
+    height: 18.75rem;
 }
 
 
