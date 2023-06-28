@@ -10,21 +10,27 @@
 <body>
     <header>
         <nav>
-            <ul class="header__navigation--ul">
-                <li><a class="header__text--principal" href="index.html">Travel Site</a></li>
+            <div class="header__navigation--container">
+              <div class="header__navigation--title-container">
+              <a class="header__text--principal" href="index.html">Travel Site</a>
+              </div>
+              <div class="header__navigation--navlinks-container">
+              <ul class="header__navigation--ul">
                 <li><a class="header__text--navigation header__text--active" href="index.html">Home</a></li>
                 <li><a class="header__text--navigation" href="./pages/hawaii.html">Hawaii</a></li>
                 <li><a class="header__text--navigation" href="./pages/iceland.html">Iceland</a></li>
                 <li><a class="header__text--navigation" href="./pages/greece.html">Greece</a></li>
               </ul>
+              </div>
+            </div>
         </nav>
     </header>
     
     <main>
         <div class="body__hero--container">
           <div class="body__hero--left-text-container">
-            <p>Travelling Comes With Endless Discoveries</p>
-            <p>Don't let your dreams be just dreams. Experience the world by booking a vacation with us now.</p>
+            <p class="body__hero--left-text-tittle">Travelling Comes With Endless Discoveries</p>
+            <p class="body__hero--left-text-description">Don't let your dreams be just dreams. Experience the world by booking a vacation with us now.</p>
             <button class="body__hero--button-format">Get Started</button>
           </div>
           <div class="body__hero--right-image-container">
@@ -33,8 +39,22 @@
         </div>
 
 
+        <p class="body__recommendations--text-tittle">Recommendations</p>
 
-        <div class="body__recommendations--container"></div>
+        <div class="body__recommendations--container">
+          <div class="body__recommendations--card-container">
+            <img src="./assets/Images/hawaii.jpg" alt="Hawaii">
+            <p class="body__recommendations--text">Hawaii</p>
+          </div>
+          <div class="body__recommendations--card-container">
+            <img src="./assets/Images/iceland.jpg" alt="Iceland">
+            <p class="body__recommendations--text">Iceland</p>
+          </div>
+          <div class="body__recommendations--card-container">
+            <img src="./assets/Images/greece.jpg" alt="Greece">
+            <p class="body__recommendations--text">Greece</p>
+          </div>
+        </div>
 
     </main>
 

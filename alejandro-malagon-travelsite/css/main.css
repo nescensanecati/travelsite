@@ -1,8 +1,6 @@
 .body__hero--container {
     width: 100%;
-    height: 18.75rem;
     background-color:#FEFAF5    ;
-    border: 5px dashed black;
     display: flex;
     flex-direction: row;
 }
@@ -11,11 +9,19 @@
     width: 50%;
     text-align: left;
     margin: auto;
-    margin-left: 5%;
+    margin-left: 10%;
     margin-right: 5%;
 }
 
-.body__hero--left-text-container p {
+.body__hero--left-text-tittle {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5%;
+    color: #335576;
+}
+
+
+.body__hero--left-text-description {
     text-align: left;
     margin-bottom: 5%;
 }
@@ -25,6 +31,7 @@
     color:  white;
     text-decoration:none; 
     border-radius: 6.25rem;
+    border: #DB7A4E;
     padding: .3125rem 1.5625rem .3125rem 1.5625rem;
 }
 
@@ -39,8 +46,41 @@
 
 
 .body__recommendations--container {
-    width: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.body__recommendations--container img {
+    display: block;
     height: 18.75rem;
-    background-color:aliceblue;
-    border: 5px solid grey;
+    box-shadow: 0rem .25rem .25rem rgba(0,0,0,0.2);
+    border: rgba(0,0,0,0.2) .0625rem solid;
+    border-radius: .3125rem;
+}
+
+.body__recommendations--card-container {
+    position: relative;
+}
+
+.body__recommendations--text {
+position: absolute;
+bottom: .5rem;
+right: .5rem;
+color: white;
+font-weight: bold;
+}
+
+.body__recommendations--text-tittle {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    margin: 1% 0rem 1% 10%;
+    color: #335576;
 }

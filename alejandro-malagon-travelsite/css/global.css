@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  border: solid 1px red;
+  /* border: solid 1px red; */
 }
 
 
@@ -19,21 +19,33 @@ body {
   font-family: Verdana
 }
 
-.header__navigation--ul {
+.header__navigation--container {
+  display: flex;
+  flex-wrap: nowrap;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
-  list-style-type: none;
   overflow: hidden;
   background-color: #FFFFFF;
+}
+
+.header__navigation--navlinks-container{
+  position: absolute;
+  right: 5%;
+}
+
+.header__navigation--ul {
+  list-style-type: none;
 }
 
 .header__navigation--ul li {
   float: left;
 }
 
+
 .header__text--principal {
   display: block;
+  width: auto;
   color: #335576;
   text-align: center;
   padding: .3125rem .3125rem;
@@ -101,10 +113,6 @@ body {
   margin: 0;
 }
 
-
 .footer__logo--format img {
   height: 1.25rem;
-  padding: 0;
-  margin-right: .625rem;
 }
-
