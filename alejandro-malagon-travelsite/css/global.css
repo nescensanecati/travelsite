@@ -11,7 +11,7 @@ header {
   background-color: #FFFFFF;
 }
 
-footer{
+footer {
   background-color: #FEFAF5;
 }
 
@@ -29,7 +29,7 @@ body {
   background-color: #FFFFFF;
 }
 
-.header__navigation--navlinks-container{
+.header__navigation--navlinks-container {
   position: absolute;
   right: 5%;
 }

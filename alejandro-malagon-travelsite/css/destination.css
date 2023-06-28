@@ -1,6 +1,40 @@
+* {
+    border: red solid .0625rem;
+}
+
+
 .body__content--container {
     width: 100%;
+    height: 18.75rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+}
+
+.body__content--cards-container {
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.body__content--card1,
+.body__content--card2,
+.body__content--card3 {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.body__content--activity1,
+.body__content--activity2,
+.body__content--activity3,
+.body__content--activity4,
+.body__content--activity5 {
+    width: 100%;
+    height: 20%;
 }

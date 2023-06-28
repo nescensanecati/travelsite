@@ -1,6 +1,6 @@
 .body__hero--container {
     width: 100%;
-    background-color:#FEFAF5    ;
+    background-color: #FEFAF5;
     display: flex;
     flex-direction: row;
 }
@@ -26,10 +26,10 @@
     margin-bottom: 5%;
 }
 
-.body__hero--button-format{
+.body__hero--button-format {
     background-color: #DB7A4E;
-    color:  white;
-    text-decoration:none; 
+    color: white;
+    text-decoration: none;
     border-radius: 6.25rem;
     border: #DB7A4E;
     padding: .3125rem 1.5625rem .3125rem 1.5625rem;
@@ -60,8 +60,8 @@
 .body__recommendations--container img {
     display: block;
     height: 18.75rem;
-    box-shadow: 0rem .25rem .25rem rgba(0,0,0,0.2);
-    border: rgba(0,0,0,0.2) .0625rem solid;
+    box-shadow: 0rem .25rem .25rem rgba(0, 0, 0, 0.2);
+    border: rgba(0, 0, 0, 0.2) .0625rem solid;
     border-radius: .3125rem;
 }
 
@@ -70,11 +70,11 @@
 }
 
 .body__recommendations--text {
-position: absolute;
-bottom: .5rem;
-right: .5rem;
-color: white;
-font-weight: bold;
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+    color: white;
+    font-weight: bold;
 }
 
 .body__recommendations--text-tittle {
