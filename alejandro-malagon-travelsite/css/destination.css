@@ -1,14 +1,22 @@
 * {
-    border: red solid .0625rem;
+    /* border: red solid .0625rem; */
 }
 
+.body__content--tittle{
+    padding: 5%;
+    padding-left: 10%;
+    font-size: x-large;
+    font-weight: bold;
+}
 
 .body__content--container {
     width: 100%;
-    height: 18.75rem;
+    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .body__content--cards-container {
@@ -26,8 +34,10 @@
 .body__content--card3 {
     width: 20%;
     height: 100%;
+    padding: 2%;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 .body__content--activity1,
@@ -35,6 +45,25 @@
 .body__content--activity3,
 .body__content--activity4,
 .body__content--activity5 {
-    width: 100%;
+    display: block;
     height: 20%;
+    width: 100%;
+    text-align: center;
+    /* margin: auto; */
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.body__content--activity1 {
+    font-weight: bold;
+    border-bottom: .1875rem black solid;
+}
+
+.body__content--activity2,
+.body__content--activity3,
+.body__content--activity4,
+.body__content--activity5 {
+    background-color: #FEFAF5;
 }
