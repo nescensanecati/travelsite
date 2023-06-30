@@ -41,11 +41,8 @@
 
 .hero__text--format * {
     text-align: left;
-    width: 60%;
-}
-
-.hero__block p {
-    padding-bottom: 1.25rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 p {
@@ -77,21 +74,12 @@ table p {
     color: #5bacc3;
 }
 
-.hero__h1--lower-padding {
-    padding-bottom: 1.25rem;
-}
 
-.hero__text--nitro-pink {
-    background-color: #fff0ed;
-}
-
-
-.body__button-blue-button
-{
+.body__button-blue-button {
     background-color: #5bacc3;
     color: white;
     border: none;
-    width: 11.25rem;
+    width: 180px;
     padding: 0.625rem 1.25rem 0.625rem 1.25rem;
 }
 
@@ -151,10 +139,14 @@ table p {
     flex-direction: wrap;
 }
 
+.ourproducts__card--flex-bottom-container h3 {
+    font-size: 25px;
+}
+
 .ourproducts__card--flex-container-parent-child-2 {
-    width:70%;
+    width: 70%;
     height: 99%;
-    padding-left:  5%;
+    padding-left: 5%;
     padding-top: 5%;
     background-color: #FFF0ED;
     display: flex;
@@ -169,5 +161,110 @@ table p {
     background-color: #FFF0ED;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+}
+
+
+.body_hero--container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #fff0ed;
+}
+
+.body_hero--left-container {
+    margin: 3%;
+    width: 50%;
+}
+
+.body_hero--right-container {
+    width: 30%;
+    height: 280px;
+    background-image: url('../assets/images/coffeebeans-hero.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.body__different--container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.body__different--left-container {
+    width: 50%;
+    padding: 3%;
+    margin: auto;
+    position: relative;
+}
+
+.body__different--left-container h1,
+.body__different--left-container p,
+.body__different--left-container button {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.body__different--right-container {
+    width: 40%;
+    display: block;
+}
+
+
+
+.body__different--images-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+
+
+.body__different--logo1 {
+    height: 50px;
+    width: 50px;
+    background-image: url('../assets/logos/planting.svg');
+    background-size: contain;
+}
+
+.body__different--logo2 {
+    height: 50px;
+    width: 50px;
+    background-image: url('../assets/logos/coffee-beans.svg');
+    background-size: contain;
+}
+
+.body__different--logo3 {
+    height: 50px;
+    width: 50px;
+    background-image: url('../assets/logos/coffee-cup.svg');
+    background-size: contain;
+}
+
+.body__different--right-container {
+    width: 400px;
+    height: 400px;
+    background-image: url('../assets/images/coldbrewbackground.png');
+    background-size: cover;
+    position: relative;
+    margin: 5%;
+    text-align: center;
+}
+
+.body__different--right-image {
+    height: 280px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    margin-top: 15%;
 }
