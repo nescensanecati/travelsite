@@ -43,7 +43,7 @@
 }
 
 .body__hero--right-image-format {
-    height: 18.75rem;
+    height: 300px;
     margin: 5%;
 }
 
@@ -62,10 +62,10 @@
 
 .body__recommendations--container img {
     display: block;
-    height: 18.75rem;
-    box-shadow: 0rem .25rem .25rem rgba(0, 0, 0, 0.2);
-    border: rgba(0, 0, 0, 0.2) .0625rem solid;
-    border-radius: .3125rem;
+    height: 300px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border: rgba(0, 0, 0, 0.2) 1px solid;
+    border-radius: 5px;
 }
 
 .body__recommendations--card-container {
@@ -75,8 +75,8 @@
 
 .body__recommendations--text {
     position: absolute;
-    bottom: .5rem;
-    right: .5rem;
+    bottom: 8px;
+    right: 8px;
     color: white;
     font-weight: bold;
 }
@@ -85,6 +85,6 @@
     display: block;
     font-weight: bold;
     text-align: left;
-    margin: 3% 0rem 1% 5%;
+    margin: 3% 0% 1% 5%;
     color: #335576;
 }

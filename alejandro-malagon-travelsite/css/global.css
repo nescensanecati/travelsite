@@ -51,7 +51,7 @@ body {
   text-align: center;
   padding: .3125rem .3125rem;
   text-decoration: none;
-  margin: .625rem 0rem .625rem 0rem;
+  margin: 10px 0px 10px 0px;
 }
 
 .header__text--navigation {
@@ -60,7 +60,11 @@ body {
   text-align: center;
   padding: .3125rem .3125rem;
   text-decoration: none;
-  margin: .625rem 0rem .625rem 0rem;
+  margin: 10px 0px 10px 0px;
+}
+
+.header__text--navigation:hover {
+  background-color: rgb(219, 122, 78, 0.3) ;
 }
 
 .header__text--active {
@@ -118,5 +122,5 @@ body {
 }
 
 .footer__logo--format img {
-  height: 1.25rem;
+  height: 20px;
 }
