@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    border: red solid 1px;
 }
 
 body {
@@ -108,11 +109,12 @@ p.body__text--italic {
     background-color: #fff0ed;
 }
 
-.header__logo--format{
+.header__logo--format {
     width: 50px;
     height: 50px;
     height: 100%;
     margin-left: 10%;
+    opacity: 25%;
 }
 
 .header__container--right-nav {
@@ -140,3 +142,39 @@ p.body__text--italic {
     flex-direction: row-reverse;
 }
 
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.footer_logo_left,
+.footer_logo_right {
+    width: 120px;
+    height: 120px;
+    background-image: url('../assets/logos/coffee-beans-logo-and-footer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 25%;
+}
+
+.footer_logo_left {
+    position: absolute;
+    left: -40px;
+    margin-top: 2%;
+}
+
+.footer_logo_right {
+    display: inline-block;
+    align-self: flex-end;
+    position: absolute;
+    right: -40px;
+    margin-bottom: 2%;
+}
+
+.footer__container--table {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
