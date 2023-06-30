@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    border: red solid 1px;
 }
 
 body {
@@ -147,6 +146,7 @@ p.body__text--italic {
     display: flex;
     flex-direction: row;
     width: 100%;
+    overflow: hidden;
 }
 
 .footer_logo_left,

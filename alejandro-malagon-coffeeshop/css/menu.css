@@ -34,18 +34,32 @@
     background-position: center;
 }
 
+.main__h1--menu-container-border {
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    border: #5bacc3 5px solid;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main__h1--menu-container {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
 .main__h1--menu-title {
     width: 200px;
     height: 130px;
     background-color: #393939;
     color: white;
     text-align: center;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-top: 1.5%;
+    /* margin: auto; */
+    padding-top: 13%;
 }
 
 .main__background--container img {
@@ -77,3 +91,5 @@ p {
 h3 {
     padding-bottom: 0.3125rem;
 }
+
+
