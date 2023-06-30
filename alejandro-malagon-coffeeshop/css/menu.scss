@@ -1,0 +1,97 @@
+@use './partials/global' as *;
+
+.main__background--nitro-pink {
+    background-color: #fff0ed;
+}
+
+.main__background--light-gray {
+    background-color: #f7f7f7;
+}
+
+.main__menu--local-nav-outter-box {
+    display: block;
+    width: 100%;
+    background-color: #393939;
+    text-align: center;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+}
+
+.menu-local-nav * {
+    width: 100%;
+    background-color: #393939;
+    color: white;
+    list-style-type: none;
+    margin: 5px;
+    padding-left: 1.25rem;
+    border-left: solid #5bacc3 4px;
+}
+
+.main__background--container {
+    width: 100%;
+    position: relative;
+    height: 500px;
+    background-image: url('../assets/images/coffee-circle.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.main__h1--menu-container-border {
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    border: #5bacc3 5px solid;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main__h1--menu-container {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.main__h1--menu-title {
+    width: 200px;
+    height: 130px;
+    background-color: #393939;
+    color: white;
+    text-align: center;
+    /* margin: auto; */
+    padding-top: 13%;
+}
+
+.main__background--container img {
+    width: 100%;
+    height: auto;
+}
+
+.main__text--centered {
+    width: 100%;
+    text-align: center;
+}
+
+.body__text--special-h2s {
+    color: #393939;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main__paragraphs--centered {
+    width: 40%;
+    position: relative;
+    margin: auto;
+}
+
+p {
+    padding-bottom: 0.625rem;
+}
+
+h3 {
+    padding-bottom: 0.3125rem;
+}
+
+
