@@ -46,6 +46,7 @@ body {
 .header__text--principal {
   display: block;
   width: auto;
+  font-weight: bold;
   color: #335576;
   text-align: center;
   padding: .3125rem .3125rem;
@@ -93,16 +94,19 @@ body {
 .footer__table--row1 {
   color: #335576;
   text-align: left;
+  font-size: x-large;
 }
 
 .footer__table--row2 {
   color: #DB7A4E;
   text-align: left;
+  font-size: small;
 }
 
 .footer__table--row3 {
   color: #335576;
   text-align: left;
+  font-size: small;
 }
 
 .footer__table--row3 a {

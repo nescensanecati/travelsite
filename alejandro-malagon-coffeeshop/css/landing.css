@@ -1,9 +1,3 @@
-/* colors:
-nitro-blue #5BACC3
-nitro-pink #FFF0ED
-graphite #393939 
-light gray #F7F7F7 */
-
 .body__section--our-products {
     background-color: #f7f7f7;
     width: 100%;
@@ -138,8 +132,6 @@ table p {
 
 
 .ourproducts__card--flex-container-parent-child-1 {
-    /* display: flex; */
-    /* flex-direction: wrap; */
     width: 100%;
     height: 100%;
     background-color: white;
@@ -148,8 +140,6 @@ table p {
 }
 
 .ourproducts__card--flex-container-parent-child-1 img {
-    /* display: flex; */
-    /* justify-content: center; */
     margin: 1.25rem;
     height: 17.5rem;
 }

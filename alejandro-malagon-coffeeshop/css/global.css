@@ -1,14 +1,9 @@
-/* colors:
-nitro-blue #5BACC3
-nitro-pink #FFF0ED
-graphite #393939 
-light gray #F7F7F7 */
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     text-decoration: none;
+    /* border: solid red 1px; */
 }
 
 body {
