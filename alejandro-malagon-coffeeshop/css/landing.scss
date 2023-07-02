@@ -73,17 +73,7 @@ table p {
 
 .ourproducts__card--nitro-blue-font {
     color: #5bacc3;
-}
-
-
-.body__hero--button-border {
-    display: block;
-    border: black solid 1px;
-    padding: 0;
-    width: 180px;
-    height: 35px;
-    margin: 0;
-    position: relative;
+    font-size: xx-large;
 }
 
 .body__hero--button-container {
@@ -100,7 +90,7 @@ table p {
     color: white;
     border: none;
     width: 180px;
-    height: 35px;
+    height: 50px;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -108,18 +98,19 @@ table p {
     top: 3px;
     left: 3px;
     display: block;
+    padding-bottom: 1.5%;
 }
 
-.body__button--blue-button-learn-more-container {
-    display: block;
-    border: black solid 1px;
-    width: 180px;
-    height: 35px;
-    margin-top: 3%;
-    padding: 0;
-    position: relative;
+.body__button--blue-button-hero:before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+    box-sizing: border-box;
 }
-
 
 .body__button--blue-button-learn-more {
     display: block;
@@ -127,12 +118,23 @@ table p {
     color: white;
     border: none;
     width: 180px;
-    height: 35px;
+    height: 50px;
     margin: 0;
     padding: 0;
+    margin-top: 5%;
+    padding-bottom: 1.5%;
+    position: relative;
+}
+
+.body__button--blue-button-learn-more:before {
+    content: "";
     position: absolute;
-    top: 3px;
-    left: 3px;
+    top: -4px;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+    box-sizing: border-box;
 }
 
 .body__section--our-products-flex {
@@ -190,9 +192,15 @@ table p {
     flex-direction: wrap;
 }
 
+.ourproducts__card--flex-container-parent-child-2 p {
+    color: #909090;
+}
+
 .ourproducts__card--flex-bottom-container h3 {
     font-size: 25px;
 }
+
+
 
 .ourproducts__card--flex-container-parent-child-2 {
     width: 70%;
@@ -332,4 +340,32 @@ table p {
 
 .body__different--right-image {
     height: 280px;
+}
+
+.ourproducts__button--container {
+    text-align: center;
+}
+
+
+.ourproducts__button--blue-button {
+    background-color: #5bacc3;
+    color: white;
+    border: none;
+    width: 180px;
+    height: 50px;
+    position: relative;
+    padding-bottom: 0.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.ourproducts__button--blue-button:before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+    box-sizing: border-box;
 }
