@@ -21,7 +21,13 @@
     margin: 6.25rem;
 }
 
+@keyframes change-discount-color {
+    from {background-color: #393939;}
+    to {background-color: #5bacc3;}
+}
+
 .discount__section--banner-text {
+    padding-top: 1%;
     font-size: 2.8125rem;
     font-weight: 400;
     color: #393939;
@@ -31,7 +37,13 @@
     color: white;
     position: relative;
     margin: auto;
+    animation-name: change-discount-color;
+    animation-duration: 2.5s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
 }
+
+
 
 .hero {
     display: block;
@@ -77,64 +89,66 @@ table p {
 }
 
 .body__hero--button-container {
-    position: absolute;
+    position: relative;
+
+}
+
+.body__hero--button-container a {
     margin: 0%;
     padding: 0%;
     display: block;
 }
 
 
-
 .body__button--blue-button-hero {
-    background-color: #5bacc3;
-    color: white;
-    border: none;
-    width: 180px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
     text-align: center;
-    position: relative;
-    top: 3px;
-    left: 3px;
     display: block;
-    padding-bottom: 1.5%;
+    position:relative;
+    color: white;
+    width: 180px;
+    height: 60px;
+    padding:5px 0 0 5px;
+    box-sizing:border-box;
+    background: #5bacc3 content-box;
+    border:3px solid black;
+    box-shadow: 8px 8px 0px #5bacc3;
 }
 
-.body__button--blue-button-hero:before {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    width: 100%;
-    height: 100%;
-    border: 3px solid black;
-    box-sizing: border-box;
+.body__button--blue-button-hero:active {
+    text-align: center;
+    position:relative;
+    top: 5px;
+    left: 5px;
+    color: white;
+    width: 180px;
+    height: 60px;
+    padding:0;
+    border:3px solid black;
+    box-shadow: 0 0 0px #5bacc3; 
 }
 
 .body__button--blue-button-learn-more {
-    display: block;
-    background-color: #5bacc3;
+    position:relative;
     color: white;
-    border: none;
     width: 180px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-    margin-top: 5%;
-    padding-bottom: 1.5%;
-    position: relative;
+    height: 60px;
+    padding:5px 0 0 5px;
+    box-sizing:border-box;
+    background: #5bacc3 content-box;
+    border:3px solid black;
+    box-shadow: 8px 8px 0px #5bacc3;
 }
 
-.body__button--blue-button-learn-more:before {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    width: 100%;
-    height: 100%;
-    border: 3px solid black;
-    box-sizing: border-box;
+.body__button--blue-button-learn-more:active {
+    position:relative;
+    top: 5px;
+    left: 5px;
+    color: white;
+    width: 180px;
+    height: 60px;
+    padding:0;
+    border:3px solid black;
+    box-shadow: 0 0 0px #5bacc3; 
 }
 
 .body__section--our-products-flex {
@@ -283,7 +297,7 @@ table p {
     flex-wrap: nowrap;
     justify-content: space-between;
     margin-top: 3%;
-    margin-bottom: 3%;
+    margin-bottom: 10%;
 }
 
 
@@ -338,34 +352,54 @@ table p {
     margin: auto;
 }
 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
 .body__different--right-image {
     height: 280px;
 }
 
+.body__different--right-image:hover {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
 .ourproducts__button--container {
     text-align: center;
+    margin-bottom: 5%;
 }
-
 
 .ourproducts__button--blue-button {
-    background-color: #5bacc3;
+    text-align: center;
+    display:inline;
+    position:relative;
     color: white;
-    border: none;
     width: 180px;
-    height: 50px;
-    position: relative;
-    padding-bottom: 0.5%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    height: 60px;
+    padding:5px 0 0 5px;
+    box-sizing:border-box;
+    background: #5bacc3 content-box;
+    border:3px solid black;
+    box-shadow: 8px 8px 0px #5bacc3;
 }
 
-.ourproducts__button--blue-button:before {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    width: 100%;
-    height: 100%;
-    border: 3px solid black;
-    box-sizing: border-box;
+.ourproducts__button--blue-button:active {
+    text-align: center;
+    position:relative;
+    top: 5px;
+    left: 5px;
+    color: white;
+    width: 180px;
+    height: 60px;
+    padding:0;
+    border:3px solid black;
+    box-shadow: 0 0 0px #5bacc3; 
 }
