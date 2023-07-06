@@ -1,0 +1,17 @@
+@import "./partials/reset";
+
+@import "./partials/variables";
+
+@import "./partials/mobile_default";
+
+@media only screen and (min-width: 48rem) {
+    @import "./partials/tablet";
+}
+
+@media only screen and (min-width: 80rem) {
+    @import "./partials/desktop";
+}
+
+// * {
+//     border: solid red 1px;
+// }

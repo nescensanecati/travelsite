@@ -1,0 +1,218 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*  ----------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFontRegular;
+    font-weight: $regularWeight;
+    font-size: 16px;
+}
+
+/*  ----------------------- HEADER --------------------------- */
+header {
+    background-color: $primaryColorBlack;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    h1 {
+        color: $primaryColorWhite;
+        font-size: 1.5rem;
+        font-family: $defaultFontRegular;
+        font-weight: $boldWeight;
+        line-height: 2rem;
+        padding: $gutter 0;
+        // max-width: 20px;
+        // max-height: 120px;
+    }
+}
+
+//end header
+
+/*  ----------------------- NAVIGATION --------------------------- */
+nav {
+    background-color: $primaryColorBlack;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+
+        li {
+            padding: $gutter 0;
+            width: 50%;
+
+            a {
+                background-color: $primaryColorBlack;
+                text-align: center;
+            }
+        }
+
+        .active {
+            border-bottom: 3px $primaryColorWhite solid;
+
+            a {
+                font-family: $defaultFontBold;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $primaryColorWhite;
+        width: 100%;
+    }
+}
+
+//end nav
+
+/*  ----------------------- MAIN --------------------------- */
+main {
+
+    a,
+    p,
+    h2,
+    h3,
+    h4 {
+        padding: $gutter;
+    }
+
+    h2 {
+        padding-top: 1.5rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: $boldWeight;
+    }
+
+    h3 {
+        font-size: .875rem;
+        font-weight: $demiWeight;
+        line-height: 1.375rem;
+        padding-top: ($gutter/2);
+    }
+
+    p {
+        font-size: .8125rem;
+        font-weight: $regularWeight;
+        line-height: 1.125rem;
+        padding-bottom: $gutter;
+    }
+
+    img {
+        width: 100%;
+        padding: 0.5rem $gutter;
+    }
+
+    .main__article--container {
+        position: relative;
+
+        .main__img--hero {
+            position: relative;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            z-index: -1;
+        }
+
+        .main__article--h2 {
+            position: absolute;
+            color: white;
+            top: 50%;
+            transform: translate(0%, -50%);
+            width: 100%;
+            text-align: left;
+            padding-left: $gutter;
+            z-index: 10;
+        }
+
+        #main__img--hero-overlay {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+    }
+    
+
+    article {
+        h2 {
+            padding: $gutter;
+            padding-top: $doublegutter;
+        }
+
+    }
+
+
+
+}
+
+//end main
+
+/*  ----------------------- FOOTER --------------------------- */
+footer {
+    background-color: $primaryColorBlack;
+    padding: $gutter;
+
+    article {
+        padding: $gutter 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+        color: white;
+    }
+
+    h2 {
+        padding: $gutter 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: $demiWeight;
+    }
+
+    h3 {
+        font-size: .875rem;
+        line-height: 1.375rem;
+        font-weight: $demiWeight;
+    }
+
+    p {
+        font-size: .8125rem;
+        font-weight: $regularWeight;
+        line-height: 1.125rem;
+    }
+
+    img {
+        float: left;
+        padding: $gutter $gutter $gutter 0;
+        text-align: left;
+    }
+
+    .footer__img--twitter {
+        float: none;
+    }
+}
+
+//end footer
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+//end clearfix
