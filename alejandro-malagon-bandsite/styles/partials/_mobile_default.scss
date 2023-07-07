@@ -204,6 +204,28 @@ footer {
         text-align: left;
     }
 
+
+    .footer__h2--bandsite-logo-mobile {
+        position: absolute;
+        top : 0;
+        right: 0;
+        color: white;
+        text-align: center;
+    }
+
+    .footer__h2--bandsite-logo-not-mobile,.footer__h2--bandsite-logo-not-mobile-container {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .footer__h2--bandsite-logo-mobile {
+        position: relative;
+        color: white;
+        text-align: left;
+        visibility: visible;
+    }
+
 }
 
 //end footer

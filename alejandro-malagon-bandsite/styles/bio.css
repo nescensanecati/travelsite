@@ -273,6 +273,24 @@ footer img {
   padding: 1rem 1rem 1rem 0;
   text-align: left;
 }
+footer .footer__h2--bandsite-logo-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+}
+footer .footer__h2--bandsite-logo-not-mobile, footer .footer__h2--bandsite-logo-not-mobile-container {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+footer .footer__h2--bandsite-logo-mobile {
+  position: relative;
+  color: white;
+  text-align: left;
+  visibility: visible;
+}
 
 @media only screen and (min-width: 768px) {
   /*  ----------------------- HEADER --------------------------- */
@@ -380,10 +398,27 @@ footer img {
   }
   footer .footer__section--information-container article {
     width: 100%;
+    position: relative;
   }
-  footer .footer__h2--bandsite-logo {
+  footer .footer__h2--bandsite-logo-not-mobile-container {
+    position: relative;
+    width: 70%;
+    visibility: unset;
+  }
+  footer .footer__h2--bandsite-logo-not-mobile {
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
+    color: white;
+    text-align: left;
+    visibility: unset;
+    line-height: 3.5;
+  }
+  footer .footer__h2--bandsite-logo-mobile, footer .footer__h2--bandsite-logo-mobile-container {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
   }
 }/*# sourceMappingURL=bio.css.map */

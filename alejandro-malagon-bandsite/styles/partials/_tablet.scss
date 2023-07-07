@@ -141,14 +141,33 @@ footer {
 
         article {
             width: 100%;
+            position: relative;
         }
     }
 
-    .footer__h2--bandsite-logo {
-        position: absolute;
-        bottom : 0;
-        right: 0;
+    .footer__h2--bandsite-logo-not-mobile-container{
+        position: relative;
+        width: 70%;
+        visibility:unset;
     }
+    .footer__h2--bandsite-logo-not-mobile {
+        position: absolute;
+        top : 0;
+        right: 0;
+        color: white;
+        text-align: left;
+        visibility:unset;
+        line-height: 3.5;
+    }
+
+    .footer__h2--bandsite-logo-mobile, .footer__h2--bandsite-logo-mobile-container {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        margin: 0;
+        padding: 0;
+    }
+
 
 }
 
