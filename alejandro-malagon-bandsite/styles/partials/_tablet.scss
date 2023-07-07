@@ -1,0 +1,155 @@
+// * {
+//     border: red 1px solid;
+// }
+
+/*  ----------------------- HEADER --------------------------- */
+header {
+    display: flex;
+    flex-direction: row;
+
+    h1 {
+        padding: $gutter;
+    }
+}
+
+//end header
+
+/*  ----------------------- NAVIGATION --------------------------- */
+nav {
+    width: 30%;
+
+    ul {
+        height: 100%;
+
+        li {
+            padding: (1.5*$gutter) 0;
+            line-height: 1;
+        }
+    }
+}
+
+//end nav
+
+/*  ----------------------- MAIN --------------------------- */
+main {
+    .main__section--aboutmusicians-container {
+        padding: (2*$gutter) (3*$gutter);
+
+        .main__article--phrases-container {
+            padding: 0;
+            margin-bottom: $gutter;
+        }
+
+        h2,
+        img,
+        .main__article--phrases-container {
+            padding: $gutter 0;
+        }
+
+        h3 {
+            padding: 0;
+        }
+
+        .main__article--paragraph-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            h4 {
+                width: 100%;
+                padding: 0;
+            }
+
+            p {
+                width: 50%;
+                padding-left: 0;
+            }
+        }
+    }
+
+
+    .main__div--photogallery-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        padding: 0 (2*$gutter) $gutter (2*$gutter);
+
+        & h2 {
+            padding: $gutter 0;
+            width: 100%;
+        }
+
+        & picture {
+            padding: 0;
+            margin-bottom: $gutter;
+            width: 30%;
+        }
+
+        img {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+//end main
+
+/*  ----------------------- FOOTER --------------------------- */
+footer * {
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+}
+footer {
+        padding: 0;
+        margin: 0;
+        padding: 0 (2*$gutter);
+
+
+    section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: left;
+
+
+        h2 {
+            width: 30%;
+            line-height: (3*$gutter);
+            line-height: 1;
+        }
+    }
+
+
+    .footer__section--information-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+
+
+        article {
+            width: 100%;
+        }
+    }
+
+    .footer__h2--bandsite-logo {
+        position: absolute;
+        bottom : 0;
+        right: 0;
+    }
+
+}
+
+//end footer

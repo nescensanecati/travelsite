@@ -194,25 +194,16 @@ footer {
         line-height: 1.125rem;
     }
 
-    img {
-        float: left;
+    .footer__section--logos-container {
+        display: flex;
+        flex-direction: row;   
+    }
+    
+    img {     
         padding: $gutter $gutter $gutter 0;
         text-align: left;
     }
 
-    .footer__img--twitter {
-        float: none;
-    }
 }
 
 //end footer
-
-
-/*----- Clearfix: Force an Element not to collapse -----*/
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-//end clearfix

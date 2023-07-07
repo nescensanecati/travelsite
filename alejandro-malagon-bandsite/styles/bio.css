@@ -27,7 +27,7 @@ time, mark, audio, video {
 }
 
 body {
-  line-height: 1;
+  line-height: 0;
 }
 
 article, aside, details, figcaption, figure,
@@ -265,18 +265,125 @@ footer p {
   font-weight: 400;
   line-height: 1.125rem;
 }
+footer .footer__section--logos-container {
+  display: flex;
+  flex-direction: row;
+}
 footer img {
-  float: left;
   padding: 1rem 1rem 1rem 0;
   text-align: left;
 }
-footer .footer__img--twitter {
-  float: none;
-}
 
-/*----- Clearfix: Force an Element not to collapse -----*/
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+@media only screen and (min-width: 768px) {
+  /*  ----------------------- HEADER --------------------------- */
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+  header h1 {
+    padding: 1rem;
+  }
+  /*  ----------------------- NAVIGATION --------------------------- */
+  nav {
+    width: 30%;
+  }
+  nav ul {
+    height: 100%;
+  }
+  nav ul li {
+    padding: 1.5rem 0;
+    line-height: 1;
+  }
+  /*  ----------------------- MAIN --------------------------- */
+  main .main__section--aboutmusicians-container {
+    padding: 2rem 3rem;
+  }
+  main .main__section--aboutmusicians-container .main__article--phrases-container {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  main .main__section--aboutmusicians-container h2,
+  main .main__section--aboutmusicians-container img,
+  main .main__section--aboutmusicians-container .main__article--phrases-container {
+    padding: 1rem 0;
+  }
+  main .main__section--aboutmusicians-container h3 {
+    padding: 0;
+  }
+  main .main__section--aboutmusicians-container .main__article--paragraph-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  main .main__section--aboutmusicians-container .main__article--paragraph-container h4 {
+    width: 100%;
+    padding: 0;
+  }
+  main .main__section--aboutmusicians-container .main__article--paragraph-container p {
+    width: 50%;
+    padding-left: 0;
+  }
+  main .main__div--photogallery-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 2rem 1rem 2rem;
+  }
+  main .main__div--photogallery-container h2 {
+    padding: 1rem 0;
+    width: 100%;
+  }
+  main .main__div--photogallery-container picture {
+    padding: 0;
+    margin-bottom: 1rem;
+    width: 30%;
+  }
+  main .main__div--photogallery-container img {
+    margin: 0;
+    padding: 0;
+  }
+  /*  ----------------------- FOOTER --------------------------- */
+  footer * {
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  footer {
+    padding: 0;
+    margin: 0;
+    padding: 0 2rem;
+  }
+  footer section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: left;
+  }
+  footer section h2 {
+    width: 30%;
+    line-height: 3rem;
+    line-height: 1;
+  }
+  footer .footer__section--information-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  footer .footer__section--information-container section {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+  footer .footer__section--information-container article {
+    width: 100%;
+  }
+  footer .footer__h2--bandsite-logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 }/*# sourceMappingURL=bio.css.map */
