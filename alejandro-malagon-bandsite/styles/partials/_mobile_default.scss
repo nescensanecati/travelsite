@@ -125,19 +125,27 @@ main {
     }
 
     img {
+
+        .main__section--photogallery-container & {
+            //https://codepen.io/AnthonyMoss/pen/RwwyQQ (for greyscale)
+            filter: grayscale(0%);
+            -webkit-filter: grayscale(0%);
+            -moz-filter: grayscale(0%);
+        }
+
         width: 100%;
         padding: $defaultPadding $doubleDefaultPadding;
-        //https://codepen.io/AnthonyMoss/pen/RwwyQQ (for greyscale)
-        filter: grayscale(0%);
-        -webkit-filter: grayscale(0%);
-        -moz-filter: grayscale(0%);
+
     }
 
-    img:hover {
-        //https://codepen.io/AnthonyMoss/pen/RwwyQQ (for greyscale)
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
+    .main__section--photogallery-container img {
+        &:hover {
+            //https://codepen.io/AnthonyMoss/pen/RwwyQQ (for greyscale)
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+        }
+
     }
 
     .main__article--phrases-container {
