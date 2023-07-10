@@ -183,6 +183,10 @@ footer {
     background-color: $primaryColorBlack;
     padding: 0 $doubleDefaultPadding;
 
+    a{
+        text-decoration: none;
+    }
+
     article {
         padding: $defaultPadding 0;
     }
@@ -191,7 +195,8 @@ footer {
     h2,
     h3,
     h4,
-    p {
+    p,
+    a {
         color: white;
     }
 

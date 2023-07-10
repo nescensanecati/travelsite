@@ -262,6 +262,9 @@ footer {
   background-color: #323232;
   padding: 0 16px;
 }
+footer a {
+  text-decoration: none;
+}
 footer article {
   padding: 8px 0;
 }
@@ -269,7 +272,8 @@ footer h1,
 footer h2,
 footer h3,
 footer h4,
-footer p {
+footer p,
+footer a {
   color: white;
 }
 footer h2 {
