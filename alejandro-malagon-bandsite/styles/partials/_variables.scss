@@ -7,34 +7,32 @@ $secondaryColorDarkMercury: #E1E1E1;
 $secondaryColorDarkAlabaster: #FAFAFA;
 
 //spacing-margins
-$gutter: 1rem;
-$doublegutter: (2 * $gutter);
+$defaultPadding: 8px;
+$doubleDefaultPadding: (2 * $defaultPadding);
 
 
 @font-face {
-    font-family: 'Avenir-Regular';
+    font-family: 'Avenir-Font';
     font-weight: 400;
     src: url('../assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype'),
         url('../assets/fonts/alternative-files/AvenirNextLTPro.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Avenir-Bold';
+    font-family: 'Avenir-Font';
     font-weight: 700;
     src: url('../assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype'),
         url('../assets/fonts/alternative-files/AvenirNextLTProBold.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Avenir-Demi';
+    font-family: 'Avenir-Font';
     font-weight: 600;
     src: url('../assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype'),
         url('../assets/fonts/alternative-files/AvenirNextLTProDemi.ttf') format('truetype');
 }
 
-$defaultFontRegular: 'Avenir-Regular';
-$defaultFontBold: 'Avenir-Bold';
-$defaultFontDemi: 'Avenir-Demi';
+$defaultFont: 'Avenir-Font';
 $regularWeight: 400;
 $boldWeight: 700;
 $demiWeight: 600;

@@ -1,14 +1,14 @@
-// * {
-//     border: red 1px solid;
-// }
-
 /*  ----------------------- HEADER --------------------------- */
 header {
     display: flex;
     flex-direction: row;
 
     h1 {
-        padding: $gutter;
+        padding: $doubleDefaultPadding;
+    }
+
+    img {
+        margin: (3*$defaultPadding);
     }
 }
 
@@ -22,8 +22,8 @@ nav {
         height: 100%;
 
         li {
-            padding: (1.5*$gutter) 0;
-            line-height: 1;
+            padding: (2.5*$defaultPadding) 0;
+            line-height: 0.21vh;
         }
     }
 }
@@ -32,22 +32,41 @@ nav {
 
 /*  ----------------------- MAIN --------------------------- */
 main {
+
+
     .main__section--aboutmusicians-container {
-        padding: (2*$gutter) (3*$gutter);
+        padding: 0 (6*$defaultPadding);
 
         .main__article--phrases-container {
             padding: 0;
-            margin-bottom: $gutter;
+            margin-bottom: $doubleDefaultPadding;
         }
 
-        h2,
         img,
-        .main__article--phrases-container {
-            padding: $gutter 0;
+        .main__article--phrases-container,
+        .main__article--paragraph-container {
+            padding: $doubleDefaultPadding (6*$defaultPadding);
+        }
+
+        h2 {
+            font-family: $defaultFont;
+            font-weight: $demiWeight;
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            padding-left: 0;
         }
 
         h3 {
             padding: 0;
+            font-family: $defaultFont;
+            font-weight: $demiWeight;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        .main__h3--author-format {
+            font-weight: 400;
+            padding: $defaultPadding;
         }
 
         .main__article--paragraph-container {
@@ -59,32 +78,58 @@ main {
             h4 {
                 width: 100%;
                 padding: 0;
+                padding: 0;
+                font-family: $defaultFont;
+                font-weight: $demiWeight;
+                font-size: 2.25rem;
+                line-height: 2.75rem;
             }
 
             p {
                 width: 50%;
                 padding-left: 0;
+                font-family: $defaultFont;
+                font-weight: $regularWeight;
+                font-size: .875rem;
+                line-height: 1.375rem;
             }
         }
     }
 
+    .main__article--container {
+        padding: 0;
 
-    .main__div--photogallery-container {
+        .main__article--h2 {
+            font-family: $defaultFont;
+            font-weight: $demiWeight;
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+            padding-left: (6*$defaultPadding);
+        }
+    }
+
+
+    .main__section--photogallery-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
 
-        padding: 0 (2*$gutter) $gutter (2*$gutter);
+        padding: 0 (4*$defaultPadding) $doubleDefaultPadding (6*$defaultPadding);
 
         & h2 {
-            padding: $gutter 0;
+            padding: $defaultPadding 0;
             width: 100%;
+            font-family: $defaultFont;
+            font-weight: $demiWeight;
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            text-align: left;
         }
 
         & picture {
             padding: 0;
-            margin-bottom: $gutter;
+            margin-bottom: $doubleDefaultPadding;
             width: 30%;
         }
 
@@ -104,10 +149,11 @@ footer * {
     position: relative;
 
 }
+
 footer {
-        padding: 0;
-        margin: 0;
-        padding: 0 (2*$gutter);
+    padding: 0;
+    margin: 0;
+    padding: 0 (2*$defaultPadding);
 
 
     section {
@@ -120,7 +166,7 @@ footer {
 
         h2 {
             width: 30%;
-            line-height: (3*$gutter);
+            line-height: (3*$defaultPadding);
             line-height: 1;
         }
     }
@@ -145,22 +191,25 @@ footer {
         }
     }
 
-    .footer__h2--bandsite-logo-not-mobile-container{
+    .footer__h2--bandsite-logo-not-mobile-container {
         position: relative;
         width: 70%;
-        visibility:unset;
+        visibility: unset;
     }
+
     .footer__h2--bandsite-logo-not-mobile {
         position: absolute;
-        top : 0;
+        top: 0;
         right: 0;
         color: white;
         text-align: left;
-        visibility:unset;
-        line-height: 3.5;
+        visibility: unset;
+        line-height: 2;
+        font-weight: $regularWeight;
     }
 
-    .footer__h2--bandsite-logo-mobile, .footer__h2--bandsite-logo-mobile-container {
+    .footer__h2--bandsite-logo-mobile,
+    .footer__h2--bandsite-logo-mobile-container {
         visibility: hidden;
         height: 0;
         width: 0;

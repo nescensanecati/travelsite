@@ -1,0 +1,31 @@
+/*  ----------------------- MAIN --------------------------- */
+main {
+
+    .main__article--container {
+        .main__article--h2 {
+            padding: $doubleDefaultPadding (12*$defaultPadding);
+        }
+    }
+
+    .main__section--aboutmusicians-container {
+        padding: $doubleDefaultPadding (12*$defaultPadding);
+
+        .main__article--phrases-container,
+        .main__article--paragraph-container {
+            padding: 0 (6*$defaultPadding);
+        }
+    }
+
+    .main__section--photogallery-container {
+        padding: $doubleDefaultPadding (12*$defaultPadding);
+    }
+}
+
+//end main
+
+/*  ----------------------- FOOTER --------------------------- */
+footer {
+    padding: 0 (12*$defaultPadding);
+}
+
+//end footer
