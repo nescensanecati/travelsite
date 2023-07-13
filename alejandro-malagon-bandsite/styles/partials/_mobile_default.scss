@@ -60,7 +60,7 @@ nav {
             }
         }
 
-        .active {
+        .header__nav--active {
             border-bottom: 3px $primaryColorWhite solid;
 
             a {
@@ -95,12 +95,14 @@ main {
 
     a,
     p,
+    h1,
     h2,
     h3,
     h4 {
         padding: $defaultPadding $doubleDefaultPadding;
         margin: $doubleDefaultPadding 0;
         font-weight: $demiWeight;
+        color: $primaryColorBlack;
     }
 
     h2 {
@@ -170,7 +172,7 @@ main {
             z-index: -1;
         }
 
-        .main__article--h2 {
+        .main__article--h1 {
             position: absolute;
             color: white;
             top: 50%;

@@ -166,16 +166,16 @@ nav ul li a {
   width: 100%;
   height: 100%;
 }
-nav ul .active {
+nav ul .header__nav--active {
   border-bottom: 3px #FFFFFF solid;
 }
-nav ul .active a {
+nav ul .header__nav--active a {
   font-family: "Avenir-Font";
   font-weight: 700;
   padding: 0;
   line-height: 2rem;
 }
-nav ul .active:hover {
+nav ul .header__nav--active:hover {
   background-color: #AFAFAF;
 }
 nav a {
@@ -193,12 +193,14 @@ main {
 }
 main a,
 main p,
+main h1,
 main h2,
 main h3,
 main h4 {
   padding: 8px 16px;
   margin: 16px 0;
   font-weight: 600;
+  color: #323232;
 }
 main h2 {
   font-size: 1.5rem;
@@ -250,7 +252,7 @@ main .main__article--container .main__img--hero {
   margin: 0;
   z-index: -1;
 }
-main .main__article--container .main__article--h2 {
+main .main__article--container .main__article--h1 {
   position: absolute;
   color: white;
   top: 50%;
@@ -418,7 +420,7 @@ footer .footer__h2--bandsite-logo-mobile {
   main .main__article--container {
     padding: 0;
   }
-  main .main__article--container .main__article--h2 {
+  main .main__article--container .main__article--h1 {
     font-family: "Avenir-Font";
     font-weight: 600;
     font-size: 3.75rem;
@@ -514,7 +516,7 @@ footer .footer__h2--bandsite-logo-mobile {
 }
 @media only screen and (min-width: 1280px) {
   /*  ----------------------- MAIN --------------------------- */
-  main .main__article--container .main__article--h2 {
+  main .main__article--container .main__article--h1 {
     padding: 16px 96px;
   }
   main .main__section--aboutmusicians-container {
