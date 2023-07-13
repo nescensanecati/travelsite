@@ -274,6 +274,136 @@ main article h2 {
 main .main__section--photogallery-container {
   background-color: #FAFAFA;
 }
+main .main__section-comments-container h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+main .main__section-comments-container #main__form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-bottom: 8px;
+}
+main .main__section-comments-container #main__form div {
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+}
+main .main__section-comments-container #main__form div section * {
+  margin: 16px 8px 16px 8px;
+  display: block;
+}
+main .main__section-comments-container #main__form div section * input {
+  margin: 16px 0;
+  width: 100%;
+}
+main .main__section-comments-container #main__form div section .main__form--image-format {
+  background: url("../assets/images/mohan-muruge.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+main .main__section-comments-container #main__form div .main_section--comment-container {
+  width: 100%;
+  margin-left: 8px;
+}
+main .main__section-comments-container #main__form div .main_section--comment-container * {
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+main .main__section-comments-container #main__form div .main_section--comment-container textarea {
+  width: 100%;
+  height: 30%;
+  border: 1px #E1E1E1 solid;
+}
+main .main__section-comments-container #main__form div .main_section--comment-container input,
+main .main__section-comments-container #main__form div .main_section--comment-container textarea {
+  border-radius: 4px;
+  border: 1px #E1E1E1 solid;
+  padding: 8px;
+  font-family: "Avenir-Font";
+}
+main .main__section-comments-container #main__form div .main_section--comment-container input:focus,
+main .main__section-comments-container #main__form div .main_section--comment-container textarea:focus {
+  border: 1px #000000 solid;
+  outline: none !important;
+}
+main .main__section-comments-container #main__form div .main_section--comment-container input:invalid,
+main .main__section-comments-container #main__form div .main_section--comment-container textarea:invalid {
+  border: 1px red solid !important;
+}
+main .main__section-comments-container #main__form div .main_section--comment-container label {
+  color: #AFAFAF;
+  font-family: "Avenir-Font";
+  font-weight: 600;
+  font-size: 10px;
+}
+main .main__section-comments-container #main__form div .main_section--comment-container button {
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border-style: none;
+}
+main .main__section-comments-container #main__form div .main_section--comment-container button:hover {
+  background-color: #000000;
+}
+main .main__section-comments-container .solid {
+  border-top: 1px solid #E1E1E1;
+  width: 90%;
+  margin: auto;
+}
+main #main__article--comments-container {
+  padding: 8px 16px;
+}
+main #main__article--comments-container .main__div--blank-logo {
+  background-color: #E1E1E1;
+  background-size: cover;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 8px 16px;
+  margin: 0 8px 16px 8px;
+}
+main #main__article--comments-container article {
+  display: flex;
+  margin-top: 8px;
+}
+main #main__article--comments-container article div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+main #main__article--comments-container article div * {
+  padding: 8px;
+  margin: 0;
+  line-height: 0;
+}
+main #main__article--comments-container article div h3 {
+  width: 50%;
+  text-align: left;
+  color: #323232;
+  font-size: 0.875rem;
+}
+main #main__article--comments-container article div h4 {
+  width: 50%;
+  text-align: right;
+  color: #AFAFAF;
+  font-weight: 400;
+  font-size: 0.625rem;
+}
+main #main__article--comments-container article div p {
+  width: 100%;
+  line-height: 1;
+  color: #323232;
+  font-size: 0.75rem;
+}
 
 /*  ----------------------- FOOTER --------------------------- */
 footer {

@@ -204,6 +204,171 @@ main {
         background-color: $secondaryColorDarkAlabaster;
     }
 
+    .main__section-comments-container {
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        #main__form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+            margin-bottom: $defaultPadding;
+
+            div {
+                padding: $defaultPadding $doubleDefaultPadding;
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                width: 100%;
+
+                & section {
+
+                    * {
+                        margin: $doubleDefaultPadding $defaultPadding $doubleDefaultPadding $defaultPadding;
+                        display: block;
+                    }
+
+                    * input {
+                        margin: $doubleDefaultPadding 0;
+                        width: 100%;
+                    }
+
+                    & .main__form--image-format {
+                        background: url('../assets/images/mohan-muruge.jpg');
+                        background-size: cover;
+                        border-radius: 50%;
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+
+                .main_section--comment-container {
+                    width: 100%;
+                    margin-left: $defaultPadding;
+
+                    * {
+                        padding-right: 0;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        height: 30%;
+                        border: 1px $secondaryColorDarkMercury solid;
+                    }
+
+                    input,
+                    textarea {
+                        border-radius: 4px;
+                        border: 1px $secondaryColorDarkMercury solid;
+                        padding: $defaultPadding;
+                        font-family: $defaultFont;
+
+
+                        &:focus {
+                            border: 1px $secondaryColorDarkBlack solid;
+                            outline: none !important;
+                        }
+
+                        &:invalid {
+                            border: 1px red solid !important;
+                        }
+
+
+                    }
+
+                    label {
+                        color: $primaryColorSilver;
+                        font-family: $defaultFont;
+                        font-weight: $demiWeight;
+                        font-size: 10px;
+                    }
+
+                    button {
+                        background-color: $primaryColorBlack;
+                        color: $primaryColorWhite;
+                        border-radius: 4px;
+                        padding: $defaultPadding $doubleDefaultPadding;
+                        border-style: none;
+
+                        &:hover {
+                            background-color: $secondaryColorDarkBlack;
+                        }
+                    }
+
+
+                }
+
+
+            }
+        }
+
+        .solid {
+            border-top: 1px solid $secondaryColorDarkMercury;
+            width: 90%;
+            margin: auto;
+        }
+
+    }
+
+    #main__article--comments-container {
+        padding: $defaultPadding $doubleDefaultPadding;
+
+        .main__div--blank-logo{
+            background-color: $secondaryColorDarkMercury;
+            background-size: cover;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            padding: 8px 16px;
+            margin: 0 8px 16px 8px;
+        }
+
+        article {
+            display: flex;
+            margin-top: $defaultPadding;
+
+
+            div {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+
+                *{
+                    padding: 8px;
+                    margin: 0;
+                    line-height: 0;
+                }
+                
+                h3 {
+                    width: 50%;
+                    text-align: left;
+                    color: $primaryColorBlack;
+                    font-size: .875rem;
+                }
+                h4{
+                    width: 50%;
+                    text-align: right;
+                    color: $primaryColorSilver;
+                    font-weight: $regularWeight;
+                    font-size: .625rem;
+                }
+                p {
+                    width: 100%;
+                    line-height: 1;
+                    color: $primaryColorBlack;
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+
 }
 
 //end main

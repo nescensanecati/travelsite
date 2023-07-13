@@ -11,6 +11,7 @@
     <!-- STYLE SHEETS -->
     <link href="styles/bio.css" rel="stylesheet" />
     <title>BANDSITE</title>
+    <script src="./scripts/index-page.js" defer></script>
   </head>
   <body>
     <!-- PAGE HEADER GOES HERE -->
@@ -22,7 +23,9 @@
       <!-- PAGE NAVIGATION GOES HERE -->
       <nav>
         <ul>
-          <li class="header__nav--active"><a href="index.html">Biography</a></li>
+          <li class="header__nav--active">
+            <a href="index.html">Biography</a>
+          </li>
           <li><a href="./pages/shows.html">Shows</a></li>
         </ul>
       </nav>
@@ -116,6 +119,48 @@
           ><img src="./assets/images/photo-gallery-9.jpg" alt="Photo Gallery"
         /></picture>
       </section>
+      <section class="main__section-comments-container">
+        <h2>Join the Conversation</h2>
+        <form id="main__form">
+          <div>
+            <section class="main_section--icon-container">
+              <div class="main__form--image-format"></div>
+            </section>
+            <section class="main_section--comment-container">
+              <label>
+                NAME
+                <input
+                  type="text"
+                  name="commentorName"
+                  placeholder="Enter your name"
+                />
+              </label>
+              <label for="main__textarea--commentInput">COMMENT</label>
+              <textarea
+                name="commentInput"
+                id="main__textarea--commentInput"
+                placeholder="Add a new comment"
+              ></textarea>
+              <button type="submit" class="main__button--submit-comment">
+                COMMENT
+              </button>
+            </section>
+          </div>
+        </form>
+        <hr class="solid" />
+        <section id="main__article--comments-container">
+          <article>
+            <div class="main__div--blank-logo"></div>
+              <div>
+                <h3>Connor Walton</h3>
+                <h4>02/17/2021</h4>
+                <p>This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
+              </div>
+          </article>
+          <article></article>
+          <article></article>
+        </section>
+      </section>
     </main>
 
     <!-- PAGE FOOTER GOES HERE -->
@@ -159,7 +204,9 @@
             <p>New York, NY 10012, USA</p>
           </article>
           <article>
-            <p><a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></p>
+            <p>
+              <a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
+            </p>
           </article>
         </section>
         <section>
@@ -172,7 +219,11 @@
             <p>US / South America / Japan</p>
           </article>
           <article>
-            <p><a href="mailto:pearl.gregg@limitlessag.com">pearl.gregg@limitlessag.com</a></p>
+            <p>
+              <a href="mailto:pearl.gregg@limitlessag.com"
+                >pearl.gregg@limitlessag.com</a
+              >
+            </p>
           </article>
         </section>
         <section>
@@ -185,12 +236,18 @@
             <p>UK / EU / AU</p>
           </article>
           <article>
-            <p><a href="mailto:cwhyte@archentertainment.com">cwhyte@archentertainment.com</a></p>
+            <p>
+              <a href="mailto:cwhyte@archentertainment.com"
+                >cwhyte@archentertainment.com</a
+              >
+            </p>
           </article>
         </section>
       </section>
       <article class="footer__h2--bandsite-logo-mobile-container">
-        <a href="index.html"><h2 class="footer__h2--bandsite-logo-mobile">BANDSITE</h2></a>
+        <a href="index.html"
+          ><h2 class="footer__h2--bandsite-logo-mobile">BANDSITE</h2></a
+        >
       </article>
       <article>
         <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
