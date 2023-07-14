@@ -147,115 +147,104 @@ main {
             & div {
                 padding: 0;
                 margin: 0 0 (2*$defaultPadding) 0;
-            }}
-
-            h2 {
-                padding: $defaultPadding 0;
-                width: 100%;
-                font-family: $defaultFont;
-                font-weight: $demiWeight;
-                font-size: 2.25rem;
-                line-height: 2.75rem;
-                text-align: left;
-            }
-
-            #main__article--comments-container {
-                margin: (3*$defaultPadding) 0 0 0;
-                padding: 0;
             }
         }
-        
-        .main__section--shows-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-evenly;
-            padding: 0 (4*$defaultPadding) $doubleDefaultPadding (6*$defaultPadding);
-        
-            div {
-                width: 20%;
-            }
+
+        h2 {
+            padding: $defaultPadding 0;
+            width: 100%;
+            font-family: $defaultFont;
+            font-weight: $demiWeight;
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            text-align: left;
+        }
+
+        #main__article--comments-container {
+            margin: (3*$defaultPadding) 0 0 0;
+            padding: 0;
         }
     }
+}
 
-    //end main
+//end main
 
-    /*  ----------------------- FOOTER --------------------------- */
-    footer * {
-        padding: 0;
-        margin: 0;
+/*  ----------------------- FOOTER --------------------------- */
+footer * {
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+    padding: 0 (2*$defaultPadding);
+
+
+    section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         position: relative;
+        justify-content: left;
 
+
+        h2 {
+            width: 30%;
+            line-height: (3*$defaultPadding);
+            line-height: 1;
+        }
     }
 
-    footer {
-        padding: 0;
-        margin: 0;
-        padding: 0 (2*$defaultPadding);
 
+    .footer__section--information-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
 
         section {
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-direction: column;
+            width: 30%;
+        }
+
+
+        article {
+            width: 100%;
             position: relative;
-            justify-content: left;
-
-
-            h2 {
-                width: 30%;
-                line-height: (3*$defaultPadding);
-                line-height: 1;
-            }
         }
-
-
-        .footer__section--information-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: left;
-
-            section {
-                display: flex;
-                flex-direction: column;
-                width: 30%;
-            }
-
-
-            article {
-                width: 100%;
-                position: relative;
-            }
-        }
-
-        .footer__h2--bandsite-logo-not-mobile-container {
-            position: relative;
-            width: 70%;
-            visibility: unset;
-        }
-
-        .footer__h2--bandsite-logo-not-mobile {
-            position: absolute;
-            top: 0;
-            right: 0;
-            color: white;
-            text-align: left;
-            visibility: unset;
-            line-height: 2;
-            font-weight: $regularWeight;
-        }
-
-        .footer__h2--bandsite-logo-mobile,
-        .footer__h2--bandsite-logo-mobile-container {
-            visibility: hidden;
-            height: 0;
-            width: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-
     }
 
-    //end footer
+    .footer__h2--bandsite-logo-not-mobile-container {
+        position: relative;
+        width: 70%;
+        visibility: unset;
+    }
+
+    .footer__h2--bandsite-logo-not-mobile {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+        text-align: left;
+        visibility: unset;
+        line-height: 2;
+        font-weight: $regularWeight;
+    }
+
+    .footer__h2--bandsite-logo-mobile,
+    .footer__h2--bandsite-logo-mobile-container {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+
+}
+
+//end footer

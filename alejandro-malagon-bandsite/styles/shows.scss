@@ -25,7 +25,8 @@ main {
         }
 
 
-        p, .main__article--h1{
+        p,
+        .main__article--h1 {
             width: 100%;
             color: $primaryColorWhite;
             position: relative;
@@ -62,16 +63,39 @@ main {
         }
     }
 
-    .main__section--shows-container {
-        display: flex;
-        flex-direction: row;
-        padding: $defaultPadding $doubleDefaultPadding $doubleDefaultPadding $doubleDefaultPadding;
+    .main__shows--container {
+        padding: (3*$defaultPadding) (6*$defaultPadding);
 
         article {
+            h2{
+                padding: (3*$defaultPadding) 0%;
+            }
+        }
+        .main__section--shows-container {
             display: flex;
             flex-direction: column;
+            width: 100%;
+            padding: 0;
+
+            * {
+                padding: $defaultPadding 0;
+            }
+
+            article {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                p,
+                button {
+                    width: 25%;
+                    padding: $defaultPadding 0;
+                    margin: 0;
+                }
+            }
         }
     }
+
 }
 
 @media only screen and (min-width: 1280px) {
@@ -87,6 +111,24 @@ main {
 
             p {
                 padding-left: 6rem;
+            }
+        }
+
+        .main__shows--container {
+            display: flex;
+            flex-direction: row;
+            padding: (3*$defaultPadding) (6*$doubleDefaultPadding);
+        
+
+            h2 {
+                padding: $defaultPadding;
+                margin: 0;
+            }
+
+            .main__section--shows-container {
+                width: 100%;
+                margin-left: (3*$doubleDefaultPadding);
+
             }
         }
     }

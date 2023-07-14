@@ -648,16 +648,6 @@ footer .footer__h2--bandsite-logo-mobile {
     margin: 1.5rem 0 0 0;
     padding: 0;
   }
-  main .main__section--shows-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    padding: 0 2rem 1rem 3rem;
-  }
-  main .main__section--shows-container div {
-    width: 20%;
-  }
   /*  ----------------------- FOOTER --------------------------- */
   footer * {
     padding: 0;
