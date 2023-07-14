@@ -17,7 +17,7 @@ src: https://app.pluralsight.com/library/courses/responsive-web-design-media-que
 body {
     font-family: $defaultFont;
     font-weight: $regularWeight;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /*  ----------------------- HEADER --------------------------- */
@@ -32,7 +32,7 @@ header {
     img {
         height: 20px;
         width: 120px;
-        margin: (3*$defaultPadding) 0 (3*$defaultPadding) 0;
+        margin: (2*$defaultPadding) 0 (2*$defaultPadding) 0;
     }
 }
 
@@ -102,7 +102,7 @@ main {
     h3,
     h4 {
         padding: $defaultPadding $doubleDefaultPadding;
-        margin: $doubleDefaultPadding 0;
+        margin: $defaultPadding 0;
         font-weight: $demiWeight;
         color: $primaryColorBlack;
     }
@@ -183,6 +183,8 @@ main {
             text-align: left;
             padding-left: $doubleDefaultPadding;
             z-index: 10;
+            font-size: 1.5rem;
+            line-height: 1;
         }
 
         #main__img--hero-overlay {
@@ -195,7 +197,7 @@ main {
 
     article {
         h2 {
-            padding: (3*$defaultPadding) $doubleDefaultPadding $doubleDefaultPadding $doubleDefaultPadding;
+            padding: $defaultPadding $doubleDefaultPadding $doubleDefaultPadding $doubleDefaultPadding;
             margin-bottom: 0;
             width: 100%;
         }
@@ -262,7 +264,7 @@ main {
                         width: 100%;
                         height: 30%;
                         border: 1px $secondaryColorDarkMercury solid;
-                        resize:none;
+                        resize: none;
                     }
 
                     input,
@@ -290,7 +292,7 @@ main {
                         color: $primaryColorSilver;
                         font-family: $defaultFont;
                         font-weight: $demiWeight;
-                        font-size: 10px;
+                        font-size: .625rem;
                     }
 
                     button {
@@ -323,14 +325,14 @@ main {
     #main__article--comments-container {
         padding: $defaultPadding $doubleDefaultPadding;
 
-        .main__div--blank-logo{
+        .main__div--blank-logo {
             background-color: $secondaryColorDarkMercury;
             background-size: cover;
             border-radius: 50%;
             width: 36px;
             height: 36px;
-            padding: 8px 16px;
-            margin: 0 8px 16px 8px;
+            padding: .5rem 1rem;
+            margin: 0 .5rem 1rem .5rem;
         }
 
         article {
@@ -344,32 +346,83 @@ main {
                 flex-wrap: wrap;
                 width: 100%;
 
-                *{
-                    padding: 8px;
+                * {
+                    padding: .5rem;
                     margin: 0;
                     line-height: 0;
                 }
-                
+
                 h3 {
                     width: 70%;
                     text-align: left;
                     color: $primaryColorBlack;
                     font-size: .75rem;
                 }
-                h4{
+
+                h4 {
                     width: 30%;
                     text-align: right;
                     color: $primaryColorSilver;
                     font-weight: $regularWeight;
                     font-size: .625rem;
                 }
+
                 p {
                     width: 100%;
                     line-height: 1;
                     color: $primaryColorBlack;
-                    font-size: .75rem;
+                    font-size: .85rem;
                 }
             }
+        }
+    }
+
+    .main__section--shows-container {
+        display: flex;
+        flex-direction: column;
+        padding: $defaultPadding $doubleDefaultPadding $doubleDefaultPadding $doubleDefaultPadding;
+
+        & h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        & div {
+            width: 100%;
+        }
+
+        & p {
+            margin: $defaultPadding 0;
+            padding: 0;
+        }
+
+        & button {
+            background-color: $primaryColorBlack;
+            color: $primaryColorWhite;
+            border-radius: 4px;
+            padding: $defaultPadding $doubleDefaultPadding;
+            margin: $doubleDefaultPadding 0;
+            border-style: none;
+            width: 100%;
+
+            &:hover {
+                background-color: $secondaryColorDarkBlack;
+            }
+        }
+
+        .main__p--title-format {
+            color: $primaryColorSilver;
+            font-weight: $demiWeight;
+        }
+
+        .main__p--info-format {
+            color: $primaryColorBlack;
+            font-weight: $regularWeight;
+            font-size: .8125rem;
+        }
+
+        .main__p--demi {
+            font-weight: $demiWeight;
         }
     }
 

@@ -164,6 +164,18 @@ main {
                 padding: 0;
             }
         }
+        
+        .main__section--shows-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding: 0 (4*$defaultPadding) $doubleDefaultPadding (6*$defaultPadding);
+        
+            div {
+                width: 20%;
+            }
+        }
     }
 
     //end main

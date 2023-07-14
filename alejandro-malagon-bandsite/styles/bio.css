@@ -129,7 +129,7 @@ src: https://app.pluralsight.com/library/courses/responsive-web-design-media-que
 body {
   font-family: "Avenir-Font";
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 /*  ----------------------- HEADER --------------------------- */
@@ -143,7 +143,7 @@ header a {
 header img {
   height: 20px;
   width: 120px;
-  margin: 24px 0 24px 0;
+  margin: 1rem 0 1rem 0;
 }
 
 /*  ----------------------- NAVIGATION --------------------------- */
@@ -156,7 +156,7 @@ nav ul {
 }
 nav ul li {
   width: 50%;
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 nav ul li a {
   text-align: center;
@@ -199,8 +199,8 @@ main h1,
 main h2,
 main h3,
 main h4 {
-  padding: 8px 16px;
-  margin: 16px 0;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
   font-weight: 600;
   color: #323232;
 }
@@ -224,7 +224,7 @@ main p {
 }
 main img {
   width: 100%;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
 }
 .main__section--photogallery-container main img {
   filter: grayscale(0%);
@@ -237,11 +237,11 @@ main .main__section--photogallery-container img:hover {
   -moz-filter: grayscale(100%);
 }
 main .main__article--phrases-container {
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 main .main__article--phrases-container * {
   padding: 0;
-  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
   margin: 0;
 }
 main .main__article--container {
@@ -261,15 +261,17 @@ main .main__article--container .main__article--h1 {
   transform: translate(0%, -50%);
   width: 100%;
   text-align: left;
-  padding-left: 16px;
+  padding-left: 1rem;
   z-index: 10;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 main .main__article--container #main__img--hero-overlay {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
 }
 main article h2 {
-  padding: 24px 16px 16px 16px;
+  padding: 0.5rem 1rem 1rem 1rem;
   margin-bottom: 0;
   width: 100%;
 }
@@ -285,21 +287,21 @@ main .main__section-comments-container #main__form {
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 main .main__section-comments-container #main__form div {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: left;
   width: 100%;
 }
 main .main__section-comments-container #main__form div section * {
-  margin: 16px 8px 16px 8px;
+  margin: 1rem 0.5rem 1rem 0.5rem;
   display: block;
 }
 main .main__section-comments-container #main__form div section * input {
-  margin: 16px 0;
+  margin: 1rem 0;
   width: 100%;
 }
 main .main__section-comments-container #main__form div section .main__form--image-format {
@@ -311,7 +313,7 @@ main .main__section-comments-container #main__form div section .main__form--imag
 }
 main .main__section-comments-container #main__form div .main_section--comment-container {
   width: 100%;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 main .main__section-comments-container #main__form div .main_section--comment-container * {
   padding-right: 0;
@@ -328,7 +330,7 @@ main .main__section-comments-container #main__form div .main_section--comment-co
 main .main__section-comments-container #main__form div .main_section--comment-container textarea {
   border-radius: 4px;
   border: 1px #E1E1E1 solid;
-  padding: 8px;
+  padding: 0.5rem;
   font-family: "Avenir-Font";
   background-color: #FAFAFA;
 }
@@ -345,13 +347,13 @@ main .main__section-comments-container #main__form div .main_section--comment-co
   color: #AFAFAF;
   font-family: "Avenir-Font";
   font-weight: 600;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 main .main__section-comments-container #main__form div .main_section--comment-container button {
   background-color: #323232;
   color: #FFFFFF;
   border-radius: 4px;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   border-style: none;
 }
 main .main__section-comments-container #main__form div .main_section--comment-container button:hover {
@@ -363,7 +365,7 @@ main .main__section-comments-container .solid {
   margin: auto;
 }
 main #main__article--comments-container {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
 }
 main #main__article--comments-container .main__div--blank-logo {
   background-color: #E1E1E1;
@@ -371,12 +373,12 @@ main #main__article--comments-container .main__div--blank-logo {
   border-radius: 50%;
   width: 36px;
   height: 36px;
-  padding: 8px 16px;
-  margin: 0 8px 16px 8px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem 1rem 0.5rem;
 }
 main #main__article--comments-container article {
   display: flex;
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 main #main__article--comments-container article div {
   display: flex;
@@ -385,7 +387,7 @@ main #main__article--comments-container article div {
   width: 100%;
 }
 main #main__article--comments-container article div * {
-  padding: 8px;
+  padding: 0.5rem;
   margin: 0;
   line-height: 0;
 }
@@ -406,19 +408,59 @@ main #main__article--comments-container article div p {
   width: 100%;
   line-height: 1;
   color: #323232;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+}
+main .main__section--shows-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+main .main__section--shows-container h2 {
+  margin: 0;
+  padding: 0;
+}
+main .main__section--shows-container div {
+  width: 100%;
+}
+main .main__section--shows-container p {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+main .main__section--shows-container button {
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  border-style: none;
+  width: 100%;
+}
+main .main__section--shows-container button:hover {
+  background-color: #000000;
+}
+main .main__section--shows-container .main__p--title-format {
+  color: #AFAFAF;
+  font-weight: 600;
+}
+main .main__section--shows-container .main__p--info-format {
+  color: #323232;
+  font-weight: 400;
+  font-size: 0.8125rem;
+}
+main .main__section--shows-container .main__p--demi {
+  font-weight: 600;
 }
 
 /*  ----------------------- FOOTER --------------------------- */
 footer {
   background-color: #323232;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 footer a {
   text-decoration: none;
 }
 footer article {
-  padding: 8px 0;
+  padding: 0.5rem 0;
 }
 footer h1,
 footer h2,
@@ -429,7 +471,7 @@ footer a {
   color: white;
 }
 footer h2 {
-  padding: 8px 0;
+  padding: 0.5rem 0;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
@@ -450,7 +492,7 @@ footer .footer__section--logos-container {
   flex-direction: row;
 }
 footer img {
-  padding: 8px 8px 8px 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
   text-align: left;
 }
 footer .footer__h2--bandsite-logo-mobile {
@@ -459,7 +501,7 @@ footer .footer__h2--bandsite-logo-mobile {
   right: 0;
   color: white;
   text-align: center;
-  padding-top: 48px;
+  padding-top: 3rem;
 }
 footer .footer__h2--bandsite-logo-not-mobile,
 footer .footer__h2--bandsite-logo-not-mobile-container {
@@ -481,10 +523,10 @@ footer .footer__h2--bandsite-logo-mobile {
     flex-direction: row;
   }
   header h1 {
-    padding: 16px;
+    padding: 1rem;
   }
   header img {
-    margin: 24px;
+    margin: 1.5rem;
   }
   /*  ----------------------- NAVIGATION --------------------------- */
   nav {
@@ -494,21 +536,21 @@ footer .footer__h2--bandsite-logo-mobile {
     height: 100%;
   }
   nav ul li {
-    padding: 20px 0;
+    padding: 1.25rem 0;
     line-height: 0.21vh;
   }
   /*  ----------------------- MAIN --------------------------- */
   main .main__section--aboutmusicians-container {
-    padding: 0 48px;
+    padding: 0 3rem;
   }
   main .main__section--aboutmusicians-container .main__article--phrases-container {
     padding: 0;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
   main .main__section--aboutmusicians-container img,
   main .main__section--aboutmusicians-container .main__article--phrases-container,
   main .main__section--aboutmusicians-container .main__article--paragraph-container {
-    padding: 16px 48px;
+    padding: 1rem 3rem;
   }
   main .main__section--aboutmusicians-container h2 {
     font-family: "Avenir-Font";
@@ -526,7 +568,7 @@ footer .footer__h2--bandsite-logo-mobile {
   }
   main .main__section--aboutmusicians-container .main__h3--author-format {
     font-weight: 400;
-    padding: 8px;
+    padding: 0.5rem;
   }
   main .main__section--aboutmusicians-container .main__article--paragraph-container {
     display: flex;
@@ -559,17 +601,17 @@ footer .footer__h2--bandsite-logo-mobile {
     font-weight: 600;
     font-size: 3.75rem;
     line-height: 4.25rem;
-    padding-left: 48px;
+    padding-left: 3rem;
   }
   main .main__section--photogallery-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 32px 16px 48px;
+    padding: 0 2rem 1rem 3rem;
   }
   main .main__section--photogallery-container h2 {
-    padding: 8px 0;
+    padding: 0.5rem 0;
     width: 100%;
     font-family: "Avenir-Font";
     font-weight: 600;
@@ -579,7 +621,7 @@ footer .footer__h2--bandsite-logo-mobile {
   }
   main .main__section--photogallery-container picture {
     padding: 0;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     width: 30%;
   }
   main .main__section--photogallery-container img {
@@ -587,14 +629,14 @@ footer .footer__h2--bandsite-logo-mobile {
     padding: 0;
   }
   main .main__section-comments-container {
-    padding: 0 32px 16px 48px;
+    padding: 0 2rem 1rem 3rem;
   }
   main .main__section-comments-container #main__form div {
     padding: 0;
-    margin: 0 0 16px 0;
+    margin: 0 0 1rem 0;
   }
   main .main__section-comments-container h2 {
-    padding: 8px 0;
+    padding: 0.5rem 0;
     width: 100%;
     font-family: "Avenir-Font";
     font-weight: 600;
@@ -603,8 +645,18 @@ footer .footer__h2--bandsite-logo-mobile {
     text-align: left;
   }
   main .main__section-comments-container #main__article--comments-container {
-    margin: 24px 0 0 0;
+    margin: 1.5rem 0 0 0;
     padding: 0;
+  }
+  main .main__section--shows-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding: 0 2rem 1rem 3rem;
+  }
+  main .main__section--shows-container div {
+    width: 20%;
   }
   /*  ----------------------- FOOTER --------------------------- */
   footer * {
@@ -615,7 +667,7 @@ footer .footer__h2--bandsite-logo-mobile {
   footer {
     padding: 0;
     margin: 0;
-    padding: 0 16px;
+    padding: 0 1rem;
   }
   footer section {
     display: flex;
@@ -626,7 +678,7 @@ footer .footer__h2--bandsite-logo-mobile {
   }
   footer section h2 {
     width: 30%;
-    line-height: 24px;
+    line-height: 1.5rem;
     line-height: 1;
   }
   footer .footer__section--information-container {
@@ -671,34 +723,34 @@ footer .footer__h2--bandsite-logo-mobile {
 @media only screen and (min-width: 1280px) {
   /*  ----------------------- MAIN --------------------------- */
   main .main__article--container .main__article--h1 {
-    padding: 16px 96px;
+    padding: 1rem 6rem;
   }
   main .main__section--aboutmusicians-container {
-    padding: 16px 96px;
+    padding: 1rem 6rem;
   }
   main .main__section--aboutmusicians-container .main__article--phrases-container,
   main .main__section--aboutmusicians-container .main__article--paragraph-container {
-    padding: 0 48px;
+    padding: 0 3rem;
   }
   main .main__section--photogallery-container {
-    padding: 16px 96px;
+    padding: 1rem 6rem;
   }
   main .main__section-comments-container {
-    padding: 16px 96px;
+    padding: 1rem 6rem;
   }
   main .main__section-comments-container #main__form {
     width: 40%;
     margin: auto;
-    margin-top: 24px;
+    margin-top: 1.5rem;
   }
   main .main__section-comments-container #main__article--comments-container {
     width: 40%;
     margin: auto;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   /*  ----------------------- FOOTER --------------------------- */
   footer {
-    padding: 0 96px;
+    padding: 0 6rem;
   }
 }/*# sourceMappingURL=bio.css.map */
