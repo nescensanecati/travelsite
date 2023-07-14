@@ -4,10 +4,91 @@
 
 @import "./partials/mobile_default";
 
+
+
+main {
+    .main__article--container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        background: url('../assets/images/photo-gallery-3.jpg');
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: darken;
+        background-size: cover;
+
+        * {
+            margin: (4*$defaultPadding) 0 0 0;
+            padding: 0;
+            padding: 0 $doubleDefaultPadding;
+            line-height: 1;
+        }
+
+
+        p, .main__article--h1{
+            width: 100%;
+            color: $primaryColorWhite;
+            position: relative;
+            transform: none;
+        }
+
+        p {
+            font-weight: $regularWeight;
+            font-size: 1rem;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            margin-bottom: $doubleDefaultPadding;
+        }
+    }
+}
+
 @media only screen and (min-width: 768px) {
     @import "./partials/tablet";
+
+    main {
+
+        .main__article--container {
+            iframe {
+                margin-bottom: $doubleDefaultPadding;
+                padding: 0 3rem;
+            }
+
+            p {
+                padding-left: 3rem;
+            }
+        }
+    }
+
+    .main__section--shows-container {
+        display: flex;
+        flex-direction: row;
+        padding: $defaultPadding $doubleDefaultPadding $doubleDefaultPadding $doubleDefaultPadding;
+
+        article {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 @media only screen and (min-width: 1280px) {
     @import "./partials/desktop";
+
+    main {
+
+        .main__article--container {
+            iframe {
+                margin-bottom: $doubleDefaultPadding;
+                padding: 0 6rem;
+            }
+
+            p {
+                padding-left: 6rem;
+            }
+        }
+    }
+
 }

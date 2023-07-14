@@ -516,6 +516,37 @@ footer .footer__h2--bandsite-logo-mobile {
   visibility: visible;
 }
 
+main .main__article--container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: url("../assets/images/photo-gallery-3.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+}
+main .main__article--container * {
+  margin: 2rem 0 0 0;
+  padding: 0;
+  padding: 0 1rem;
+  line-height: 1;
+}
+main .main__article--container p, main .main__article--container .main__article--h1 {
+  width: 100%;
+  color: #FFFFFF;
+  position: relative;
+  transform: none;
+}
+main .main__article--container p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+main .main__article--container iframe {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+
 @media only screen and (min-width: 768px) {
   /*  ----------------------- HEADER --------------------------- */
   header {
@@ -719,6 +750,22 @@ footer .footer__h2--bandsite-logo-mobile {
     margin: 0;
     padding: 0;
   }
+  main .main__article--container iframe {
+    margin-bottom: 1rem;
+    padding: 0 3rem;
+  }
+  main .main__article--container p {
+    padding-left: 3rem;
+  }
+  .main__section--shows-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+  .main__section--shows-container article {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media only screen and (min-width: 1280px) {
   /*  ----------------------- MAIN --------------------------- */
@@ -752,5 +799,12 @@ footer .footer__h2--bandsite-logo-mobile {
   /*  ----------------------- FOOTER --------------------------- */
   footer {
     padding: 0 6rem;
+  }
+  main .main__article--container iframe {
+    margin-bottom: 1rem;
+    padding: 0 6rem;
+  }
+  main .main__article--container p {
+    padding-left: 6rem;
   }
 }/*# sourceMappingURL=shows.css.map */
