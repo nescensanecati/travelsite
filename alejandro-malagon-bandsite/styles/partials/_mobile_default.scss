@@ -68,6 +68,7 @@ nav {
                 font-weight: $boldWeight;
                 padding: 0;
                 line-height: 2rem;
+                color: $primaryColorWhite;
             }
 
             &:hover {
@@ -80,6 +81,7 @@ nav {
         text-decoration: none;
         color: $primaryColorWhite;
         width: 100%;
+        color: $secondaryColorDarkMercury;
     }
 
     li:hover {
@@ -260,6 +262,7 @@ main {
                         width: 100%;
                         height: 30%;
                         border: 1px $secondaryColorDarkMercury solid;
+                        resize:none;
                     }
 
                     input,
@@ -268,6 +271,7 @@ main {
                         border: 1px $secondaryColorDarkMercury solid;
                         padding: $defaultPadding;
                         font-family: $defaultFont;
+                        background-color: $secondaryColorDarkAlabaster;
 
 
                         &:focus {
@@ -347,13 +351,13 @@ main {
                 }
                 
                 h3 {
-                    width: 50%;
+                    width: 70%;
                     text-align: left;
                     color: $primaryColorBlack;
-                    font-size: .875rem;
+                    font-size: .75rem;
                 }
                 h4{
-                    width: 50%;
+                    width: 30%;
                     text-align: right;
                     color: $primaryColorSilver;
                     font-weight: $regularWeight;

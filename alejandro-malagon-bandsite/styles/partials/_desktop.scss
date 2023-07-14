@@ -19,6 +19,24 @@ main {
     .main__section--photogallery-container {
         padding: $doubleDefaultPadding (12*$defaultPadding);
     }
+
+    .main__section-comments-container {
+        padding: $doubleDefaultPadding (12*$defaultPadding);
+
+        #main__form{
+            width: 40%;
+            margin: auto;
+            margin-top: (3*$defaultPadding);
+        }
+
+        #main__article--comments-container {
+            width: 40%;
+            margin: auto;
+            margin-top: (3*$defaultPadding);
+            margin-bottom: (3*$defaultPadding);
+        }
+    }
+    
 }
 
 //end main

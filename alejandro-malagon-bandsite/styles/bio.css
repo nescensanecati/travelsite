@@ -174,6 +174,7 @@ nav ul .header__nav--active a {
   font-weight: 700;
   padding: 0;
   line-height: 2rem;
+  color: #FFFFFF;
 }
 nav ul .header__nav--active:hover {
   background-color: #AFAFAF;
@@ -182,6 +183,7 @@ nav a {
   text-decoration: none;
   color: #FFFFFF;
   width: 100%;
+  color: #E1E1E1;
 }
 nav li:hover {
   background-color: #AFAFAF;
@@ -320,6 +322,7 @@ main .main__section-comments-container #main__form div .main_section--comment-co
   width: 100%;
   height: 30%;
   border: 1px #E1E1E1 solid;
+  resize: none;
 }
 main .main__section-comments-container #main__form div .main_section--comment-container input,
 main .main__section-comments-container #main__form div .main_section--comment-container textarea {
@@ -327,6 +330,7 @@ main .main__section-comments-container #main__form div .main_section--comment-co
   border: 1px #E1E1E1 solid;
   padding: 8px;
   font-family: "Avenir-Font";
+  background-color: #FAFAFA;
 }
 main .main__section-comments-container #main__form div .main_section--comment-container input:focus,
 main .main__section-comments-container #main__form div .main_section--comment-container textarea:focus {
@@ -386,13 +390,13 @@ main #main__article--comments-container article div * {
   line-height: 0;
 }
 main #main__article--comments-container article div h3 {
-  width: 50%;
+  width: 70%;
   text-align: left;
   color: #323232;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 main #main__article--comments-container article div h4 {
-  width: 50%;
+  width: 30%;
   text-align: right;
   color: #AFAFAF;
   font-weight: 400;
@@ -582,6 +586,26 @@ footer .footer__h2--bandsite-logo-mobile {
     margin: 0;
     padding: 0;
   }
+  main .main__section-comments-container {
+    padding: 0 32px 16px 48px;
+  }
+  main .main__section-comments-container #main__form div {
+    padding: 0;
+    margin: 0 0 16px 0;
+  }
+  main .main__section-comments-container h2 {
+    padding: 8px 0;
+    width: 100%;
+    font-family: "Avenir-Font";
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    text-align: left;
+  }
+  main .main__section-comments-container #main__article--comments-container {
+    margin: 24px 0 0 0;
+    padding: 0;
+  }
   /*  ----------------------- FOOTER --------------------------- */
   footer * {
     padding: 0;
@@ -658,6 +682,20 @@ footer .footer__h2--bandsite-logo-mobile {
   }
   main .main__section--photogallery-container {
     padding: 16px 96px;
+  }
+  main .main__section-comments-container {
+    padding: 16px 96px;
+  }
+  main .main__section-comments-container #main__form {
+    width: 40%;
+    margin: auto;
+    margin-top: 24px;
+  }
+  main .main__section-comments-container #main__article--comments-container {
+    width: 40%;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
   /*  ----------------------- FOOTER --------------------------- */
   footer {

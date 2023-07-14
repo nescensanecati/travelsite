@@ -59,25 +59,18 @@ function handleFormSubmit(event) {
     // Prevent page from reloading
     event.preventDefault();
 
+    // Form current date
+    const date = new Date().toLocaleDateString('en-US', {year: "numeric",month: "2-digit",day: "2-digit"});
+
     // Object to help us form data to be used for validation
-    // const formSubmission = {
-    //     fullName: event.target.fullName.value,
-    //     email: event.target.email.value,
-    //     password: event.target.password.value,
-    //     retype: event.target.retype.value,
-    //     numGuests: event.target.numGuests.value,
-    //     date: event.target.date.value,
-    //     visit_type: event.target.visit_type.value,
-    // };
+    const formSubmission = {
+        commentorName: event.target.commentorName.value,
+        comment: event.target.commentInput.value,
+        commentDate: date,
+    };
 
-    // Clean up data to push into and match our appointments array
-    // const cardData = {
-    //     name: event.target.fullName.value,
-    //     date: event.target.date.value
-    // };
-
-    // Push card data to our appointments array
-    // appointments.push(cardData);
+    // Push card data to our comments array
+    commentsObject.unshift(formSubmission);
 
     // Render comments to the screen
     renderComments();
