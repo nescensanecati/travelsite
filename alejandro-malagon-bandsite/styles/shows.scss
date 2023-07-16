@@ -127,12 +127,12 @@ main {
           padding-right: (3 * $defaultPadding);
         }
         .shows__row--hover:hover {
-          background-color: $secondaryColorDarkMercury;
+          background-color: $secondaryColorDarkAlabaster;
           border-radius: 4px;
         }
 
         .shows__row--selected {
-          border: 1px $primaryColorBlack solid;
+          background-color: $secondaryColorDarkMercury;
           border-radius: 4px;
         }
       }

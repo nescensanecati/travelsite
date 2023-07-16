@@ -1,250 +1,237 @@
 /*  ----------------------- HEADER --------------------------- */
 header {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    h1 {
-        padding: $doubleDefaultPadding;
-    }
+  h1 {
+    padding: $doubleDefaultPadding;
+  }
 
-    img {
-        margin: (3*$defaultPadding);
-    }
+  img {
+    margin: (3 * $defaultPadding);
+  }
 }
 
 //end header
 
 /*  ----------------------- NAVIGATION --------------------------- */
 nav {
-    width: 30%;
+  width: 30%;
 
-    ul {
-        height: 100%;
+  ul {
+    height: 100%;
 
-        li {
-            padding: (2.5*$defaultPadding) 0;
-            line-height: 0.21vh;
-        }
+    li {
+      padding: (2.5 * $defaultPadding) 0;
+      line-height: 0.21vh;
     }
+  }
 }
 
 //end nav
 
 /*  ----------------------- MAIN --------------------------- */
 main {
+  .main__section--aboutmusicians-container {
+    padding: 0 (6 * $defaultPadding);
 
-
-    .main__section--aboutmusicians-container {
-        padding: 0 (6*$defaultPadding);
-
-        .main__article--phrases-container {
-            padding: 0;
-            margin-bottom: $doubleDefaultPadding;
-        }
-
-        img,
-        .main__article--phrases-container,
-        .main__article--paragraph-container {
-            padding: $doubleDefaultPadding (6*$defaultPadding);
-        }
-
-        h2 {
-            font-family: $defaultFont;
-            font-weight: $demiWeight;
-            font-size: 2.25rem;
-            line-height: 2.75rem;
-            padding-left: 0;
-        }
-
-        h3 {
-            padding: 0;
-            font-family: $defaultFont;
-            font-weight: $demiWeight;
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
-
-        .main__h3--author-format {
-            font-weight: 400;
-            padding: $defaultPadding;
-        }
-
-        .main__article--paragraph-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-
-            h4 {
-                width: 100%;
-                padding: 0;
-                padding: 0;
-                font-family: $defaultFont;
-                font-weight: $demiWeight;
-                font-size: 2.25rem;
-                line-height: 2.75rem;
-            }
-
-            p {
-                width: 50%;
-                padding-left: 0;
-                font-family: $defaultFont;
-                font-weight: $regularWeight;
-                font-size: .875rem;
-                line-height: 1.375rem;
-            }
-        }
+    .main__article--phrases-container {
+      padding: 0;
+      margin-bottom: $doubleDefaultPadding;
     }
 
-    .main__article--container {
+    img,
+    .main__article--phrases-container,
+    .main__article--paragraph-container {
+      padding: $doubleDefaultPadding (6 * $defaultPadding);
+    }
+
+    h2 {
+      font-family: $defaultFont;
+      font-weight: $demiWeight;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      padding-left: 0;
+    }
+
+    h3 {
+      padding: 0;
+      font-family: $defaultFont;
+      font-weight: $demiWeight;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .main__h3--author-format {
+      font-weight: 400;
+      padding: $defaultPadding;
+    }
+
+    .main__article--paragraph-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      h4 {
+        width: 100%;
         padding: 0;
+        padding: 0;
+        font-family: $defaultFont;
+        font-weight: $demiWeight;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+      }
 
-        .main__article--h1 {
-            font-family: $defaultFont;
-            font-weight: $demiWeight;
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-            padding-left: (6*$defaultPadding);
-        }
+      p {
+        width: 50%;
+        padding-left: 0;
+        font-family: $defaultFont;
+        font-weight: $regularWeight;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
+    }
+  }
+
+  .main__article--container {
+    .main__article--h1 {
+      font-family: $defaultFont;
+      font-weight: $demiWeight;
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+      padding-left: (6 * $defaultPadding);
+    }
+  }
+
+  .main__section--photogallery-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0 (4 * $defaultPadding) $doubleDefaultPadding (6 * $defaultPadding);
+
+    & h2 {
+      padding: $defaultPadding 0;
+      width: 100%;
+      font-family: $defaultFont;
+      font-weight: $demiWeight;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      text-align: left;
     }
 
-
-    .main__section--photogallery-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        padding: 0 (4*$defaultPadding) $doubleDefaultPadding (6*$defaultPadding);
-
-        & h2 {
-            padding: $defaultPadding 0;
-            width: 100%;
-            font-family: $defaultFont;
-            font-weight: $demiWeight;
-            font-size: 2.25rem;
-            line-height: 2.75rem;
-            text-align: left;
-        }
-
-        & picture {
-            padding: 0;
-            margin-bottom: $doubleDefaultPadding;
-            width: 30%;
-        }
-
-        img {
-            margin: 0;
-            padding: 0;
-        }
+    & picture {
+      padding: 0;
+      margin-bottom: $doubleDefaultPadding;
+      width: 30%;
     }
 
-    .main__section-comments-container {
-
-        padding: 0 (4*$defaultPadding) $doubleDefaultPadding (6*$defaultPadding);
-
-        & #main__form {
-            & div {
-                padding: 0;
-                margin: 0 0 (2*$defaultPadding) 0;
-            }
-        }
-
-        h2 {
-            padding: $defaultPadding 0;
-            width: 100%;
-            font-family: $defaultFont;
-            font-weight: $demiWeight;
-            font-size: 2.25rem;
-            line-height: 2.75rem;
-            text-align: left;
-        }
-
-        #main__article--comments-container {
-            margin: (3*$defaultPadding) 0 0 0;
-            padding: 0;
-        }
+    img {
+      margin: 0;
+      padding: 0;
     }
+  }
+
+  .main__section-comments-container {
+    padding: 0 (4 * $defaultPadding) $doubleDefaultPadding (6 * $defaultPadding);
+
+    & #main__form {
+      & div {
+        padding: 0;
+        margin: 0 0 (2 * $defaultPadding) 0;
+      }
+    }
+
+    h2 {
+      padding: $defaultPadding 0;
+      width: 100%;
+      font-family: $defaultFont;
+      font-weight: $demiWeight;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      text-align: left;
+    }
+
+    #main__article--comments-container {
+      margin: (3 * $defaultPadding) 0 0 0;
+      padding: 0;
+    }
+  }
 }
 
 //end main
 
 /*  ----------------------- FOOTER --------------------------- */
 footer * {
-    padding: 0;
-    margin: 0;
-    position: relative;
-
+  padding: 0;
+  margin: 0;
+  position: relative;
 }
 
 footer {
-    padding: 0;
-    margin: 0;
-    padding: 0 (2*$defaultPadding);
+  padding: 0;
+  margin: 0;
+  padding: 0 (2 * $defaultPadding);
 
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: left;
+
+    h2 {
+      width: 30%;
+      line-height: (3 * $defaultPadding);
+      line-height: 1;
+    }
+  }
+
+  .footer__section--information-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
 
     section {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        position: relative;
-        justify-content: left;
-
-
-        h2 {
-            width: 30%;
-            line-height: (3*$defaultPadding);
-            line-height: 1;
-        }
+      display: flex;
+      flex-direction: column;
+      width: 30%;
     }
 
-
-    .footer__section--information-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: left;
-
-        section {
-            display: flex;
-            flex-direction: column;
-            width: 30%;
-        }
-
-
-        article {
-            width: 100%;
-            position: relative;
-        }
+    article {
+      width: 100%;
+      position: relative;
     }
+  }
 
-    .footer__h2--bandsite-logo-not-mobile-container {
-        position: relative;
-        width: 70%;
-        visibility: unset;
-    }
+  .footer__h2--bandsite-logo-not-mobile-container {
+    position: relative;
+    width: 70%;
+    visibility: unset;
+  }
 
-    .footer__h2--bandsite-logo-not-mobile {
-        position: absolute;
-        top: 0;
-        right: 0;
-        color: white;
-        text-align: left;
-        visibility: unset;
-        line-height: 2;
-        font-weight: $regularWeight;
-    }
+  .footer__h2--bandsite-logo-not-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    text-align: left;
+    visibility: unset;
+    line-height: 2;
+    font-weight: $regularWeight;
+  }
 
-    .footer__h2--bandsite-logo-mobile,
-    .footer__h2--bandsite-logo-mobile-container {
-        visibility: hidden;
-        height: 0;
-        width: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-
+  .footer__h2--bandsite-logo-mobile,
+  .footer__h2--bandsite-logo-mobile-container {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 //end footer

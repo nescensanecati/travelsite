@@ -72,7 +72,7 @@ nav {
       }
 
       &:hover {
-        background-color: $primaryColorSilver;
+        border-bottom: 3px $primaryColorWhite solid;
       }
     }
   }
@@ -85,7 +85,7 @@ nav {
   }
 
   li:hover {
-    background-color: $primaryColorSilver;
+    border-bottom: 3px $primaryColorWhite solid;
   }
 }
 
@@ -161,6 +161,7 @@ main {
 
   .main__article--container {
     position: relative;
+    padding: 3rem 0;
 
     .main__img--hero {
       position: relative;
