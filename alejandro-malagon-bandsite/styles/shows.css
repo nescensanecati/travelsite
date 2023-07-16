@@ -317,7 +317,6 @@ main .main__article--phrases-container * {
 }
 main .main__article--container {
   position: relative;
-  padding: 3rem 0;
 }
 main .main__article--container .main__img--hero {
   position: relative;
