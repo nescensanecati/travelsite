@@ -828,4 +828,16 @@ main .main__article--container iframe {
     width: 100%;
     margin-left: 3rem;
   }
+  main .main__shows--container .main__section--shows-container .shows__row {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  main .main__shows--container .main__section--shows-container .shows__row--hover:hover {
+    background-color: #E1E1E1;
+    border-radius: 4px;
+  }
+  main .main__shows--container .main__section--shows-container .shows__row--selected {
+    border: 1px #323232 solid;
+    border-radius: 4px;
+  }
 }/*# sourceMappingURL=shows.css.map */

@@ -6,29 +6,22 @@ const commentsObject = [
 
 
 function createCommentCard(commentArray) {
-    // Create article to contain the comments
     const cardSec = document.createElement('article');
 
-    // Create div for the logo
     const tempCardDiv = document.createElement('div');
     tempCardDiv.classList.add('main__div--blank-logo')
 
-    // Create empty div for the flex arrangement
     const tempEmptyDiv = document.createElement('div');
 
-    // create h3 to show the name of the commentor
     const tempCommentDate = document.createElement('h4');
     tempCommentDate.innerText = commentArray.commentDate;
 
-    // create h4 to show the date of the comment
     const tempCommentorName = document.createElement('h3');
     tempCommentorName.innerText = commentArray.commentorName;
 
-    // create p to show the date of the comment
     const tempCommentorComment = document.createElement('p');
     tempCommentorComment.innerText = commentArray.comment;
 
-    // append our elements above as children to the cardSec
     cardSec.appendChild(tempCardDiv);
     cardSec.appendChild(tempEmptyDiv);
     tempEmptyDiv.appendChild(tempCommentorName);
@@ -38,14 +31,11 @@ function createCommentCard(commentArray) {
     return cardSec;
 }
 
-function renderComments() {
-    // Grab #main__article--comments-container from html to append comments on it
+function displayComment() {
     const myCommentsEl = document.querySelector("#main__article--comments-container");
 
-    // Clear the comments container if appointments are already there.
     myCommentsEl.innerHTML = "";
 
-    // Use forEach to loop through each item in our appointment array and create a card
     commentsObject.forEach(comment => {
         const card = createCommentCard(comment);
         myCommentsEl.appendChild(card);
@@ -54,37 +44,26 @@ function renderComments() {
 
 }
 
-
 function handleFormSubmit(event) {
-    // Prevent page from reloading
     event.preventDefault();
 
-    // Form current date
-    const date = new Date().toLocaleDateString('en-US', {year: "numeric",month: "2-digit",day: "2-digit"});
+    const date = new Date().toLocaleDateString('en-US', { year: "numeric", month: "2-digit", day: "2-digit" });
 
-    // Object to help us form data to be used for validation
     const formSubmission = {
         commentorName: event.target.commentorName.value,
         comment: event.target.commentInput.value,
         commentDate: date,
     };
 
-    // Push card data to our comments array
     commentsObject.unshift(formSubmission);
 
-    // Render comments to the screen
-    renderComments();
+    displayComment();
 
+    document.getElementById("main__form").reset();
 }
 
-
-// Select the form element
 const formEl = document.querySelector('#main__form');
 
-
-// Add an event listener to the form to get all input data within comment form
 formEl.addEventListener('submit', handleFormSubmit);
 
-
-// Render initial appointments in our array on line 1
-renderComments();
+displayComment();
