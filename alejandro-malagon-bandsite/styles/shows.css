@@ -588,6 +588,38 @@ footer .footer__h2--bandsite-logo-mobile {
   visibility: visible;
 }
 
+main .main__article--container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: url("../assets/images/photo-gallery-3.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+}
+main .main__article--container * {
+  margin: 2rem 0 0 0;
+  padding: 0;
+  padding: 0 1rem;
+  line-height: 1;
+}
+main .main__article--container p,
+main .main__article--container .main__article--h1 {
+  width: 100%;
+  color: #ffffff;
+  position: relative;
+  transform: none;
+}
+main .main__article--container p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+main .main__article--container iframe {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+
 @media only screen and (min-width: 768px) {
   /*  ----------------------- HEADER --------------------------- */
   header {
@@ -778,6 +810,39 @@ footer .footer__h2--bandsite-logo-mobile {
     margin: 0;
     padding: 0;
   }
+  main .main__article--container iframe {
+    margin-bottom: 1rem;
+    padding: 0 3rem;
+  }
+  main .main__article--container p {
+    padding-left: 3rem;
+  }
+  .main__shows--container {
+    padding: 1.5rem 3rem;
+  }
+  .main__shows--container article h2 {
+    padding: 1.5rem 0%;
+  }
+  .main__shows--container .main__section--shows-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+  .main__shows--container .main__section--shows-container * {
+    padding: 0.5rem 0;
+  }
+  .main__shows--container .main__section--shows-container article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main__shows--container .main__section--shows-container article p,
+  .main__shows--container .main__section--shows-container article button {
+    width: 25%;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
 }
 @media only screen and (min-width: 1280px) {
   /*  ----------------------- MAIN --------------------------- */
@@ -812,4 +877,36 @@ footer .footer__h2--bandsite-logo-mobile {
   footer {
     padding: 0 6rem;
   }
-}/*# sourceMappingURL=bio.css.map */
+  main .main__article--container iframe {
+    margin-bottom: 1rem;
+    padding: 0 6rem;
+  }
+  main .main__article--container p {
+    padding-left: 6rem;
+  }
+  main .main__shows--container {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 6rem;
+  }
+  main .main__shows--container h2 {
+    padding: 0.5rem;
+    margin: 0;
+  }
+  main .main__shows--container .main__section--shows-container {
+    width: 100%;
+    margin-left: 3rem;
+  }
+  main .main__shows--container .main__section--shows-container .shows__row {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  main .main__shows--container .main__section--shows-container .shows__row--hover:hover {
+    background-color: #fafafa;
+    border-radius: 4px;
+  }
+  main .main__shows--container .main__section--shows-container .shows__row--selected {
+    background-color: #e1e1e1;
+    border-radius: 4px;
+  }
+}/*# sourceMappingURL=shows.css.map */

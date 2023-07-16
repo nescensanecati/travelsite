@@ -9,40 +9,42 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1"
     />
     <!-- STYLE SHEETS -->
-    <link href="../styles/bio.css" rel="stylesheet" />
+    <link href="../styles/shows.css" rel="stylesheet" />
     <title>SHOWS</title>
+    <script src="../scripts/build-shows-page.js" defer></script>
   </head>
   <body>
     <!-- PAGE HEADER GOES HERE -->
     <header>
       <a href="../index.html"
-        ><img src="../assets/logos/logo-bandsite.svg" alt="BANDSITE"
+        ><img src="../assets/logos/logo-bandsite.svg" alt="BANDSITE logo"
       /></a>
 
       <!-- PAGE NAVIGATION GOES HERE -->
       <nav>
         <ul>
           <li><a href="../index.html">Biography</a></li>
-          <li class="header__nav--active"><a href="../pages/shows.html">Shows</a></li>
+          <li class="header__nav--active">
+            <a href="../pages/shows.html">Shows</a>
+          </li>
         </ul>
       </nav>
     </header>
-
     <!-- PAGE CONTENT GOES HERE -->
     <main>
       <!-- BANNER GOES HERE -->
       <article class="main__article--container">
-        <!-- <p>Beautiful Beasts Album</p> -->
+        <p>Beautiful Beasts Album</p>
         <h1 class="main__article--h1">Queen of Yellow x For The Stings</h1>
-        <picture
-          ><div id="main__img--hero-overlay">
-            <img
-              class="main__img--hero"
-              src="../assets/images/photo-gallery-3.jpg"
-              alt="Queen of Yellow x For The Stings"
-            /></div
-        ></picture>
+        <iframe
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1451966764&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+        ></iframe>
       </article>
+      <!-- SHOWS SCHEDULE GOES HERE -->
+      <section class="main__shows--container"></section>
     </main>
     <!-- PAGE FOOTER GOES HERE -->
     <footer>

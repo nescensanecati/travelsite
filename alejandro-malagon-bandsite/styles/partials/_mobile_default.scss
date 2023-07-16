@@ -1,289 +1,494 @@
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  
 src: https://app.pluralsight.com/library/courses/responsive-web-design-media-queries-css-preprocessing*/
 html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 /*  apply a natural box layout model to all elements  
 src: https://app.pluralsight.com/library/courses/responsive-web-design-media-queries-css-preprocessing*/
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*  ----------------------- BODY --------------------------- */
 body {
-    font-family: $defaultFont;
-    font-weight: $regularWeight;
-    font-size: 16px;
+  font-family: $defaultFont;
+  font-weight: $regularWeight;
+  font-size: 1rem;
 }
 
 /*  ----------------------- HEADER --------------------------- */
 header {
-    background-color: $primaryColorBlack;
-    text-align: center;
+  background-color: $primaryColorBlack;
+  text-align: center;
 
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    img {
-        height: 20px;
-        width: 120px;
-        margin: (3*$defaultPadding) 0 (3*$defaultPadding) 0;
-    }
+  img {
+    height: 20px;
+    width: 120px;
+    margin: (2 * $defaultPadding) 0 (2 * $defaultPadding) 0;
+  }
 }
 
 //end header
 
 /*  ----------------------- NAVIGATION --------------------------- */
 nav {
-    background-color: $primaryColorBlack;
+  background-color: $primaryColorBlack;
 
-    ul {
-        display: flex;
-        flex-direction: row;
+  ul {
+    display: flex;
+    flex-direction: row;
 
-        li {
-            width: 50%;
-            margin: 0 $doubleDefaultPadding;
+    li {
+      width: 50%;
+      margin: 0 $doubleDefaultPadding;
 
-            a {
-                text-align: center;
-                font-family: $defaultFont;
-                font-weight: $regularWeight;
-                line-height: 2rem;
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .header__nav--active {
-            border-bottom: 3px $primaryColorWhite solid;
-
-            a {
-                font-family: $defaultFont;
-                font-weight: $boldWeight;
-                padding: 0;
-                line-height: 2rem;
-            }
-
-            &:hover {
-                background-color: $primaryColorSilver;
-            }
-        }
-    }
-
-    a {
-        text-decoration: none;
-        color: $primaryColorWhite;
+      a {
+        text-align: center;
+        font-family: $defaultFont;
+        font-weight: $regularWeight;
+        line-height: 2rem;
         width: 100%;
+        height: 100%;
+      }
     }
 
-    li:hover {
-        background-color: $primaryColorSilver;
+    .header__nav--active {
+      border-bottom: 3px $primaryColorWhite solid;
+
+      a {
+        font-family: $defaultFont;
+        font-weight: $boldWeight;
+        padding: 0;
+        line-height: 2rem;
+        color: $primaryColorWhite;
+      }
+
+      &:hover {
+        border-bottom: 3px $primaryColorWhite solid;
+      }
     }
+  }
+
+  a {
+    text-decoration: none;
+    color: $primaryColorWhite;
+    width: 100%;
+    color: $secondaryColorDarkMercury;
+  }
+
+  li:hover {
+    border-bottom: 3px $primaryColorWhite solid;
+  }
 }
 
 //end nav
 
 /*  ----------------------- MAIN --------------------------- */
 main {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    a,
-    p,
-    h1,
-    h2,
-    h3,
-    h4 {
-        padding: $defaultPadding $doubleDefaultPadding;
-        margin: $doubleDefaultPadding 0;
-        font-weight: $demiWeight;
-        color: $primaryColorBlack;
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    padding: $defaultPadding $doubleDefaultPadding;
+    margin: $defaultPadding 0;
+    font-weight: $demiWeight;
+    color: $primaryColorBlack;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: $demiWeight;
+    font-family: $defaultFont;
+  }
+
+  h3 {
+    font-size: 0.875rem;
+    font-weight: $demiWeight;
+    font-family: $defaultFont;
+    line-height: 1.375rem;
+  }
+
+  p {
+    font-size: 0.8125rem;
+    font-weight: $regularWeight;
+    font-family: $defaultFont;
+    line-height: 1.125rem;
+  }
+
+  img {
+    .main__section--photogallery-container & {
+      //https://codepen.io/AnthonyMoss/pen/RwwyQQ (for greyscale)
+      filter: grayscale(0%);
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
     }
 
+    width: 100%;
+    padding: $defaultPadding $doubleDefaultPadding;
+  }
+
+  .main__section--photogallery-container img {
+    &:hover {
+      //https://codepen.io/AnthonyMoss/pen/RwwyQQ (for greyscale)
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+    }
+  }
+
+  .main__article--phrases-container {
+    * {
+      padding: 0;
+      padding-bottom: $defaultPadding;
+      margin: 0;
+    }
+
+    padding: 0 $doubleDefaultPadding;
+  }
+
+  .main__article--container {
+    position: relative;
+    padding: 3rem 0;
+
+    .main__img--hero {
+      position: relative;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      z-index: -1;
+    }
+
+    .main__article--h1 {
+      position: absolute;
+      color: white;
+      top: 50%;
+      transform: translate(0%, -50%);
+      width: 100%;
+      text-align: left;
+      padding-left: $doubleDefaultPadding;
+      z-index: 10;
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    #main__img--hero-overlay {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  article {
     h2 {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-weight: $demiWeight;
-        font-family: $defaultFont;
+      padding: $defaultPadding $doubleDefaultPadding $doubleDefaultPadding
+        $doubleDefaultPadding;
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .main__section--photogallery-container {
+    background-color: $secondaryColorDarkAlabaster;
+  }
+
+  .main__section-comments-container {
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
-    h3 {
-        font-size: .875rem;
-        font-weight: $demiWeight;
-        font-family: $defaultFont;
-        line-height: 1.375rem;
-    }
+    #main__form {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 100%;
+      margin-bottom: $defaultPadding;
 
-    p {
-        font-size: .8125rem;
-        font-weight: $regularWeight;
-        font-family: $defaultFont;
-        line-height: 1.125rem;
-    }
-
-    img {
-
-        .main__section--photogallery-container & {
-            //https://codepen.io/AnthonyMoss/pen/RwwyQQ (for greyscale)
-            filter: grayscale(0%);
-            -webkit-filter: grayscale(0%);
-            -moz-filter: grayscale(0%);
-        }
-
-        width: 100%;
+      div {
         padding: $defaultPadding $doubleDefaultPadding;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        width: 100%;
 
-    }
+        & section {
+          * {
+            margin: $doubleDefaultPadding $defaultPadding $doubleDefaultPadding
+              $defaultPadding;
+            display: block;
+          }
 
-    .main__section--photogallery-container img {
-        &:hover {
-            //https://codepen.io/AnthonyMoss/pen/RwwyQQ (for greyscale)
-            filter: grayscale(100%);
-            -webkit-filter: grayscale(100%);
-            -moz-filter: grayscale(100%);
-        }
-
-    }
-
-    .main__article--phrases-container {
-        * {
-            padding: 0;
-            padding-bottom: $defaultPadding;
-            margin: 0;
-        }
-
-        padding: 0 $doubleDefaultPadding;
-
-    }
-
-    .main__article--container {
-        position: relative;
-
-        .main__img--hero {
-            position: relative;
+          * input {
+            margin: $doubleDefaultPadding 0;
             width: 100%;
-            padding: 0;
-            margin: 0;
-            z-index: -1;
+          }
+
+          & .main__form--image-format {
+            background: url("../assets/images/mohan-muruge.jpg");
+            background-size: cover;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+          }
         }
 
-        .main__article--h1 {
-            position: absolute;
-            color: white;
-            top: 50%;
-            transform: translate(0%, -50%);
+        .main_section--comment-container {
+          width: 100%;
+          margin-left: $defaultPadding;
+
+          * {
+            padding-right: 0;
+            margin-left: 0;
+            margin-right: 0;
+          }
+
+          textarea {
             width: 100%;
-            text-align: left;
-            padding-left: $doubleDefaultPadding;
-            z-index: 10;
-        }
+            height: 30%;
+            border: 1px $secondaryColorDarkMercury solid;
+            resize: none;
+          }
 
-        #main__img--hero-overlay {
-            position: relative;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
+          input,
+          textarea {
+            border-radius: 4px;
+            border: 1px $secondaryColorDarkMercury solid;
+            padding: $defaultPadding;
+            font-family: $defaultFont;
+            background-color: $secondaryColorDarkAlabaster;
 
+            &:focus {
+              border: 1px $secondaryColorDarkBlack solid;
+              outline: none !important;
+            }
+
+            &:invalid {
+              border: 1px red solid !important;
+            }
+          }
+
+          label {
+            color: $primaryColorSilver;
+            font-family: $defaultFont;
+            font-weight: $demiWeight;
+            font-size: 0.625rem;
+          }
+
+          button {
+            background-color: $primaryColorBlack;
+            color: $primaryColorWhite;
+            border-radius: 4px;
+            padding: $defaultPadding $doubleDefaultPadding;
+            border-style: none;
+
+            &:hover {
+              background-color: $secondaryColorDarkBlack;
+            }
+          }
+        }
+      }
     }
 
+    .solid {
+      border-top: 1px solid $secondaryColorDarkMercury;
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  #main__article--comments-container {
+    padding: $defaultPadding $doubleDefaultPadding;
+
+    .main__div--blank-logo {
+      background-color: $secondaryColorDarkMercury;
+      background-size: cover;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem 1rem 0.5rem;
+    }
 
     article {
-        h2 {
-            padding: (3*$defaultPadding) $doubleDefaultPadding $doubleDefaultPadding $doubleDefaultPadding;
-            margin-bottom: 0;
-            width: 100%;
+      display: flex;
+      margin-top: $defaultPadding;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+
+        * {
+          padding: 0.5rem;
+          margin: 0;
+          line-height: 0;
         }
 
+        h3 {
+          width: 70%;
+          text-align: left;
+          color: $primaryColorBlack;
+          font-size: 0.75rem;
+        }
+
+        h4 {
+          width: 30%;
+          text-align: right;
+          color: $primaryColorSilver;
+          font-weight: $regularWeight;
+          font-size: 0.625rem;
+        }
+
+        p {
+          width: 100%;
+          line-height: 1;
+          color: $primaryColorBlack;
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+
+  .main__section--shows-container {
+    display: flex;
+    flex-direction: column;
+    padding: $defaultPadding $doubleDefaultPadding $doubleDefaultPadding
+      $doubleDefaultPadding;
+
+    & h2 {
+      margin: 0;
+      padding: 0;
     }
 
-    .main__section--photogallery-container {
-        background-color: $secondaryColorDarkAlabaster;
+    & div {
+      width: 100%;
     }
 
+    & p {
+      margin: $defaultPadding 0;
+      padding: 0;
+    }
+
+    & button {
+      background-color: $primaryColorBlack;
+      color: $primaryColorWhite;
+      border-radius: 4px;
+      padding: $defaultPadding $doubleDefaultPadding;
+      margin: $doubleDefaultPadding 0;
+      border-style: none;
+      width: 100%;
+
+      &:hover {
+        background-color: $secondaryColorDarkBlack;
+      }
+    }
+
+    .main__p--title-format {
+      color: $primaryColorSilver;
+      font-weight: $demiWeight;
+    }
+
+    .main__p--info-format {
+      color: $primaryColorBlack;
+      font-weight: $regularWeight;
+      font-size: 0.8125rem;
+    }
+
+    .main__p--demi {
+      font-weight: $demiWeight;
+    }
+  }
 }
 
 //end main
 
 /*  ----------------------- FOOTER --------------------------- */
 footer {
-    background-color: $primaryColorBlack;
-    padding: 0 $doubleDefaultPadding;
+  background-color: $primaryColorBlack;
+  padding: 0 $doubleDefaultPadding;
 
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    article {
-        padding: $defaultPadding 0;
-    }
+  article {
+    padding: $defaultPadding 0;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    a {
-        color: white;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a {
+    color: white;
+  }
 
-    h2 {
-        padding: $defaultPadding 0;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-weight: $demiWeight;
-    }
+  h2 {
+    padding: $defaultPadding 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: $demiWeight;
+  }
 
-    h3 {
-        font-size: .875rem;
-        line-height: 1.375rem;
-        font-family: $defaultFont;
-        font-weight: $demiWeight;
-    }
+  h3 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: $defaultFont;
+    font-weight: $demiWeight;
+  }
 
-    p {
-        font-size: .8125rem;
-        font-weight: $regularWeight;
-        line-height: 1.125rem;
-    }
+  p {
+    font-size: 0.8125rem;
+    font-weight: $regularWeight;
+    line-height: 1.125rem;
+  }
 
-    .footer__section--logos-container {
-        display: flex;
-        flex-direction: row;
-    }
+  .footer__section--logos-container {
+    display: flex;
+    flex-direction: row;
+  }
 
-    img {
-        padding: $defaultPadding $defaultPadding $defaultPadding 0;
-        text-align: left;
-    }
+  img {
+    padding: $defaultPadding $defaultPadding $defaultPadding 0;
+    text-align: left;
+  }
 
+  .footer__h2--bandsite-logo-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    padding-top: (6 * $defaultPadding);
+  }
 
-    .footer__h2--bandsite-logo-mobile {
-        position: absolute;
-        top: 0;
-        right: 0;
-        color: white;
-        text-align: center;
-        padding-top: (6*$defaultPadding);
-    }
+  .footer__h2--bandsite-logo-not-mobile,
+  .footer__h2--bandsite-logo-not-mobile-container {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
 
-    .footer__h2--bandsite-logo-not-mobile,
-    .footer__h2--bandsite-logo-not-mobile-container {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-    }
-
-    .footer__h2--bandsite-logo-mobile {
-        position: relative;
-        color: white;
-        text-align: left;
-        visibility: visible;
-    }
-
+  .footer__h2--bandsite-logo-mobile {
+    position: relative;
+    color: white;
+    text-align: left;
+    visibility: visible;
+  }
 }
 
 //end footer

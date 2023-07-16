@@ -1,38 +1,40 @@
 //color-variables
 $primaryColorBlack: #323232;
-$primaryColorSilver: #AFAFAF;
-$primaryColorWhite: #FFFFFF;
+$primaryColorSilver: #afafaf;
+$primaryColorWhite: #ffffff;
 $secondaryColorDarkBlack: #000000;
-$secondaryColorDarkMercury: #E1E1E1;
-$secondaryColorDarkAlabaster: #FAFAFA;
+$secondaryColorDarkMercury: #e1e1e1;
+$secondaryColorDarkAlabaster: #fafafa;
 
 //spacing-margins
-$defaultPadding: 8px;
+$defaultPadding: 0.5rem;
 $doubleDefaultPadding: (2 * $defaultPadding);
 
-
 @font-face {
-    font-family: 'Avenir-Font';
-    font-weight: 400;
-    src: url('../assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype'),
-        url('../assets/fonts/alternative-files/AvenirNextLTPro.ttf') format('truetype');
+  font-family: "Avenir-Font";
+  font-weight: 400;
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"),
+    url("../assets/fonts/alternative-files/AvenirNextLTPro.ttf")
+      format("truetype");
 }
 
 @font-face {
-    font-family: 'Avenir-Font';
-    font-weight: 700;
-    src: url('../assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype'),
-        url('../assets/fonts/alternative-files/AvenirNextLTProBold.ttf') format('truetype');
+  font-family: "Avenir-Font";
+  font-weight: 700;
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
+    url("../assets/fonts/alternative-files/AvenirNextLTProBold.ttf")
+      format("truetype");
 }
 
 @font-face {
-    font-family: 'Avenir-Font';
-    font-weight: 600;
-    src: url('../assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype'),
-        url('../assets/fonts/alternative-files/AvenirNextLTProDemi.ttf') format('truetype');
+  font-family: "Avenir-Font";
+  font-weight: 600;
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"),
+    url("../assets/fonts/alternative-files/AvenirNextLTProDemi.ttf")
+      format("truetype");
 }
 
-$defaultFont: 'Avenir-Font';
+$defaultFont: "Avenir-Font";
 $regularWeight: 400;
 $boldWeight: 700;
 $demiWeight: 600;
