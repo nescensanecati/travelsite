@@ -1,11 +1,9 @@
-const showsObject = [
-    { date: 'Mon Sept 06 2021', venue: 'Ronald Lane', location: 'San Francisco, CA' },
-    { date: 'Tue Sept 21 2021', venue: 'Pier 3 East', location: 'San Francisco, CA' },
-    { date: 'Fri Oct 15 2021', venue: 'View Lounge', location: 'San Francisco, CA' },
-    { date: 'Sat Nov 06 2021', venue: 'Hyatt Agency', location: 'San Francisco, CA' },
-    { date: 'Fri Nov 26 2021', venue: 'Moscow Center', location: 'San Francisco, CA' },
-    { date: 'Wed Dec 15 2021', venue: 'Press Club', location: 'San Francisco, CA' }
-];
+const fetchShows = fetch("https://project-1-api.herokuapp.com/showdates?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", { method: 'GET', redirect: 'follow' })
+    .then((response) => response.json())
+    .then((showResponse) => {
+        return showResponse;
+    });
+
 
 function createShowVisualizationMobile(showStructure) {
     const tempArticleContainer = document.createElement('article');
@@ -17,7 +15,8 @@ function createShowVisualizationMobile(showStructure) {
     const tempDateValue = document.createElement('p');
     tempDateValue.classList.add('main__p--info-format');
     tempDateValue.classList.add('main__p--demi');
-    tempDateValue.innerText = showStructure.date;
+    let dateFormat = new Date(showStructure.date).toLocaleDateString();
+    tempDateValue.innerText = dateFormat;
 
     const tempVenueTitle = document.createElement('p');
     tempVenueTitle.classList.add('main__p--title-format');
@@ -25,22 +24,20 @@ function createShowVisualizationMobile(showStructure) {
 
     const tempVenueValue = document.createElement('p');
     tempVenueValue.classList.add('main__p--info-format')
-    tempVenueValue.innerText = showStructure.venue;
+    tempVenueValue.innerText = showStructure.place;
 
     const tempLocationTitle = document.createElement('p');
     tempLocationTitle.classList.add('main__p--title-format');
     tempLocationTitle.innerText = 'Location'
 
-    // create p to show  
     const tempLocationValue = document.createElement('p');
     tempLocationValue.classList.add('main__p--info-format')
     tempLocationValue.innerText = showStructure.location;
 
-    // create button to show  
     const tempButtonHolder = document.createElement('button');
     tempButtonHolder.innerHTML = "BUY TICKETS"
 
-    // append our elements above as children to the cardSec
+
     tempArticleContainer.appendChild(tempDateTitle);
     tempArticleContainer.appendChild(tempDateValue);
     tempArticleContainer.appendChild(tempVenueTitle);
@@ -61,11 +58,12 @@ function createShowVisualizationNotMobile(showStructure) {
     const tempDateValue = document.createElement('p');
     tempDateValue.classList.add('main__p--info-format');
     tempDateValue.classList.add('main__p--demi');
-    tempDateValue.innerText = showStructure.date;
+    let dateFormat = new Date(showStructure.date).toLocaleDateString();
+    tempDateValue.innerText = dateFormat;
 
     const tempVenueValue = document.createElement('p');
     tempVenueValue.classList.add('main__p--info-format')
-    tempVenueValue.innerText = showStructure.venue;
+    tempVenueValue.innerText = showStructure.place;
 
     const tempLocationValue = document.createElement('p');
     tempLocationValue.classList.add('main__p--info-format')
@@ -104,10 +102,17 @@ function renderShows() {
     myShowsEl.innerHTML = "";
 
     if (screen.width < 768) {
-        showsObject.forEach(show => {
-            const tempShowStructure = createShowVisualizationMobile(show);
-            myShowsEl.appendChild(tempShowStructure);
-        })
+        const getCommentsFromApi = () => {
+            fetchShows.then(shows => {
+                shows.forEach(show => {
+                    const tempShowStructure = createShowVisualizationMobile(show);
+                    myShowsEl.appendChild(tempShowStructure);
+                })
+            });
+        };
+
+        getCommentsFromApi();
+
     } else if (screen.width >= 768) {
 
         const tempArticleContainer = document.createElement('article');
@@ -136,10 +141,15 @@ function renderShows() {
 
         myShowsEl.appendChild(tempArticleContainer)
 
-        showsObject.forEach(show => {
-            const tempShowStructureNotMobile = createShowVisualizationNotMobile(show);
-            myShowsEl.appendChild(tempShowStructureNotMobile);
-        })
+        const getCommentsFromApi = () => {
+            fetchShows.then(shows => {
+                shows.forEach(show => {
+                    const tempShowStructure = createShowVisualizationNotMobile(show);
+                    myShowsEl.appendChild(tempShowStructure);
+                })
+            });
+        };
+        getCommentsFromApi();
 
 
     }

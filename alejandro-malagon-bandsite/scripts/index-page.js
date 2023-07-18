@@ -1,11 +1,70 @@
-const commentsObject = [
-    { commentorName: 'Connor Walton', commentDate: '02/17/2021', comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains." },
-    { commentorName: 'Emilie Beach', commentDate: '01/09/2021', comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day." },
-    { commentorName: 'Miles Acosta', commentDate: '12/20/2020', comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough." },
-];
+//fetching the comments from the API
+const fetchComments = fetch("https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", { method: 'GET', redirect: 'follow' })
+    .then((response) => response.json())
+    .then((commentResponse) => {
+        return commentResponse;
+    });
+//end of fetching the comments from the API
 
 
-function createCommentCard(commentArray) {
+//posting the comments to the API
+let myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+async function postComments(url, requestOptions) {
+    const response = await fetch(url, requestOptions);
+    console.log(response.ok)
+    return response.ok
+}
+
+
+function postComments(url, requestOptions) {
+    fetch(url, requestOptions)
+        .then((response) => response.json())
+        .then((json) => {
+            console.log(json);
+        });
+
+}
+
+//end of fetching the comments from the API    
+
+function timeDifference(current, previous) {
+
+    let msPerMinute = 60 * 1000;
+    let msPerHour = msPerMinute * 60;
+    let msPerDay = msPerHour * 24;
+    let msPerMonth = msPerDay * 30;
+    let msPerYear = msPerDay * 365;
+
+    let elapsed = current - previous;
+
+    if (elapsed < msPerMinute) {
+        return Math.round(elapsed / 1000) + ' seconds ago';
+    }
+
+    else if (elapsed < msPerHour) {
+        return Math.round(elapsed / msPerMinute) + ' minutes ago';
+    }
+
+    else if (elapsed < msPerDay) {
+        return Math.round(elapsed / msPerHour) + ' hours ago';
+    }
+
+    else if (elapsed < msPerMonth) {
+        return 'approximately ' + Math.round(elapsed / msPerDay) + ' days ago';
+    }
+
+    else if (elapsed < msPerYear) {
+        return 'approximately ' + Math.round(elapsed / msPerMonth) + ' months ago';
+    }
+
+    else {
+        return 'approximately ' + Math.round(elapsed / msPerYear) + ' years ago';
+    }
+}
+
+function createCommentCard(commentJson) {
     const cardSec = document.createElement('article');
 
     const tempCardDiv = document.createElement('div');
@@ -13,14 +72,15 @@ function createCommentCard(commentArray) {
 
     const tempEmptyDiv = document.createElement('div');
 
+    timeAgo = timeDifference(Date.now(), commentJson.timestamp)
     const tempCommentDate = document.createElement('h4');
-    tempCommentDate.innerText = commentArray.commentDate;
+    tempCommentDate.innerText = timeAgo;
 
     const tempCommentorName = document.createElement('h3');
-    tempCommentorName.innerText = commentArray.commentorName;
+    tempCommentorName.innerText = commentJson.name;
 
     const tempCommentorComment = document.createElement('p');
-    tempCommentorComment.innerText = commentArray.comment;
+    tempCommentorComment.innerText = commentJson.comment;
 
     cardSec.appendChild(tempCardDiv);
     cardSec.appendChild(tempEmptyDiv);
@@ -36,12 +96,17 @@ function displayComment() {
 
     myCommentsEl.innerHTML = "";
 
-    commentsObject.forEach(comment => {
-        const card = createCommentCard(comment);
-        myCommentsEl.appendChild(card);
-    })
+    const getCommentsFromApi = () => {
+        fetchComments.then((comments) => {
+            comments.reverse()
+            comments.forEach(comment => {
+                const card = createCommentCard(comment);
+                myCommentsEl.appendChild(card);
+            })
+        });
+    };
 
-
+    getCommentsFromApi();
 }
 
 function handleFormSubmit(event) {
@@ -49,13 +114,16 @@ function handleFormSubmit(event) {
 
     const date = new Date().toLocaleDateString('en-US', { year: "numeric", month: "2-digit", day: "2-digit" });
 
-    const formSubmission = {
-        commentorName: event.target.commentorName.value,
-        comment: event.target.commentInput.value,
-        commentDate: date,
-    };
+    let raw = JSON.stringify({
+        "name": event.target.commentorName.value,
+        "comment": event.target.commentInput.value
+    });
 
-    commentsObject.unshift(formSubmission);
+
+    axios.post("https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", {
+        name: event.target.commentorName.value,
+        comment: event.target.commentInput.value
+    })
 
     displayComment();
 
