@@ -1,33 +1,4 @@
-//fetching the comments from the API
-const fetchComments = fetch("https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", { method: 'GET', redirect: 'follow' })
-    .then((response) => response.json())
-    .then((commentResponse) => {
-        return commentResponse;
-    });
-//end of fetching the comments from the API
-
-
-//posting the comments to the API
-let myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-
-async function postComments(url, requestOptions) {
-    const response = await fetch(url, requestOptions);
-    console.log(response.ok)
-    return response.ok
-}
-
-
-function postComments(url, requestOptions) {
-    fetch(url, requestOptions)
-        .then((response) => response.json())
-        .then((json) => {
-            console.log(json);
-        });
-
-}
-
-//end of fetching the comments from the API    
+commentsArray = [];
 
 function timeDifference(current, previous) {
 
@@ -96,17 +67,18 @@ function displayComment() {
 
     myCommentsEl.innerHTML = "";
 
-    const getCommentsFromApi = () => {
-        fetchComments.then((comments) => {
-            comments.reverse()
-            comments.forEach(comment => {
+    axios.get('https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b')
+        .then(response => {
+            commentsArray = response.data;
+            commentsArray.forEach(comment => {
                 const card = createCommentCard(comment);
                 myCommentsEl.appendChild(card);
-            })
-        });
-    };
+            });
+        })
+        .catch(error => {
+            console.log(error);
+        })
 
-    getCommentsFromApi();
 }
 
 function handleFormSubmit(event) {
@@ -120,14 +92,12 @@ function handleFormSubmit(event) {
     });
 
 
-    const postAxios = axios.post("https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", {
+    axios.post("https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", {
         name: event.target.commentorName.value,
         comment: event.target.commentInput.value
     })
-    postAxios.then(result => { console.log(result) });
-    postAxios.catch(error => { console.log(error) })
-
-    displayComment();
+        .then(response => { commentsArray = response.data; displayComment(); })
+        .catch(error => { console.log(error) })
 
     document.getElementById("main__form").reset();
 }

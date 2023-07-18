@@ -1,9 +1,4 @@
-const fetchShows = fetch("https://project-1-api.herokuapp.com/showdates?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", { method: 'GET', redirect: 'follow' })
-    .then((response) => response.json())
-    .then((showResponse) => {
-        return showResponse;
-    });
-
+showsArray = [];
 
 function createShowVisualizationMobile(showStructure) {
     const tempArticleContainer = document.createElement('article');
@@ -102,16 +97,17 @@ function renderShows() {
     myShowsEl.innerHTML = "";
 
     if (screen.width < 768) {
-        const getCommentsFromApi = () => {
-            fetchShows.then(shows => {
-                shows.forEach(show => {
+        axios.get('https://project-1-api.herokuapp.com/showdates?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b')
+            .then(response => {
+                showsArray = response.data;
+                showsArray.forEach(show => {
                     const tempShowStructure = createShowVisualizationMobile(show);
                     myShowsEl.appendChild(tempShowStructure);
-                })
-            });
-        };
-
-        getCommentsFromApi();
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            })
 
     } else if (screen.width >= 768) {
 
@@ -141,16 +137,17 @@ function renderShows() {
 
         myShowsEl.appendChild(tempArticleContainer)
 
-        const getCommentsFromApi = () => {
-            fetchShows.then(shows => {
-                shows.forEach(show => {
+        axios.get('https://project-1-api.herokuapp.com/showdates?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b')
+            .then(response => {
+                showsArray = response.data;
+                showsArray.forEach(show => {
                     const tempShowStructure = createShowVisualizationNotMobile(show);
                     myShowsEl.appendChild(tempShowStructure);
-                })
-            });
-        };
-        getCommentsFromApi();
-
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            })
 
     }
     else if (screen.width >= 1280) {
