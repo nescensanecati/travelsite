@@ -449,7 +449,8 @@ main #main__article--comments-container .main__div--blank-logo {
 }
 main #main__article--comments-container article {
   display: flex;
-  margin-top: 0.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid #e1e1e1;
 }
 main #main__article--comments-container article div {
   display: flex;
@@ -463,13 +464,13 @@ main #main__article--comments-container article div * {
   line-height: 0;
 }
 main #main__article--comments-container article div h3 {
-  width: 70%;
+  width: 50%;
   text-align: left;
   color: #323232;
   font-size: 0.75rem;
 }
 main #main__article--comments-container article div h4 {
-  width: 30%;
+  width: 50%;
   text-align: right;
   color: #afafaf;
   font-weight: 400;

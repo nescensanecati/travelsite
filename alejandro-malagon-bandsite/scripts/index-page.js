@@ -120,10 +120,12 @@ function handleFormSubmit(event) {
     });
 
 
-    axios.post("https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", {
+    const postAxios = axios.post("https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", {
         name: event.target.commentorName.value,
         comment: event.target.commentInput.value
     })
+    postAxios.then(result => { console.log(result) });
+    postAxios.catch(error => { console.log(error) })
 
     displayComment();
 

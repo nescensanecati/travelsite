@@ -160,26 +160,28 @@ function renderShows() {
 renderShows();
 addEventListener("resize", () => { renderShows(); });
 
+setTimeout(() => {
+    let prevRow = null;
+    const rowsContainer = document.querySelectorAll('.shows__row--hover');
+    for (let index = 0; index < rowsContainer.length; index++) {
+        rowsContainer[index].addEventListener('click', (e) => {
 
-let prevRow = null;
-const rowsContainer = document.querySelectorAll('.shows__row--hover');
-for (let index = 0; index < rowsContainer.length; index++) {
-    rowsContainer[index].addEventListener('click', (e) => {
+            const isRow = e.currentTarget.nodeName === 'ARTICLE';
 
-        const isRow = e.currentTarget.nodeName === 'ARTICLE';
+            if (!isRow) {
+                return;
+            }
 
-        if (!isRow) {
-            return;
-        }
+            e.currentTarget.classList.add('shows__row--selected');
 
-        e.currentTarget.classList.add('shows__row--selected');
+            if (prevRow !== null) {
+                prevRow.classList.remove('shows__row--selected');
+            }
 
-        if (prevRow !== null) {
-            prevRow.classList.remove('shows__row--selected');
-        }
+            prevRow = e.currentTarget;
 
-        prevRow = e.currentTarget;
+        });
+    }
+}, 1000);
 
-    });
-}
 

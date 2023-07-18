@@ -322,7 +322,8 @@ main {
 
     article {
       display: flex;
-      margin-top: $defaultPadding;
+      padding: $doubleDefaultPadding 0;
+      border-top: 1px solid $secondaryColorDarkMercury;
 
       div {
         display: flex;
@@ -337,14 +338,14 @@ main {
         }
 
         h3 {
-          width: 70%;
+          width: 50%;
           text-align: left;
           color: $primaryColorBlack;
           font-size: 0.75rem;
         }
 
         h4 {
-          width: 30%;
+          width: 50%;
           text-align: right;
           color: $primaryColorSilver;
           font-weight: $regularWeight;
