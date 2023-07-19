@@ -430,11 +430,6 @@ main .main__section-comments-container #main__form div .main_section--comment-co
 main .main__section-comments-container #main__form div .main_section--comment-container button:hover {
   background-color: #000000;
 }
-main .main__section-comments-container .solid {
-  border-top: 1px solid #e1e1e1;
-  width: 90%;
-  margin: auto;
-}
 main #main__article--comments-container {
   padding: 0.5rem 1rem;
 }

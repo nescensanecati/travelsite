@@ -1,4 +1,22 @@
-commentsArray = [];
+let commentsArray = [];
+let sortedCommentsArray = []
+
+
+function sortCommentsArray(array) {
+    tempSortedArray = [];
+    for (let index = 0; index < array.length; index++) {
+        if (tempSortedArray.length == 0) {
+            tempSortedArray.push(array[index])
+        }
+        else if (array[index].timestamp > tempSortedArray[0].timestamp) {
+            tempSortedArray.unshift(array[index])
+        }
+        else if (array[index].timestamp < tempSortedArray[tempSortedArray.length - 1].timestamp) {
+            tempSortedArray.push(array[index])
+        }
+    }
+    return tempSortedArray;
+}
 
 function timeDifference(current, previous) {
 
@@ -70,7 +88,9 @@ function displayComment() {
     axios.get('https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b')
         .then(response => {
             commentsArray = response.data;
-            commentsArray.forEach(comment => {
+            sortedCommentsArray = sortCommentsArray(commentsArray)
+            console.log(sortedCommentsArray);
+            sortedCommentsArray.forEach(comment => {
                 const card = createCommentCard(comment);
                 myCommentsEl.appendChild(card);
             });

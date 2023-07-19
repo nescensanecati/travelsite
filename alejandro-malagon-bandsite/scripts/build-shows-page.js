@@ -1,4 +1,4 @@
-showsArray = [];
+let showsArray = [];
 
 function createShowVisualizationMobile(showStructure) {
     const tempArticleContainer = document.createElement('article');
