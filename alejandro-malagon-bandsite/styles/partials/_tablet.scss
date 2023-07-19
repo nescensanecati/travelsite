@@ -32,17 +32,17 @@ nav {
 
 /*  ----------------------- MAIN --------------------------- */
 main {
-  .main__section--aboutmusicians-container {
+  .musicians {
     padding: 0 (6 * $defaultPadding);
 
-    .main__article--phrases-container {
+    .musicians__phrases {
       padding: 0;
       margin-bottom: $doubleDefaultPadding;
     }
 
     img,
-    .main__article--phrases-container,
-    .main__article--paragraph-container {
+    .musicians__phrases,
+    .musicians__p {
       padding: $doubleDefaultPadding (6 * $defaultPadding);
     }
 
@@ -62,12 +62,12 @@ main {
       line-height: 2rem;
     }
 
-    .main__h3--author-format {
+    .musicians__author {
       font-weight: 400;
       padding: $defaultPadding;
     }
 
-    .main__article--paragraph-container {
+    .musicians__p {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -94,8 +94,8 @@ main {
     }
   }
 
-  .main__article--container {
-    .main__article--h1 {
+  .banner {
+    .banner__h1 {
       font-family: $defaultFont;
       font-weight: $demiWeight;
       font-size: 3.75rem;
@@ -104,7 +104,7 @@ main {
     }
   }
 
-  .main__section--photogallery-container {
+  .gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -134,10 +134,10 @@ main {
     }
   }
 
-  .main__section-comments-container {
+  .comments {
     padding: 0 (4 * $defaultPadding) $doubleDefaultPadding (6 * $defaultPadding);
 
-    & #main__form {
+    & #comments__form {
       & div {
         padding: 0;
         margin: 0 0 (2 * $defaultPadding) 0;
@@ -154,7 +154,7 @@ main {
       text-align: left;
     }
 
-    #main__article--comments-container {
+    #new-comments {
       margin: (3 * $defaultPadding) 0 0 0;
       padding: 0;
     }
@@ -189,7 +189,7 @@ footer {
     }
   }
 
-  .footer__section--information-container {
+  .footer__information {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -207,13 +207,13 @@ footer {
     }
   }
 
-  .footer__h2--bandsite-logo-not-mobile-container {
+  .footer__h2--not-mobile-container {
     position: relative;
     width: 70%;
     visibility: unset;
   }
 
-  .footer__h2--bandsite-logo-not-mobile {
+  .footer__h2--not-mobile {
     position: absolute;
     top: 0;
     right: 0;
@@ -224,8 +224,8 @@ footer {
     font-weight: $regularWeight;
   }
 
-  .footer__h2--bandsite-logo-mobile,
-  .footer__h2--bandsite-logo-mobile-container {
+  .footer__h2--mobile,
+  .footer__h2--mobile-container {
     visibility: hidden;
     height: 0;
     width: 0;

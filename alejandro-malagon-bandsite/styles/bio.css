@@ -297,35 +297,35 @@ main img {
   width: 100%;
   padding: 0.5rem 1rem;
 }
-.main__section--photogallery-container main img {
+.gallery main img {
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
 }
-main .main__section--photogallery-container img:hover {
+main .gallery img:hover {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
 }
-main .main__article--phrases-container {
+main .musicians__phrases {
   padding: 0 1rem;
 }
-main .main__article--phrases-container * {
+main .musicians__phrases * {
   padding: 0;
   padding-bottom: 0.5rem;
   margin: 0;
 }
-main .main__article--container {
+main .banner {
   position: relative;
 }
-main .main__article--container .main__img--hero {
+main .banner .banner__img {
   position: relative;
   width: 100%;
   padding: 0;
   margin: 0;
   z-index: -1;
 }
-main .main__article--container .main__article--h1 {
+main .banner .banner__h1 {
   position: absolute;
   color: white;
   top: 50%;
@@ -337,7 +337,7 @@ main .main__article--container .main__article--h1 {
   font-size: 1.5rem;
   line-height: 1;
 }
-main .main__article--container #main__img--hero-overlay {
+main .banner #banner__img--overlay {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -346,94 +346,94 @@ main article h2 {
   margin-bottom: 0;
   width: 100%;
 }
-main .main__section--photogallery-container {
+main .gallery {
   background-color: #fafafa;
 }
-main .main__section-comments-container h2 {
+main .comments h2 {
   margin-top: 0;
   margin-bottom: 0;
 }
-main .main__section-comments-container #main__form {
+main .comments #comments__form {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
   margin-bottom: 0.5rem;
 }
-main .main__section-comments-container #main__form div {
+main .comments #comments__form div {
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: left;
   width: 100%;
 }
-main .main__section-comments-container #main__form div section * {
+main .comments #comments__form div section * {
   margin: 1rem 0.5rem 1rem 0.5rem;
   display: block;
 }
-main .main__section-comments-container #main__form div section * input {
+main .comments #comments__form div section * input {
   margin: 1rem 0;
   width: 100%;
 }
-main .main__section-comments-container #main__form div section .main__form--image-format {
+main .comments #comments__form div section .comments__icon {
   background: url("../assets/images/mohan-muruge.jpg");
   background-size: cover;
   border-radius: 50%;
   width: 36px;
   height: 36px;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container {
+main .comments #comments__form div .comments__inputs {
   width: 100%;
   margin-left: 0.5rem;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container * {
+main .comments #comments__form div .comments__inputs * {
   padding-right: 0;
   margin-left: 0;
   margin-right: 0;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container textarea {
+main .comments #comments__form div .comments__inputs textarea {
   width: 100%;
   height: 30%;
   border: 1px #e1e1e1 solid;
   resize: none;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container input,
-main .main__section-comments-container #main__form div .main_section--comment-container textarea {
+main .comments #comments__form div .comments__inputs input,
+main .comments #comments__form div .comments__inputs textarea {
   border-radius: 4px;
   border: 1px #e1e1e1 solid;
   padding: 0.5rem;
   font-family: "Avenir-Font";
   background-color: #fafafa;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container input:focus,
-main .main__section-comments-container #main__form div .main_section--comment-container textarea:focus {
+main .comments #comments__form div .comments__inputs input:focus,
+main .comments #comments__form div .comments__inputs textarea:focus {
   border: 1px #000000 solid;
   outline: none !important;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container input:invalid,
-main .main__section-comments-container #main__form div .main_section--comment-container textarea:invalid {
+main .comments #comments__form div .comments__inputs input:invalid,
+main .comments #comments__form div .comments__inputs textarea:invalid {
   border: 1px red solid !important;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container label {
+main .comments #comments__form div .comments__inputs label {
   color: #afafaf;
   font-family: "Avenir-Font";
   font-weight: 600;
   font-size: 0.625rem;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container button {
+main .comments #comments__form div .comments__inputs button {
   background-color: #323232;
   color: #ffffff;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   border-style: none;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container button:hover {
+main .comments #comments__form div .comments__inputs button:hover {
   background-color: #000000;
 }
-main #main__article--comments-container {
+main #new-comments {
   padding: 0.5rem 1rem;
 }
-main #main__article--comments-container .main__div--blank-logo {
+main #new-comments .new-comments__logo {
   background-color: #e1e1e1;
   background-size: cover;
   border-radius: 50%;
@@ -442,58 +442,58 @@ main #main__article--comments-container .main__div--blank-logo {
   padding: 0.5rem 1rem;
   margin: 0 0.5rem 1rem 0.5rem;
 }
-main #main__article--comments-container article {
+main #new-comments article {
   display: flex;
   padding: 1rem 0;
   border-top: 1px solid #e1e1e1;
 }
-main #main__article--comments-container article div {
+main #new-comments article div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
-main #main__article--comments-container article div * {
+main #new-comments article div * {
   padding: 0.5rem;
   margin: 0;
   line-height: 0;
 }
-main #main__article--comments-container article div h3 {
+main #new-comments article div h3 {
   width: 50%;
   text-align: left;
   color: #323232;
   font-size: 0.75rem;
 }
-main #main__article--comments-container article div h4 {
+main #new-comments article div h4 {
   width: 50%;
   text-align: right;
   color: #afafaf;
   font-weight: 400;
   font-size: 0.625rem;
 }
-main #main__article--comments-container article div p {
+main #new-comments article div p {
   width: 100%;
   line-height: 1;
   color: #323232;
   font-size: 0.85rem;
 }
-main .main__section--shows-container {
+main .shows {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 1rem 1rem 1rem;
 }
-main .main__section--shows-container h2 {
+main .shows h2 {
   margin: 0;
   padding: 0;
 }
-main .main__section--shows-container div {
+main .shows div {
   width: 100%;
 }
-main .main__section--shows-container p {
+main .shows p {
   margin: 0.5rem 0;
   padding: 0;
 }
-main .main__section--shows-container button {
+main .shows button {
   background-color: #323232;
   color: #ffffff;
   border-radius: 4px;
@@ -502,19 +502,19 @@ main .main__section--shows-container button {
   border-style: none;
   width: 100%;
 }
-main .main__section--shows-container button:hover {
+main .shows button:hover {
   background-color: #000000;
 }
-main .main__section--shows-container .main__p--title-format {
+main .shows .shows__title {
   color: #afafaf;
   font-weight: 600;
 }
-main .main__section--shows-container .main__p--info-format {
+main .shows .shows__info {
   color: #323232;
   font-weight: 400;
   font-size: 0.8125rem;
 }
-main .main__section--shows-container .main__p--demi {
+main .shows .shows--demi {
   font-weight: 600;
 }
 
@@ -554,7 +554,7 @@ footer p {
   font-weight: 400;
   line-height: 1.125rem;
 }
-footer .footer__section--logos-container {
+footer .footer__logos {
   display: flex;
   flex-direction: row;
 }
@@ -562,7 +562,7 @@ footer img {
   padding: 0.5rem 0.5rem 0.5rem 0;
   text-align: left;
 }
-footer .footer__h2--bandsite-logo-mobile {
+footer .footer__h2--mobile {
   position: absolute;
   top: 0;
   right: 0;
@@ -570,13 +570,13 @@ footer .footer__h2--bandsite-logo-mobile {
   text-align: center;
   padding-top: 3rem;
 }
-footer .footer__h2--bandsite-logo-not-mobile,
-footer .footer__h2--bandsite-logo-not-mobile-container {
+footer .footer__h2--not-mobile,
+footer .footer__h2--not-mobile-container {
   visibility: hidden;
   width: 0;
   height: 0;
 }
-footer .footer__h2--bandsite-logo-mobile {
+footer .footer__h2--mobile {
   position: relative;
   color: white;
   text-align: left;
@@ -607,43 +607,43 @@ footer .footer__h2--bandsite-logo-mobile {
     line-height: 0.21vh;
   }
   /*  ----------------------- MAIN --------------------------- */
-  main .main__section--aboutmusicians-container {
+  main .musicians {
     padding: 0 3rem;
   }
-  main .main__section--aboutmusicians-container .main__article--phrases-container {
+  main .musicians .musicians__phrases {
     padding: 0;
     margin-bottom: 1rem;
   }
-  main .main__section--aboutmusicians-container img,
-  main .main__section--aboutmusicians-container .main__article--phrases-container,
-  main .main__section--aboutmusicians-container .main__article--paragraph-container {
+  main .musicians img,
+  main .musicians .musicians__phrases,
+  main .musicians .musicians__p {
     padding: 1rem 3rem;
   }
-  main .main__section--aboutmusicians-container h2 {
+  main .musicians h2 {
     font-family: "Avenir-Font";
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 2.75rem;
     padding-left: 0;
   }
-  main .main__section--aboutmusicians-container h3 {
+  main .musicians h3 {
     padding: 0;
     font-family: "Avenir-Font";
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
   }
-  main .main__section--aboutmusicians-container .main__h3--author-format {
+  main .musicians .musicians__author {
     font-weight: 400;
     padding: 0.5rem;
   }
-  main .main__section--aboutmusicians-container .main__article--paragraph-container {
+  main .musicians .musicians__p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  main .main__section--aboutmusicians-container .main__article--paragraph-container h4 {
+  main .musicians .musicians__p h4 {
     width: 100%;
     padding: 0;
     padding: 0;
@@ -652,7 +652,7 @@ footer .footer__h2--bandsite-logo-mobile {
     font-size: 2.25rem;
     line-height: 2.75rem;
   }
-  main .main__section--aboutmusicians-container .main__article--paragraph-container p {
+  main .musicians .musicians__p p {
     width: 50%;
     padding-left: 0;
     font-family: "Avenir-Font";
@@ -660,21 +660,21 @@ footer .footer__h2--bandsite-logo-mobile {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
-  main .main__article--container .main__article--h1 {
+  main .banner .banner__h1 {
     font-family: "Avenir-Font";
     font-weight: 600;
     font-size: 3.75rem;
     line-height: 4.25rem;
     padding-left: 3rem;
   }
-  main .main__section--photogallery-container {
+  main .gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 2rem 1rem 3rem;
   }
-  main .main__section--photogallery-container h2 {
+  main .gallery h2 {
     padding: 0.5rem 0;
     width: 100%;
     font-family: "Avenir-Font";
@@ -683,23 +683,23 @@ footer .footer__h2--bandsite-logo-mobile {
     line-height: 2.75rem;
     text-align: left;
   }
-  main .main__section--photogallery-container picture {
+  main .gallery picture {
     padding: 0;
     margin-bottom: 1rem;
     width: 30%;
   }
-  main .main__section--photogallery-container img {
+  main .gallery img {
     margin: 0;
     padding: 0;
   }
-  main .main__section-comments-container {
+  main .comments {
     padding: 0 2rem 1rem 3rem;
   }
-  main .main__section-comments-container #main__form div {
+  main .comments #comments__form div {
     padding: 0;
     margin: 0 0 1rem 0;
   }
-  main .main__section-comments-container h2 {
+  main .comments h2 {
     padding: 0.5rem 0;
     width: 100%;
     font-family: "Avenir-Font";
@@ -708,7 +708,7 @@ footer .footer__h2--bandsite-logo-mobile {
     line-height: 2.75rem;
     text-align: left;
   }
-  main .main__section-comments-container #main__article--comments-container {
+  main .comments #new-comments {
     margin: 1.5rem 0 0 0;
     padding: 0;
   }
@@ -735,27 +735,27 @@ footer .footer__h2--bandsite-logo-mobile {
     line-height: 1.5rem;
     line-height: 1;
   }
-  footer .footer__section--information-container {
+  footer .footer__information {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: left;
   }
-  footer .footer__section--information-container section {
+  footer .footer__information section {
     display: flex;
     flex-direction: column;
     width: 30%;
   }
-  footer .footer__section--information-container article {
+  footer .footer__information article {
     width: 100%;
     position: relative;
   }
-  footer .footer__h2--bandsite-logo-not-mobile-container {
+  footer .footer__h2--not-mobile-container {
     position: relative;
     width: 70%;
     visibility: unset;
   }
-  footer .footer__h2--bandsite-logo-not-mobile {
+  footer .footer__h2--not-mobile {
     position: absolute;
     top: 0;
     right: 0;
@@ -765,8 +765,8 @@ footer .footer__h2--bandsite-logo-mobile {
     line-height: 2;
     font-weight: 400;
   }
-  footer .footer__h2--bandsite-logo-mobile,
-  footer .footer__h2--bandsite-logo-mobile-container {
+  footer .footer__h2--mobile,
+  footer .footer__h2--mobile-container {
     visibility: hidden;
     height: 0;
     width: 0;
@@ -776,28 +776,28 @@ footer .footer__h2--bandsite-logo-mobile {
 }
 @media only screen and (min-width: 1280px) {
   /*  ----------------------- MAIN --------------------------- */
-  main .main__article--container .main__article--h1 {
+  main .banner .banner__h1 {
     padding: 1rem 6rem;
   }
-  main .main__section--aboutmusicians-container {
+  main .musicians {
     padding: 1rem 6rem;
   }
-  main .main__section--aboutmusicians-container .main__article--phrases-container,
-  main .main__section--aboutmusicians-container .main__article--paragraph-container {
+  main .musicians .musicians__phrases,
+  main .musicians .musicians__p {
     padding: 0 3rem;
   }
-  main .main__section--photogallery-container {
+  main .gallery {
     padding: 1rem 6rem;
   }
-  main .main__section-comments-container {
+  main .comments {
     padding: 1rem 6rem;
   }
-  main .main__section-comments-container #main__form {
+  main .comments #comments__form {
     width: 40%;
     margin: auto;
     margin-top: 1.5rem;
   }
-  main .main__section-comments-container #main__article--comments-container {
+  main .comments #new-comments {
     width: 40%;
     margin: auto;
     margin-top: 1.5rem;

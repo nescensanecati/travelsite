@@ -35,19 +35,19 @@
     <!-- PAGE CONTENT GOES HERE -->
     <main>
       <!-- BANNER GOES HERE -->
-      <article class="main__article--container">
-        <h1 class="main__article--h1">The Bees Knees</h1>
+      <article class="banner">
+        <h1 class="banner__h1">The Bees Knees</h1>
         <picture
-          ><div id="main__img--hero-overlay">
+          ><div id="banner__img--overlay">
             <img
-              class="main__img--hero"
+              class="banner__img"
               src="./assets/images/hero-bio.jpg"
               alt="The Bees Knees Photo"
             /></div
         ></picture>
       </article>
       <!-- ABOUT THE MUSICIANS GOES HERE -->
-      <section class="main__section--aboutmusicians-container">
+      <section class="musicians">
         <article>
           <h2>About the Musicians</h2>
           <picture>
@@ -57,16 +57,16 @@
             />
           </picture>
         </article>
-        <article class="main__article--phrases-container">
+        <article class="musicians__phrases">
           <h3>
             “We push each other to be the best. It’s not uncommon for one of us
             to say ‘this needs to be better, back to the drawing board’”
           </h3>
-          <h3 class="main__h3--author-format">
+          <h3 class="musicians__author">
             - Bryan Teddy, lead vocalist of The Bees Knees
           </h3>
         </article>
-        <article class="main__article--paragraph-container">
+        <article class="musicians__p">
           <h2>The Bees Knees</h2>
           <p>
             The Bees Knees is a pop rock band originating from San Francisco,
@@ -93,7 +93,7 @@
         </article>
       </section>
       <!-- PHOTO GALERY GOES HERE -->
-      <section class="main__section--photogallery-container">
+      <section class="gallery">
         <h2>Photo Gallery</h2>
         <picture
           ><img
@@ -141,14 +141,14 @@
             alt="Photo of small papers dropping down on top of the crowd of the concert"
         /></picture>
       </section>
-      <section class="main__section-comments-container">
+      <section class="comments">
         <h2>Join the Conversation</h2>
-        <form id="main__form">
+        <form id="comments__form">
           <div>
-            <section class="main_section--icon-container">
-              <div class="main__form--image-format"></div>
+            <section>
+              <div class="comments__icon"></div>
             </section>
-            <section class="main_section--comment-container">
+            <section class="comments__inputs">
               <label>
                 NAME
                 <input
@@ -158,22 +158,20 @@
                   required
                 />
               </label>
-              <label for="main__textarea--commentInput">COMMENT</label>
+              <label for="comments__textarea">COMMENT</label>
               <textarea
                 name="commentInput"
-                id="main__textarea--commentInput"
+                id="comments__textarea"
                 placeholder="Add a new comment"
                 required
               ></textarea>
-              <button type="submit" class="main__button--submit-comment">
-                COMMENT
-              </button>
+              <button type="submit">COMMENT</button>
             </section>
           </div>
         </form>
-        <section id="main__article--comments-container">
+        <section id="new-comments">
           <article>
-            <div class="main__div--blank-logo"></div>
+            <div class="new-comments__logo"></div>
             <div>
               <h3>Connor Walton</h3>
               <h4>02/17/2021</h4>
@@ -193,13 +191,13 @@
 
     <!-- PAGE FOOTER GOES HERE -->
     <footer>
-      <article class="footer__h2--bandsite-logo-not-mobile-container">
-        <h2 class="footer__h2--bandsite-logo-not-mobile">BANDSITE</h2>
+      <article class="footer__h2--not-mobile-container">
+        <h2 class="footer__h2--not-mobile">BANDSITE</h2>
       </article>
       <section>
         <h2>Get In Touch</h2>
         <!-- FOOTER ICONS GOES HERE -->
-        <section class="footer__section--logos-container">
+        <section class="footer__logos">
           <figure>
             <a href="https://www.instagram.com/">
               <img
@@ -216,7 +214,7 @@
           <figure>
             <a href="https://www.facebook.com/">
               <img
-                class="footer__img--twitter"
+                class="footer__logos--twitter"
                 src="./assets/icons/icon-twitter.svg"
                 alt="Twitter logo"
               />
@@ -224,7 +222,7 @@
           </figure>
         </section>
       </section>
-      <section class="footer__section--information-container">
+      <section class="footer__information">
         <section>
           <article>
             <h3>Cam Adams</h3>
@@ -275,10 +273,8 @@
           </article>
         </section>
       </section>
-      <article class="footer__h2--bandsite-logo-mobile-container">
-        <a href="index.html"
-          ><h2 class="footer__h2--bandsite-logo-mobile">BANDSITE</h2></a
-        >
+      <article class="footer__h2--mobile-container">
+        <a href="index.html"><h2 class="footer__h2--mobile">BANDSITE</h2></a>
       </article>
       <article>
         <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>

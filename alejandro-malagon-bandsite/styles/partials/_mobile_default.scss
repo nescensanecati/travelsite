@@ -129,7 +129,7 @@ main {
   }
 
   img {
-    .main__section--photogallery-container & {
+    .gallery & {
       //https://codepen.io/AnthonyMoss/pen/RwwyQQ (for greyscale)
       filter: grayscale(0%);
       -webkit-filter: grayscale(0%);
@@ -140,7 +140,7 @@ main {
     padding: $defaultPadding $doubleDefaultPadding;
   }
 
-  .main__section--photogallery-container img {
+  .gallery img {
     &:hover {
       //https://codepen.io/AnthonyMoss/pen/RwwyQQ (for greyscale)
       filter: grayscale(100%);
@@ -149,7 +149,7 @@ main {
     }
   }
 
-  .main__article--phrases-container {
+  .musicians__phrases {
     * {
       padding: 0;
       padding-bottom: $defaultPadding;
@@ -159,10 +159,10 @@ main {
     padding: 0 $doubleDefaultPadding;
   }
 
-  .main__article--container {
+  .banner {
     position: relative;
 
-    .main__img--hero {
+    .banner__img {
       position: relative;
       width: 100%;
       padding: 0;
@@ -170,7 +170,7 @@ main {
       z-index: -1;
     }
 
-    .main__article--h1 {
+    .banner__h1 {
       position: absolute;
       color: white;
       top: 50%;
@@ -183,7 +183,7 @@ main {
       line-height: 1;
     }
 
-    #main__img--hero-overlay {
+    #banner__img--overlay {
       position: relative;
       background-color: rgba(0, 0, 0, 0.5);
     }
@@ -198,17 +198,17 @@ main {
     }
   }
 
-  .main__section--photogallery-container {
+  .gallery {
     background-color: $secondaryColorDarkAlabaster;
   }
 
-  .main__section-comments-container {
+  .comments {
     h2 {
       margin-top: 0;
       margin-bottom: 0;
     }
 
-    #main__form {
+    #comments__form {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -234,7 +234,7 @@ main {
             width: 100%;
           }
 
-          & .main__form--image-format {
+          & .comments__icon {
             background: url("../assets/images/mohan-muruge.jpg");
             background-size: cover;
             border-radius: 50%;
@@ -243,7 +243,7 @@ main {
           }
         }
 
-        .main_section--comment-container {
+        .comments__inputs {
           width: 100%;
           margin-left: $defaultPadding;
 
@@ -301,10 +301,10 @@ main {
     }
   }
 
-  #main__article--comments-container {
+  #new-comments {
     padding: $defaultPadding $doubleDefaultPadding;
 
-    .main__div--blank-logo {
+    .new-comments__logo {
       background-color: $secondaryColorDarkMercury;
       background-size: cover;
       border-radius: 50%;
@@ -356,7 +356,7 @@ main {
     }
   }
 
-  .main__section--shows-container {
+  .shows {
     display: flex;
     flex-direction: column;
     padding: $defaultPadding $doubleDefaultPadding $doubleDefaultPadding
@@ -390,18 +390,18 @@ main {
       }
     }
 
-    .main__p--title-format {
+    .shows__title {
       color: $primaryColorSilver;
       font-weight: $demiWeight;
     }
 
-    .main__p--info-format {
+    .shows__info {
       color: $primaryColorBlack;
       font-weight: $regularWeight;
       font-size: 0.8125rem;
     }
 
-    .main__p--demi {
+    .shows--demi {
       font-weight: $demiWeight;
     }
   }
@@ -451,7 +451,7 @@ footer {
     line-height: 1.125rem;
   }
 
-  .footer__section--logos-container {
+  .footer__logos {
     display: flex;
     flex-direction: row;
   }
@@ -461,7 +461,7 @@ footer {
     text-align: left;
   }
 
-  .footer__h2--bandsite-logo-mobile {
+  .footer__h2--mobile {
     position: absolute;
     top: 0;
     right: 0;
@@ -470,14 +470,14 @@ footer {
     padding-top: (6 * $defaultPadding);
   }
 
-  .footer__h2--bandsite-logo-not-mobile,
-  .footer__h2--bandsite-logo-not-mobile-container {
+  .footer__h2--not-mobile,
+  .footer__h2--not-mobile-container {
     visibility: hidden;
     width: 0;
     height: 0;
   }
 
-  .footer__h2--bandsite-logo-mobile {
+  .footer__h2--mobile {
     position: relative;
     color: white;
     text-align: left;

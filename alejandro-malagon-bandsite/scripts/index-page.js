@@ -57,7 +57,7 @@ function createCommentCard(commentJson) {
     const cardSec = document.createElement('article');
 
     const tempCardDiv = document.createElement('div');
-    tempCardDiv.classList.add('main__div--blank-logo')
+    tempCardDiv.classList.add('new-comments__logo')
 
     const tempEmptyDiv = document.createElement('div');
 
@@ -81,7 +81,7 @@ function createCommentCard(commentJson) {
 }
 
 function displayComment() {
-    const myCommentsEl = document.querySelector("#main__article--comments-container");
+    const myCommentsEl = document.querySelector("#new-comments");
 
     myCommentsEl.innerHTML = "";
 
@@ -106,12 +106,6 @@ function handleFormSubmit(event) {
 
     const date = new Date().toLocaleDateString('en-US', { year: "numeric", month: "2-digit", day: "2-digit" });
 
-    let raw = JSON.stringify({
-        "name": event.target.commentorName.value,
-        "comment": event.target.commentInput.value
-    });
-
-
     axios.post("https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", {
         name: event.target.commentorName.value,
         comment: event.target.commentInput.value
@@ -119,10 +113,10 @@ function handleFormSubmit(event) {
         .then(response => { commentsArray = response.data; displayComment(); })
         .catch(error => { console.log(error) })
 
-    document.getElementById("main__form").reset();
+    document.getElementById("comments__form").reset();
 }
 
-const formEl = document.querySelector('#main__form');
+const formEl = document.querySelector('#comments__form');
 
 formEl.addEventListener('submit', handleFormSubmit);
 
