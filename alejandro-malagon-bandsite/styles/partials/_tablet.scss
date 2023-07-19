@@ -1,13 +1,13 @@
 /*  ----------------------- HEADER --------------------------- */
-header {
+.header {
   display: flex;
   flex-direction: row;
 
-  h1 {
+  &__h1 {
     padding: $doubleDefaultPadding;
   }
 
-  img {
+  &__img {
     margin: (3 * $defaultPadding);
   }
 }
@@ -15,16 +15,15 @@ header {
 //end header
 
 /*  ----------------------- NAVIGATION --------------------------- */
-nav {
+.nav {
   width: 30%;
 
-  ul {
+  &__ul {
     height: 100%;
-
-    li {
-      padding: (2.5 * $defaultPadding) 0;
-      line-height: 0.21vh;
-    }
+  }
+  &__li {
+    padding: (2.5 * $defaultPadding) 0;
+    line-height: 0.21vh;
   }
 }
 
@@ -164,74 +163,50 @@ main {
 //end main
 
 /*  ----------------------- FOOTER --------------------------- */
-footer * {
+.footer {
   padding: 0;
   margin: 0;
-  position: relative;
-}
+  padding: $doubleDefaultPadding (6 * $defaultPadding);
 
-footer {
-  padding: 0;
-  margin: 0;
-  padding: 0 (2 * $defaultPadding);
-
-  section {
+  &__section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
     justify-content: left;
-
-    h2 {
-      width: 30%;
-      line-height: (3 * $defaultPadding);
-      line-height: 1;
-    }
   }
 
-  .footer__information {
+  &__h2--flex {
+    line-height: (3 * $defaultPadding);
+    line-height: 1;
+  }
+
+  &__information {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
-
-    section {
-      display: flex;
-      flex-direction: column;
-      width: 30%;
-    }
-
-    article {
-      width: 100%;
-      position: relative;
-    }
+    justify-content: space-between;
   }
 
-  .footer__h2--not-mobile-container {
+  &__section--flex {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+  %__article--flex {
+    width: 100%;
     position: relative;
-    width: 70%;
-    visibility: unset;
+  }
+  &__top {
+    justify-content: space-evenly;
+  }
+  &__logos {
+    justify-content: left;
   }
 
-  .footer__h2--not-mobile {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: white;
-    text-align: left;
-    visibility: unset;
-    line-height: 2;
-    font-weight: $regularWeight;
-  }
-
-  .footer__h2--mobile,
-  .footer__h2--mobile-container {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-    margin: 0;
-    padding: 0;
+  &--custom-width {
+    width: 33%;
   }
 }
-
 //end footer

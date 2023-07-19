@@ -89,7 +89,6 @@ function displayComment() {
         .then(response => {
             commentsArray = response.data;
             sortedCommentsArray = sortCommentsArray(commentsArray)
-            console.log(sortedCommentsArray);
             sortedCommentsArray.forEach(comment => {
                 const card = createCommentCard(comment);
                 myCommentsEl.appendChild(card);
@@ -116,8 +115,24 @@ function handleFormSubmit(event) {
     document.getElementById("comments__form").reset();
 }
 
-const formEl = document.querySelector('#comments__form');
+function bottomBandsiteLogo() {
+    const mobileContainer = document.querySelector(".footer__m")
+    const notMobileContainer = document.querySelector(".footer__nm");
 
+    if (screen.width < 768) {
+        notMobileContainer.innerHTML = "";
+        mobileContainer.innerHTML = `<a class="footer__a" href="index.html"><img class="footer__img" src="./assets/logos/logo-bandsite.svg" alt="BANDSITE logo" /></a>`;
+    }
+    else {
+        mobileContainer.innerHTML = "";
+        notMobileContainer.innerHTML = `<a class="footer__a" href="index.html"><img class="footer__img" src="./assets/logos/logo-bandsite.svg" alt="BANDSITE logo" /></a>`;
+    }
+}
+
+const formEl = document.querySelector('#comments__form');
 formEl.addEventListener('submit', handleFormSubmit);
 
 displayComment();
+
+bottomBandsiteLogo();
+addEventListener("resize", () => { bottomBandsiteLogo(); });

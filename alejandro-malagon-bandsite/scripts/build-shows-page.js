@@ -154,8 +154,25 @@ function renderShows() {
     }
 }
 
+function bottomBandsiteLogo() {
+    const mobileContainer = document.querySelector(".footer__m")
+    const notMobileContainer = document.querySelector(".footer__nm");
+
+    if (screen.width < 768) {
+        notMobileContainer.innerHTML = "";
+        mobileContainer.innerHTML = `<a class="footer__a" href="index.html"><img class="footer__img" src="../assets/logos/logo-bandsite.svg" alt="BANDSITE logo" /></a>`;
+    }
+    else {
+        mobileContainer.innerHTML = "";
+        notMobileContainer.innerHTML = `<a class="footer__a" href="index.html"><img class="footer__img" src="../assets/logos/logo-bandsite.svg" alt="BANDSITE logo" /></a>`;
+    }
+}
+
 renderShows();
 addEventListener("resize", () => { renderShows(); });
+
+bottomBandsiteLogo();
+addEventListener("resize", () => { bottomBandsiteLogo(); });
 
 setTimeout(() => {
     let prevRow = null;

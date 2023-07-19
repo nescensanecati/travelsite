@@ -204,60 +204,48 @@ body {
 }
 
 /*  ----------------------- HEADER --------------------------- */
-header {
+.header {
   background-color: #323232;
   text-align: center;
 }
-header a {
+.header__a {
   text-decoration: none;
 }
-header img {
+.header__img {
   height: 20px;
-  width: 120px;
   margin: 1rem 0 1rem 0;
+  width: 120px;
 }
 
 /*  ----------------------- NAVIGATION --------------------------- */
-nav {
+.nav {
   background-color: #323232;
 }
-nav ul {
+.nav__a {
+  color: #e1e1e1;
+  font-weight: 400;
+  height: 100%;
+  line-height: 2rem;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.nav__li {
+  margin: 0 1rem;
+  width: 50%;
+}
+.nav__li:hover {
+  border-bottom: 3px #ffffff solid;
+}
+.nav__ul {
   display: flex;
   flex-direction: row;
 }
-nav ul li {
-  width: 50%;
-  margin: 0 1rem;
-}
-nav ul li a {
-  text-align: center;
-  font-family: "Avenir-Font";
-  font-weight: 400;
-  line-height: 2rem;
-  width: 100%;
-  height: 100%;
-}
-nav ul .header__nav--active {
+.nav--active {
   border-bottom: 3px #ffffff solid;
-}
-nav ul .header__nav--active a {
-  font-family: "Avenir-Font";
+  color: #ffffff;
   font-weight: 700;
-  padding: 0;
-  line-height: 2rem;
-  color: #ffffff;
-}
-nav ul .header__nav--active:hover {
-  border-bottom: 3px #ffffff solid;
-}
-nav a {
-  text-decoration: none;
-  color: #ffffff;
-  width: 100%;
-  color: #e1e1e1;
-}
-nav li:hover {
-  border-bottom: 3px #ffffff solid;
 }
 
 /*  ----------------------- MAIN --------------------------- */
@@ -337,7 +325,7 @@ main .banner .banner__h1 {
   font-size: 1.5rem;
   line-height: 1;
 }
-main .banner #banner__img--overlay {
+main .banner #banner__overlay {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -519,68 +507,47 @@ main .shows .shows--demi {
 }
 
 /*  ----------------------- FOOTER --------------------------- */
-footer {
+.footer {
   background-color: #323232;
   padding: 0 1rem;
 }
-footer a {
-  text-decoration: none;
-}
-footer article {
+.footer__article {
   padding: 0.5rem 0;
 }
-footer h1,
-footer h2,
-footer h3,
-footer h4,
-footer p,
-footer a {
+.footer__a {
+  text-decoration: none;
+}
+.footer__h1, .footer__h2, .footer__h3, .footer__h4, .footer__p, .footer__a {
   color: white;
 }
-footer h2 {
+.footer__h2 {
   padding: 0.5rem 0;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
 }
-footer h3 {
+.footer__h3 {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: "Avenir-Font";
   font-weight: 600;
 }
-footer p {
+.footer__p {
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.125rem;
 }
-footer .footer__logos {
+.footer__logos {
   display: flex;
   flex-direction: row;
 }
-footer img {
+.footer__img {
   padding: 0.5rem 0.5rem 0.5rem 0;
   text-align: left;
 }
-footer .footer__h2--mobile {
-  position: absolute;
-  top: 0;
-  right: 0;
+.footer__h2-logo {
   color: white;
-  text-align: center;
-  padding-top: 3rem;
-}
-footer .footer__h2--not-mobile,
-footer .footer__h2--not-mobile-container {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-footer .footer__h2--mobile {
-  position: relative;
-  color: white;
-  text-align: left;
-  visibility: visible;
+  padding: 1rem 0;
 }
 
 main .banner {
@@ -617,24 +584,24 @@ main .banner iframe {
 
 @media only screen and (min-width: 768px) {
   /*  ----------------------- HEADER --------------------------- */
-  header {
+  .header {
     display: flex;
     flex-direction: row;
   }
-  header h1 {
+  .header__h1 {
     padding: 1rem;
   }
-  header img {
+  .header__img {
     margin: 1.5rem;
   }
   /*  ----------------------- NAVIGATION --------------------------- */
-  nav {
+  .nav {
     width: 30%;
   }
-  nav ul {
+  .nav__ul {
     height: 100%;
   }
-  nav ul li {
+  .nav__li {
     padding: 1.25rem 0;
     line-height: 0.21vh;
   }
@@ -745,65 +712,41 @@ main .banner iframe {
     padding: 0;
   }
   /*  ----------------------- FOOTER --------------------------- */
-  footer * {
+  .footer {
     padding: 0;
     margin: 0;
-    position: relative;
+    padding: 1rem 3rem;
   }
-  footer {
-    padding: 0;
-    margin: 0;
-    padding: 0 1rem;
-  }
-  footer section {
+  .footer__section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
     justify-content: left;
   }
-  footer section h2 {
-    width: 30%;
+  .footer__h2--flex {
     line-height: 1.5rem;
     line-height: 1;
   }
-  footer .footer__information {
+  .footer__information {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: space-between;
   }
-  footer .footer__information section {
+  .footer__section--flex {
     display: flex;
     flex-direction: column;
     width: 30%;
   }
-  footer .footer__information article {
-    width: 100%;
-    position: relative;
+  .footer__top {
+    justify-content: space-evenly;
   }
-  footer .footer__h2--not-mobile-container {
-    position: relative;
-    width: 70%;
-    visibility: unset;
+  .footer__logos {
+    justify-content: left;
   }
-  footer .footer__h2--not-mobile {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: white;
-    text-align: left;
-    visibility: unset;
-    line-height: 2;
-    font-weight: 400;
-  }
-  footer .footer__h2--mobile,
-  footer .footer__h2--mobile-container {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-    margin: 0;
-    padding: 0;
+  .footer--custom-width {
+    width: 33%;
   }
   main .banner iframe {
     margin-bottom: 1rem;
@@ -869,8 +812,8 @@ main .banner iframe {
     margin-bottom: 1.5rem;
   }
   /*  ----------------------- FOOTER --------------------------- */
-  footer {
-    padding: 0 6rem;
+  .footer {
+    padding: 1.5rem 6rem;
   }
   main .banner iframe {
     margin-bottom: 1rem;

@@ -21,71 +21,51 @@ body {
 }
 
 /*  ----------------------- HEADER --------------------------- */
-header {
+.header {
   background-color: $primaryColorBlack;
   text-align: center;
 
-  a {
+  &__a {
     text-decoration: none;
   }
 
-  img {
+  &__img {
     height: 20px;
-    width: 120px;
     margin: (2 * $defaultPadding) 0 (2 * $defaultPadding) 0;
+    width: 120px;
   }
 }
 
 //end header
 
 /*  ----------------------- NAVIGATION --------------------------- */
-nav {
+.nav {
   background-color: $primaryColorBlack;
-
-  ul {
+  &__a {
+    color: $secondaryColorDarkMercury;
+    font-weight: $regularWeight;
+    height: 100%;
+    line-height: 2rem;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+  }
+  &__li {
+    margin: 0 $doubleDefaultPadding;
+    width: 50%;
+    &:hover {
+      border-bottom: 3px $primaryColorWhite solid;
+    }
+  }
+  &__ul {
     display: flex;
     flex-direction: row;
-
-    li {
-      width: 50%;
-      margin: 0 $doubleDefaultPadding;
-
-      a {
-        text-align: center;
-        font-family: $defaultFont;
-        font-weight: $regularWeight;
-        line-height: 2rem;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .header__nav--active {
-      border-bottom: 3px $primaryColorWhite solid;
-
-      a {
-        font-family: $defaultFont;
-        font-weight: $boldWeight;
-        padding: 0;
-        line-height: 2rem;
-        color: $primaryColorWhite;
-      }
-
-      &:hover {
-        border-bottom: 3px $primaryColorWhite solid;
-      }
-    }
   }
-
-  a {
-    text-decoration: none;
-    color: $primaryColorWhite;
-    width: 100%;
-    color: $secondaryColorDarkMercury;
-  }
-
-  li:hover {
+  &--active {
     border-bottom: 3px $primaryColorWhite solid;
+    color: $primaryColorWhite;
+    font-weight: $boldWeight;
   }
 }
 
@@ -183,7 +163,7 @@ main {
       line-height: 1;
     }
 
-    #banner__img--overlay {
+    #banner__overlay {
       position: relative;
       background-color: rgba(0, 0, 0, 0.5);
     }
@@ -410,78 +390,60 @@ main {
 //end main
 
 /*  ----------------------- FOOTER --------------------------- */
-footer {
+.footer {
   background-color: $primaryColorBlack;
   padding: 0 $doubleDefaultPadding;
 
-  a {
-    text-decoration: none;
-  }
-
-  article {
+  &__article {
     padding: $defaultPadding 0;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  a {
+  &__a {
+    text-decoration: none;
+  }
+
+  &__h1,
+  &__h2,
+  &__h3,
+  &__h4,
+  &__p,
+  &__a {
     color: white;
   }
 
-  h2 {
+  &__h2 {
     padding: $defaultPadding 0;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: $demiWeight;
   }
 
-  h3 {
+  &__h3 {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: $defaultFont;
     font-weight: $demiWeight;
   }
 
-  p {
+  &__p {
     font-size: 0.8125rem;
     font-weight: $regularWeight;
     line-height: 1.125rem;
   }
 
-  .footer__logos {
+  &__logos {
     display: flex;
     flex-direction: row;
   }
 
-  img {
+  &__img {
     padding: $defaultPadding $defaultPadding $defaultPadding 0;
     text-align: left;
   }
 
-  .footer__h2--mobile {
-    position: absolute;
-    top: 0;
-    right: 0;
+  &__h2-logo {
     color: white;
-    text-align: center;
-    padding-top: (6 * $defaultPadding);
-  }
-
-  .footer__h2--not-mobile,
-  .footer__h2--not-mobile-container {
-    visibility: hidden;
-    width: 0;
-    height: 0;
-  }
-
-  .footer__h2--mobile {
-    position: relative;
-    color: white;
-    text-align: left;
-    visibility: visible;
+    padding: (2 * $defaultPadding) 0;
   }
 }
 

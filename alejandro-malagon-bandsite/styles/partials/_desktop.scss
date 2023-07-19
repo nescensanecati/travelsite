@@ -40,8 +40,8 @@ main {
 //end main
 
 /*  ----------------------- FOOTER --------------------------- */
-footer {
-  padding: 0 (12 * $defaultPadding);
+.footer {
+  padding: (3 * $defaultPadding) (12 * $defaultPadding);
 }
 
 //end footer
