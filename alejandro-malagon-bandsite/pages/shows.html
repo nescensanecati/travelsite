@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head">
     <meta charset="UTF-8" />
     <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH 
     src: https://app.pluralsight.com/library/courses/responsive-web-design-media-queries-css-preprocessing-->
@@ -12,20 +12,26 @@
     <link href="../styles/shows.css" rel="stylesheet" />
     <title>SHOWS</title>
     <script src="../scripts/build-shows-page.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <!-- PAGE HEADER GOES HERE -->
-    <header>
-      <a href="../index.html"
-        ><img src="../assets/logos/logo-bandsite.svg" alt="BANDSITE logo"
+    <header class="header">
+      <a href="../index.html" class="header__a"
+        ><img
+          class="header__img"
+          src="../assets/logos/logo-bandsite.svg"
+          alt="BANDSITE logo"
       /></a>
 
       <!-- PAGE NAVIGATION GOES HERE -->
-      <nav>
-        <ul>
-          <li><a href="../index.html">Biography</a></li>
-          <li class="header__nav--active">
-            <a href="../pages/shows.html">Shows</a>
+      <nav class="nav">
+        <ul class="nav__ul">
+          <li class="nav__li">
+            <a class="nav__a" href="../index.html">Biography</a>
+          </li>
+          <li class="nav__li nav--active">
+            <a class="nav__a" href="../pages/shows.html">Shows</a>
           </li>
         </ul>
       </nav>
@@ -33,9 +39,9 @@
     <!-- PAGE CONTENT GOES HERE -->
     <main>
       <!-- BANNER GOES HERE -->
-      <article class="main__article--container">
+      <article class="banner">
         <p>Beautiful Beasts Album</p>
-        <h1 class="main__article--h1">Queen of Yellow x For The Stings</h1>
+        <h1 class="banner__h1">Queen of Yellow x For The Stings</h1>
         <iframe
           scrolling="no"
           frameborder="no"
@@ -44,102 +50,114 @@
         ></iframe>
       </article>
       <!-- SHOWS SCHEDULE GOES HERE -->
-      <section class="main__shows--container"></section>
+      <section class="shows"></section>
     </main>
     <!-- PAGE FOOTER GOES HERE -->
-    <footer>
-      <article class="footer__h2--bandsite-logo-not-mobile-container">
-        <h2 class="footer__h2--bandsite-logo-not-mobile">BANDSITE</h2>
-      </article>
-      <section>
-        <h2>Get In Touch</h2>
+    <footer class="footer">
+      <section class="footer__section footer__top">
+        <h2 class="footer--custom-width footer__h2 footer__h2--flex">
+          Get In Touch
+        </h2>
         <!-- FOOTER ICONS GOES HERE -->
-        <section class="footer__section--logos-container">
+        <section
+          class="footer--custom-width footer__section footer__logos footer__top"
+        >
           <figure>
-            <a href="https://www.instagram.com/">
+            <a class="footer__a" href="https://www.instagram.com/">
               <img
+                class="footer__img"
                 src="../assets/icons/icon-instagram.svg"
                 alt="Instagram logo"
               />
             </a>
           </figure>
           <figure>
-            <a href="https://www.facebook.com/">
+            <a class="footer__a" href="https://www.facebook.com/">
               <img
+                class="footer__img"
                 src="../assets/icons/icon-facebook.svg"
                 alt="Facebook logo"
               />
             </a>
           </figure>
           <figure>
-            <a href="https://www.facebook.com/">
+            <a class="footer__a" href="https://www.facebook.com/">
               <img
-                class="footer__img--twitter"
+                class="footer__logos--twitter footer__img"
                 src="../assets/icons/icon-twitter.svg"
                 alt="Twitter logo"
               />
             </a>
           </figure>
         </section>
+        <section
+          class="footer--custom-width footer__section footer__bandsite footer__nm"
+        ></section>
       </section>
-      <section class="footer__section--information-container">
-        <section>
-          <article>
-            <h3>Cam Adams</h3>
-            <h3>The Bees Knees Management</h3>
+      <section class="footer__section footer__information">
+        <section
+          class="footer--custom-width footer__section footer__section--flex"
+        >
+          <article class="footer__article footer__article--flex">
+            <h3 class="footer__h3">Cam Adams</h3>
+            <h3 class="footer__h3">The Bees Knees Management</h3>
           </article>
-          <article>
-            <p>503 Broadway Penthouse,</p>
-            <p>New York, NY 10012, USA</p>
+          <article class="footer__article footer__article--flex">
+            <p class="footer__p">503 Broadway Penthouse,</p>
+            <p class="footer__p">New York, NY 10012, USA</p>
           </article>
-          <article>
-            <p>
-              <a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
+          <article class="footer__article footer__article--flex">
+            <p class="footer__p">
+              <a class="footer__a" href="mailto:info@thebeesknees.com"
+                >info@thebeesknees.com</a
+              >
             </p>
           </article>
         </section>
-        <section>
-          <article>
-            <h3>Pearl Gregg</h3>
-            <h3>Limitless Artist Group</h3>
+        <section
+          class="footer--custom-width footer__section footer__section--flex"
+        >
+          <article class="footer__article">
+            <h3 class="footer__h3">Pearl Gregg</h3>
+            <h3 class="footer__h3">Limitless Artist Group</h3>
           </article>
-          <article>
-            <p>Booking Agent for</p>
-            <p>US / South America / Japan</p>
+          <article class="footer__article">
+            <p class="footer__p">Booking Agent for</p>
+            <p class="footer__p">US / South America / Japan</p>
           </article>
-          <article>
-            <p>
-              <a href="mailto:pearl.gregg@limitlessag.com"
+          <article class="footer__article">
+            <p class="footer__p">
+              <a class="footer__a" href="mailto:pearl.gregg@limitlessag.com"
                 >pearl.gregg@limitlessag.com</a
               >
             </p>
           </article>
         </section>
-        <section>
-          <article>
-            <h3>Carson Whyte</h3>
-            <h3>ARCH Entertainment</h3>
+        <section
+          class="footer--custom-width footer__section footer__section--flex"
+        >
+          <article class="footer__article">
+            <h3 class="footer__h3">Carson Whyte</h3>
+            <h3 class="footer__h3">ARCH Entertainment</h3>
           </article>
-          <article>
-            <p>Booking Agent for</p>
-            <p>UK / EU / AU</p>
+          <article class="footer__article">
+            <p class="footer__p">Booking Agent for</p>
+            <p class="footer__p">UK / EU / AU</p>
           </article>
-          <article>
-            <p>
-              <a href="mailto:cwhyte@archentertainment.com"
+          <article class="footer__article">
+            <p class="footer__p">
+              <a class="footer__a" href="mailto:cwhyte@archentertainment.com"
                 >cwhyte@archentertainment.com</a
               >
             </p>
           </article>
         </section>
       </section>
-      <article class="footer__h2--bandsite-logo-mobile-container">
-        <a href="../index.html"
-          ><h2 class="footer__h2--bandsite-logo-mobile">BANDSITE</h2></a
-        >
-      </article>
-      <article>
-        <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
+      <article class="footer__article footer__bandsite footer__m"></article>
+      <article class="footer__article">
+        <p class="footer__p">
+          Copyright The Bees Knees © 2021 All Rights Reserved
+        </p>
       </article>
     </footer>
   </body>

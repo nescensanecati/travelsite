@@ -1,26 +1,75 @@
-const commentsObject = [
-    { commentorName: 'Connor Walton', commentDate: '02/17/2021', comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains." },
-    { commentorName: 'Emilie Beach', commentDate: '01/09/2021', comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day." },
-    { commentorName: 'Miles Acosta', commentDate: '12/20/2020', comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough." },
-];
+let commentsArray = [];
+let sortedCommentsArray = []
 
 
-function createCommentCard(commentArray) {
+function sortCommentsArray(array) {
+    tempSortedArray = [];
+    for (let index = 0; index < array.length; index++) {
+        if (tempSortedArray.length == 0) {
+            tempSortedArray.push(array[index])
+        }
+        else if (array[index].timestamp > tempSortedArray[0].timestamp) {
+            tempSortedArray.unshift(array[index])
+        }
+        else if (array[index].timestamp < tempSortedArray[tempSortedArray.length - 1].timestamp) {
+            tempSortedArray.push(array[index])
+        }
+    }
+    return tempSortedArray;
+}
+
+function timeDifference(current, previous) {
+
+    let msPerMinute = 60 * 1000;
+    let msPerHour = msPerMinute * 60;
+    let msPerDay = msPerHour * 24;
+    let msPerMonth = msPerDay * 30;
+    let msPerYear = msPerDay * 365;
+
+    let elapsed = current - previous;
+
+    if (elapsed < msPerMinute) {
+        return Math.round(elapsed / 1000) + ' seconds ago';
+    }
+
+    else if (elapsed < msPerHour) {
+        return Math.round(elapsed / msPerMinute) + ' minutes ago';
+    }
+
+    else if (elapsed < msPerDay) {
+        return Math.round(elapsed / msPerHour) + ' hours ago';
+    }
+
+    else if (elapsed < msPerMonth) {
+        return 'approximately ' + Math.round(elapsed / msPerDay) + ' days ago';
+    }
+
+    else if (elapsed < msPerYear) {
+        return 'approximately ' + Math.round(elapsed / msPerMonth) + ' months ago';
+    }
+
+    else {
+        return 'approximately ' + Math.round(elapsed / msPerYear) + ' years ago';
+    }
+}
+
+function createCommentCard(commentJson) {
     const cardSec = document.createElement('article');
 
     const tempCardDiv = document.createElement('div');
-    tempCardDiv.classList.add('main__div--blank-logo')
+    tempCardDiv.classList.add('new-comments__logo')
 
     const tempEmptyDiv = document.createElement('div');
 
+    timeAgo = timeDifference(Date.now(), commentJson.timestamp)
     const tempCommentDate = document.createElement('h4');
-    tempCommentDate.innerText = commentArray.commentDate;
+    tempCommentDate.innerText = timeAgo;
 
     const tempCommentorName = document.createElement('h3');
-    tempCommentorName.innerText = commentArray.commentorName;
+    tempCommentorName.innerText = commentJson.name;
 
     const tempCommentorComment = document.createElement('p');
-    tempCommentorComment.innerText = commentArray.comment;
+    tempCommentorComment.innerText = commentJson.comment;
 
     cardSec.appendChild(tempCardDiv);
     cardSec.appendChild(tempEmptyDiv);
@@ -32,15 +81,22 @@ function createCommentCard(commentArray) {
 }
 
 function displayComment() {
-    const myCommentsEl = document.querySelector("#main__article--comments-container");
+    const myCommentsEl = document.querySelector("#new-comments");
 
     myCommentsEl.innerHTML = "";
 
-    commentsObject.forEach(comment => {
-        const card = createCommentCard(comment);
-        myCommentsEl.appendChild(card);
-    })
-
+    axios.get('https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b')
+        .then(response => {
+            commentsArray = response.data;
+            sortedCommentsArray = sortCommentsArray(commentsArray)
+            sortedCommentsArray.forEach(comment => {
+                const card = createCommentCard(comment);
+                myCommentsEl.appendChild(card);
+            });
+        })
+        .catch(error => {
+            console.log(error);
+        })
 
 }
 
@@ -49,21 +105,34 @@ function handleFormSubmit(event) {
 
     const date = new Date().toLocaleDateString('en-US', { year: "numeric", month: "2-digit", day: "2-digit" });
 
-    const formSubmission = {
-        commentorName: event.target.commentorName.value,
-        comment: event.target.commentInput.value,
-        commentDate: date,
-    };
+    axios.post("https://project-1-api.herokuapp.com/comments?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b", {
+        name: event.target.commentorName.value,
+        comment: event.target.commentInput.value
+    })
+        .then(response => { commentsArray = response.data; displayComment(); })
+        .catch(error => { console.log(error) })
 
-    commentsObject.unshift(formSubmission);
-
-    displayComment();
-
-    document.getElementById("main__form").reset();
+    document.getElementById("comments__form").reset();
 }
 
-const formEl = document.querySelector('#main__form');
+function bottomBandsiteLogo() {
+    const mobileContainer = document.querySelector(".footer__m")
+    const notMobileContainer = document.querySelector(".footer__nm");
 
+    if (screen.width < 768) {
+        notMobileContainer.innerHTML = "";
+        mobileContainer.innerHTML = `<a class="footer__a" href="index.html"><img class="footer__img" src="./assets/logos/logo-bandsite.svg" alt="BANDSITE logo" /></a>`;
+    }
+    else {
+        mobileContainer.innerHTML = "";
+        notMobileContainer.innerHTML = `<a class="footer__a" href="index.html"><img class="footer__img" src="./assets/logos/logo-bandsite.svg" alt="BANDSITE logo" /></a>`;
+    }
+}
+
+const formEl = document.querySelector('#comments__form');
 formEl.addEventListener('submit', handleFormSubmit);
 
 displayComment();
+
+bottomBandsiteLogo();
+addEventListener("resize", () => { location.reload(); bottomBandsiteLogo(); });

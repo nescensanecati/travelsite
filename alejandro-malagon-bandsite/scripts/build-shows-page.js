@@ -1,46 +1,38 @@
-const showsObject = [
-    { date: 'Mon Sept 06 2021', venue: 'Ronald Lane', location: 'San Francisco, CA' },
-    { date: 'Tue Sept 21 2021', venue: 'Pier 3 East', location: 'San Francisco, CA' },
-    { date: 'Fri Oct 15 2021', venue: 'View Lounge', location: 'San Francisco, CA' },
-    { date: 'Sat Nov 06 2021', venue: 'Hyatt Agency', location: 'San Francisco, CA' },
-    { date: 'Fri Nov 26 2021', venue: 'Moscow Center', location: 'San Francisco, CA' },
-    { date: 'Wed Dec 15 2021', venue: 'Press Club', location: 'San Francisco, CA' }
-];
+let showsArray = [];
 
 function createShowVisualizationMobile(showStructure) {
     const tempArticleContainer = document.createElement('article');
 
     const tempDateTitle = document.createElement('p');
-    tempDateTitle.classList.add('main__p--title-format')
+    tempDateTitle.classList.add('shows__title')
     tempDateTitle.innerText = 'Date'
 
     const tempDateValue = document.createElement('p');
-    tempDateValue.classList.add('main__p--info-format');
-    tempDateValue.classList.add('main__p--demi');
-    tempDateValue.innerText = showStructure.date;
+    tempDateValue.classList.add('shows__info');
+    tempDateValue.classList.add('shows--demi');
+    let dateFormat = new Date(showStructure.date).toLocaleDateString();
+    tempDateValue.innerText = dateFormat;
 
     const tempVenueTitle = document.createElement('p');
-    tempVenueTitle.classList.add('main__p--title-format');
+    tempVenueTitle.classList.add('shows__title');
     tempVenueTitle.innerText = 'Venue'
 
     const tempVenueValue = document.createElement('p');
-    tempVenueValue.classList.add('main__p--info-format')
-    tempVenueValue.innerText = showStructure.venue;
+    tempVenueValue.classList.add('shows__info')
+    tempVenueValue.innerText = showStructure.place;
 
     const tempLocationTitle = document.createElement('p');
-    tempLocationTitle.classList.add('main__p--title-format');
+    tempLocationTitle.classList.add('shows__title');
     tempLocationTitle.innerText = 'Location'
 
-    // create p to show  
     const tempLocationValue = document.createElement('p');
-    tempLocationValue.classList.add('main__p--info-format')
+    tempLocationValue.classList.add('shows__info')
     tempLocationValue.innerText = showStructure.location;
 
-    // create button to show  
     const tempButtonHolder = document.createElement('button');
     tempButtonHolder.innerHTML = "BUY TICKETS"
 
-    // append our elements above as children to the cardSec
+
     tempArticleContainer.appendChild(tempDateTitle);
     tempArticleContainer.appendChild(tempDateValue);
     tempArticleContainer.appendChild(tempVenueTitle);
@@ -59,16 +51,17 @@ function createShowVisualizationNotMobile(showStructure) {
 
 
     const tempDateValue = document.createElement('p');
-    tempDateValue.classList.add('main__p--info-format');
-    tempDateValue.classList.add('main__p--demi');
-    tempDateValue.innerText = showStructure.date;
+    tempDateValue.classList.add('shows__info');
+    tempDateValue.classList.add('shows--demi');
+    let dateFormat = new Date(showStructure.date).toLocaleDateString();
+    tempDateValue.innerText = dateFormat;
 
     const tempVenueValue = document.createElement('p');
-    tempVenueValue.classList.add('main__p--info-format')
-    tempVenueValue.innerText = showStructure.venue;
+    tempVenueValue.classList.add('shows__info')
+    tempVenueValue.innerText = showStructure.place;
 
     const tempLocationValue = document.createElement('p');
-    tempLocationValue.classList.add('main__p--info-format')
+    tempLocationValue.classList.add('shows__info')
     tempLocationValue.innerText = showStructure.location;
 
     const tempButtonHolder = document.createElement('button');
@@ -84,7 +77,7 @@ function createShowVisualizationNotMobile(showStructure) {
 }
 
 function renderShows() {
-    const showsParentContainer = document.querySelector(".main__shows--container");
+    const showsParentContainer = document.querySelector(".shows");
     showsParentContainer.innerHTML = "";
 
     const tempArticleContainer = document.createElement('article');
@@ -93,40 +86,48 @@ function renderShows() {
     tempH2TittleValue.innerText = 'Shows';
 
     const tempShowsContainer = document.createElement('article');
-    tempShowsContainer.classList.add("main__section--shows-container")
+    tempShowsContainer.classList.add("shows__container")
 
     tempArticleContainer.appendChild(tempH2TittleValue);
     showsParentContainer.appendChild(tempArticleContainer);
     showsParentContainer.appendChild(tempShowsContainer);
 
-    const myShowsEl = document.querySelector(".main__section--shows-container");
+    const myShowsEl = document.querySelector(".shows__container");
 
     myShowsEl.innerHTML = "";
 
     if (screen.width < 768) {
-        showsObject.forEach(show => {
-            const tempShowStructure = createShowVisualizationMobile(show);
-            myShowsEl.appendChild(tempShowStructure);
-        })
+        axios.get('https://project-1-api.herokuapp.com/showdates?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b')
+            .then(response => {
+                showsArray = response.data;
+                showsArray.forEach(show => {
+                    const tempShowStructure = createShowVisualizationMobile(show);
+                    myShowsEl.appendChild(tempShowStructure);
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
     } else if (screen.width >= 768) {
 
         const tempArticleContainer = document.createElement('article');
         tempArticleContainer.classList.add('shows__row');
 
         const tempDateTitle = document.createElement('p');
-        tempDateTitle.classList.add('main__p--title-format')
+        tempDateTitle.classList.add('shows__title')
         tempDateTitle.innerText = 'Date'
 
         const tempVenueTitle = document.createElement('p');
-        tempVenueTitle.classList.add('main__p--title-format');
+        tempVenueTitle.classList.add('shows__title');
         tempVenueTitle.innerText = 'Venue'
 
         const tempLocationTitle = document.createElement('p');
-        tempLocationTitle.classList.add('main__p--title-format');
+        tempLocationTitle.classList.add('shows__title');
         tempLocationTitle.innerText = 'Location'
 
         const tempEmptyTitle = document.createElement('p');
-        tempEmptyTitle.classList.add('main__p--title-format')
+        tempEmptyTitle.classList.add('shows__title')
         tempEmptyTitle.innerText = ''
 
         tempArticleContainer.appendChild(tempDateTitle);
@@ -136,40 +137,63 @@ function renderShows() {
 
         myShowsEl.appendChild(tempArticleContainer)
 
-        showsObject.forEach(show => {
-            const tempShowStructureNotMobile = createShowVisualizationNotMobile(show);
-            myShowsEl.appendChild(tempShowStructureNotMobile);
-        })
-
+        axios.get('https://project-1-api.herokuapp.com/showdates?api_key=e49de4b9-5c8a-40f3-a40b-efe5cd3ca98b')
+            .then(response => {
+                showsArray = response.data;
+                showsArray.forEach(show => {
+                    const tempShowStructure = createShowVisualizationNotMobile(show);
+                    myShowsEl.appendChild(tempShowStructure);
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            })
 
     }
     else if (screen.width >= 1280) {
     }
 }
 
-renderShows();
-addEventListener("resize", () => { renderShows(); });
+function bottomBandsiteLogo() {
+    const mobileContainer = document.querySelector(".footer__m")
+    const notMobileContainer = document.querySelector(".footer__nm");
 
-
-let prevRow = null;
-const rowsContainer = document.querySelectorAll('.shows__row--hover');
-for (let index = 0; index < rowsContainer.length; index++) {
-    rowsContainer[index].addEventListener('click', (e) => {
-
-        const isRow = e.currentTarget.nodeName === 'ARTICLE';
-
-        if (!isRow) {
-            return;
-        }
-
-        e.currentTarget.classList.add('shows__row--selected');
-
-        if (prevRow !== null) {
-            prevRow.classList.remove('shows__row--selected');
-        }
-
-        prevRow = e.currentTarget;
-
-    });
+    if (screen.width < 768) {
+        notMobileContainer.innerHTML = "";
+        mobileContainer.innerHTML = `<a class="footer__a" href="index.html"><img class="footer__img" src="../assets/logos/logo-bandsite.svg" alt="BANDSITE logo" /></a>`;
+    }
+    else {
+        mobileContainer.innerHTML = "";
+        notMobileContainer.innerHTML = `<a class="footer__a" href="index.html"><img class="footer__img" src="../assets/logos/logo-bandsite.svg" alt="BANDSITE logo" /></a>`;
+    }
 }
+
+renderShows();
+bottomBandsiteLogo();
+addEventListener("resize", () => { location.reload(); renderShows(); bottomBandsiteLogo(); });
+
+setTimeout(() => {
+    let prevRow = null;
+    const rowsContainer = document.querySelectorAll('.shows__row--hover');
+    for (let index = 0; index < rowsContainer.length; index++) {
+        rowsContainer[index].addEventListener('click', (e) => {
+
+            const isRow = e.currentTarget.nodeName === 'ARTICLE';
+
+            if (!isRow) {
+                return;
+            }
+
+            e.currentTarget.classList.add('shows__row--selected');
+
+            if (prevRow !== null) {
+                prevRow.classList.remove('shows__row--selected');
+            }
+
+            prevRow = e.currentTarget;
+
+        });
+    }
+}, 1000);
+
 

@@ -1,34 +1,34 @@
 /*  ----------------------- MAIN --------------------------- */
 main {
-  .main__article--container {
-    .main__article--h1 {
+  .banner {
+    .banner__h1 {
       padding: $doubleDefaultPadding (12 * $defaultPadding);
     }
   }
 
-  .main__section--aboutmusicians-container {
+  .musicians {
     padding: $doubleDefaultPadding (12 * $defaultPadding);
 
-    .main__article--phrases-container,
-    .main__article--paragraph-container {
+    .musicians__phrases,
+    .musicians__p {
       padding: 0 (6 * $defaultPadding);
     }
   }
 
-  .main__section--photogallery-container {
+  .gallery {
     padding: $doubleDefaultPadding (12 * $defaultPadding);
   }
 
-  .main__section-comments-container {
+  .comments {
     padding: $doubleDefaultPadding (12 * $defaultPadding);
 
-    #main__form {
+    #comments__form {
       width: 40%;
       margin: auto;
       margin-top: (3 * $defaultPadding);
     }
 
-    #main__article--comments-container {
+    #new-comments {
       width: 40%;
       margin: auto;
       margin-top: (3 * $defaultPadding);
@@ -40,8 +40,8 @@ main {
 //end main
 
 /*  ----------------------- FOOTER --------------------------- */
-footer {
-  padding: 0 (12 * $defaultPadding);
+.footer {
+  padding: (3 * $defaultPadding) (12 * $defaultPadding);
 }
 
 //end footer

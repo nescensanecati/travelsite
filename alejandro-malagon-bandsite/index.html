@@ -12,21 +12,27 @@
     <link href="styles/bio.css" rel="stylesheet" />
     <title>BANDSITE</title>
     <script src="./scripts/index-page.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <!-- PAGE HEADER GOES HERE -->
-    <header>
-      <a href="index.html"
-        ><img src="./assets/logos/logo-bandsite.svg" alt="BANDSITE logo"
+    <header class="header">
+      <a href="index.html" class="header__a"
+        ><img
+          class="header__img"
+          src="./assets/logos/logo-bandsite.svg"
+          alt="BANDSITE logo"
       /></a>
 
       <!-- PAGE NAVIGATION GOES HERE -->
-      <nav>
-        <ul>
-          <li class="header__nav--active">
-            <a href="index.html">Biography</a>
+      <nav class="nav">
+        <ul class="nav__ul">
+          <li class="nav__li nav--active">
+            <a class="nav__a" href="index.html">Biography</a>
           </li>
-          <li><a href="./pages/shows.html">Shows</a></li>
+          <li class="nav__li">
+            <a class="nav__a" href="./pages/shows.html">Shows</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -34,19 +40,19 @@
     <!-- PAGE CONTENT GOES HERE -->
     <main>
       <!-- BANNER GOES HERE -->
-      <article class="main__article--container">
-        <h1 class="main__article--h1">The Bees Knees</h1>
+      <article class="banner">
+        <h1 class="banner__h1">The Bees Knees</h1>
         <picture
-          ><div id="main__img--hero-overlay">
+          ><div id="banner__overlay">
             <img
-              class="main__img--hero"
+              class="banner__img"
               src="./assets/images/hero-bio.jpg"
               alt="The Bees Knees Photo"
             /></div
         ></picture>
       </article>
       <!-- ABOUT THE MUSICIANS GOES HERE -->
-      <section class="main__section--aboutmusicians-container">
+      <section class="musicians">
         <article>
           <h2>About the Musicians</h2>
           <picture>
@@ -56,16 +62,16 @@
             />
           </picture>
         </article>
-        <article class="main__article--phrases-container">
+        <article class="musicians__phrases">
           <h3>
             “We push each other to be the best. It’s not uncommon for one of us
             to say ‘this needs to be better, back to the drawing board’”
           </h3>
-          <h3 class="main__h3--author-format">
+          <h3 class="musicians__author">
             - Bryan Teddy, lead vocalist of The Bees Knees
           </h3>
         </article>
-        <article class="main__article--paragraph-container">
+        <article class="musicians__p">
           <h2>The Bees Knees</h2>
           <p>
             The Bees Knees is a pop rock band originating from San Francisco,
@@ -92,7 +98,7 @@
         </article>
       </section>
       <!-- PHOTO GALERY GOES HERE -->
-      <section class="main__section--photogallery-container">
+      <section class="gallery">
         <h2>Photo Gallery</h2>
         <picture
           ><img
@@ -140,38 +146,37 @@
             alt="Photo of small papers dropping down on top of the crowd of the concert"
         /></picture>
       </section>
-      <section class="main__section-comments-container">
+      <section class="comments">
         <h2>Join the Conversation</h2>
-        <form id="main__form">
+        <form id="comments__form">
           <div>
-            <section class="main_section--icon-container">
-              <div class="main__form--image-format"></div>
+            <section>
+              <div class="comments__icon"></div>
             </section>
-            <section class="main_section--comment-container">
+            <section class="comments__inputs">
               <label>
                 NAME
                 <input
                   type="text"
                   name="commentorName"
                   placeholder="Enter your name"
+                  required
                 />
               </label>
-              <label for="main__textarea--commentInput">COMMENT</label>
+              <label for="comments__textarea">COMMENT</label>
               <textarea
                 name="commentInput"
-                id="main__textarea--commentInput"
+                id="comments__textarea"
                 placeholder="Add a new comment"
+                required
               ></textarea>
-              <button type="submit" class="main__button--submit-comment">
-                COMMENT
-              </button>
+              <button type="submit">COMMENT</button>
             </section>
           </div>
         </form>
-        <hr class="solid" />
-        <section id="main__article--comments-container">
+        <section id="new-comments">
           <article>
-            <div class="main__div--blank-logo"></div>
+            <div class="new-comments__logo"></div>
             <div>
               <h3>Connor Walton</h3>
               <h4>02/17/2021</h4>
@@ -190,96 +195,111 @@
     </main>
 
     <!-- PAGE FOOTER GOES HERE -->
-    <footer>
-      <article class="footer__h2--bandsite-logo-not-mobile-container">
-        <h2 class="footer__h2--bandsite-logo-not-mobile">BANDSITE</h2>
-      </article>
-      <section>
-        <h2>Get In Touch</h2>
+    <footer class="footer">
+      <section class="footer__section footer__top">
+        <h2 class="footer--custom-width footer__h2 footer__h2--flex">
+          Get In Touch
+        </h2>
         <!-- FOOTER ICONS GOES HERE -->
-        <section class="footer__section--logos-container">
+        <section
+          class="footer--custom-width footer__section footer__logos footer__top"
+        >
           <figure>
-            <a href="https://www.instagram.com/">
+            <a class="footer__a" href="https://www.instagram.com/">
               <img
+                class="footer__img"
                 src="./assets/icons/icon-instagram.svg"
                 alt="Instagram logo"
               />
             </a>
           </figure>
           <figure>
-            <a href="https://www.facebook.com/">
-              <img src="./assets/icons/icon-facebook.svg" alt="Facebook logo" />
+            <a class="footer__a" href="https://www.facebook.com/">
+              <img
+                class="footer__img"
+                src="./assets/icons/icon-facebook.svg"
+                alt="Facebook logo"
+              />
             </a>
           </figure>
           <figure>
-            <a href="https://www.facebook.com/">
+            <a class="footer__a" href="https://www.facebook.com/">
               <img
-                class="footer__img--twitter"
+                class="footer__logos--twitter footer__img"
                 src="./assets/icons/icon-twitter.svg"
                 alt="Twitter logo"
               />
             </a>
           </figure>
         </section>
+        <section
+          class="footer--custom-width footer__section footer__bandsite footer__nm"
+        ></section>
       </section>
-      <section class="footer__section--information-container">
-        <section>
-          <article>
-            <h3>Cam Adams</h3>
-            <h3>The Bees Knees Management</h3>
+      <section class="footer__section footer__information">
+        <section
+          class="footer--custom-width footer__section footer__section--flex"
+        >
+          <article class="footer__article footer__article--flex">
+            <h3 class="footer__h3">Cam Adams</h3>
+            <h3 class="footer__h3">The Bees Knees Management</h3>
           </article>
-          <article>
-            <p>503 Broadway Penthouse,</p>
-            <p>New York, NY 10012, USA</p>
+          <article class="footer__article footer__article--flex">
+            <p class="footer__p">503 Broadway Penthouse,</p>
+            <p class="footer__p">New York, NY 10012, USA</p>
           </article>
-          <article>
-            <p>
-              <a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
+          <article class="footer__article footer__article--flex">
+            <p class="footer__p">
+              <a class="footer__a" href="mailto:info@thebeesknees.com"
+                >info@thebeesknees.com</a
+              >
             </p>
           </article>
         </section>
-        <section>
-          <article>
-            <h3>Pearl Gregg</h3>
-            <h3>Limitless Artist Group</h3>
+        <section
+          class="footer--custom-width footer__section footer__section--flex"
+        >
+          <article class="footer__article">
+            <h3 class="footer__h3">Pearl Gregg</h3>
+            <h3 class="footer__h3">Limitless Artist Group</h3>
           </article>
-          <article>
-            <p>Booking Agent for</p>
-            <p>US / South America / Japan</p>
+          <article class="footer__article">
+            <p class="footer__p">Booking Agent for</p>
+            <p class="footer__p">US / South America / Japan</p>
           </article>
-          <article>
-            <p>
-              <a href="mailto:pearl.gregg@limitlessag.com"
+          <article class="footer__article">
+            <p class="footer__p">
+              <a class="footer__a" href="mailto:pearl.gregg@limitlessag.com"
                 >pearl.gregg@limitlessag.com</a
               >
             </p>
           </article>
         </section>
-        <section>
-          <article>
-            <h3>Carson Whyte</h3>
-            <h3>ARCH Entertainment</h3>
+        <section
+          class="footer--custom-width footer__section footer__section--flex"
+        >
+          <article class="footer__article">
+            <h3 class="footer__h3">Carson Whyte</h3>
+            <h3 class="footer__h3">ARCH Entertainment</h3>
           </article>
-          <article>
-            <p>Booking Agent for</p>
-            <p>UK / EU / AU</p>
+          <article class="footer__article">
+            <p class="footer__p">Booking Agent for</p>
+            <p class="footer__p">UK / EU / AU</p>
           </article>
-          <article>
-            <p>
-              <a href="mailto:cwhyte@archentertainment.com"
+          <article class="footer__article">
+            <p class="footer__p">
+              <a class="footer__a" href="mailto:cwhyte@archentertainment.com"
                 >cwhyte@archentertainment.com</a
               >
             </p>
           </article>
         </section>
       </section>
-      <article class="footer__h2--bandsite-logo-mobile-container">
-        <a href="index.html"
-          ><h2 class="footer__h2--bandsite-logo-mobile">BANDSITE</h2></a
-        >
-      </article>
-      <article>
-        <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
+      <article class="footer__article footer__bandsite footer__m"></article>
+      <article class="footer__article">
+        <p class="footer__p">
+          Copyright The Bees Knees © 2021 All Rights Reserved
+        </p>
       </article>
     </footer>
   </body>

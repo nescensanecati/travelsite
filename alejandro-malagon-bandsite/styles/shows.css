@@ -145,7 +145,7 @@ del {
 
 abbr[title],
 dfn[title] {
-  border-bottom: 1px dotted;
+  border-bottom: 0.0625rem dotted;
   cursor: help;
 }
 
@@ -156,9 +156,9 @@ table {
 
 hr {
   display: block;
-  height: 1px;
+  height: 0.0625rem;
   border: 0;
-  border-top: 1px solid black;
+  border-top: 0.0625rem solid black;
   margin: 1em 0;
   padding: 0;
 }
@@ -204,60 +204,48 @@ body {
 }
 
 /*  ----------------------- HEADER --------------------------- */
-header {
+.header {
   background-color: #323232;
   text-align: center;
 }
-header a {
+.header__a {
   text-decoration: none;
 }
-header img {
-  height: 20px;
-  width: 120px;
+.header__img {
+  height: 1.25rem;
   margin: 1rem 0 1rem 0;
+  width: 7.5rem;
 }
 
 /*  ----------------------- NAVIGATION --------------------------- */
-nav {
+.nav {
   background-color: #323232;
 }
-nav ul {
+.nav__a {
+  color: #e1e1e1;
+  font-weight: 400;
+  height: 100%;
+  line-height: 2rem;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.nav__li {
+  margin: 0 1rem;
+  width: 50%;
+}
+.nav__li:hover {
+  border-bottom: 0.1875rem #ffffff solid;
+}
+.nav__ul {
   display: flex;
   flex-direction: row;
 }
-nav ul li {
-  width: 50%;
-  margin: 0 1rem;
-}
-nav ul li a {
-  text-align: center;
-  font-family: "Avenir-Font";
-  font-weight: 400;
-  line-height: 2rem;
-  width: 100%;
-  height: 100%;
-}
-nav ul .header__nav--active {
-  border-bottom: 3px #ffffff solid;
-}
-nav ul .header__nav--active a {
-  font-family: "Avenir-Font";
+.nav--active {
+  border-bottom: 0.1875rem #ffffff solid;
+  color: #ffffff;
   font-weight: 700;
-  padding: 0;
-  line-height: 2rem;
-  color: #ffffff;
-}
-nav ul .header__nav--active:hover {
-  border-bottom: 3px #ffffff solid;
-}
-nav a {
-  text-decoration: none;
-  color: #ffffff;
-  width: 100%;
-  color: #e1e1e1;
-}
-nav li:hover {
-  border-bottom: 3px #ffffff solid;
 }
 
 /*  ----------------------- MAIN --------------------------- */
@@ -297,35 +285,35 @@ main img {
   width: 100%;
   padding: 0.5rem 1rem;
 }
-.main__section--photogallery-container main img {
+.gallery main img {
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
 }
-main .main__section--photogallery-container img:hover {
+main .gallery img:hover {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
 }
-main .main__article--phrases-container {
+main .musicians__phrases {
   padding: 0 1rem;
 }
-main .main__article--phrases-container * {
+main .musicians__phrases * {
   padding: 0;
   padding-bottom: 0.5rem;
   margin: 0;
 }
-main .main__article--container {
+main .banner {
   position: relative;
 }
-main .main__article--container .main__img--hero {
+main .banner .banner__img {
   position: relative;
   width: 100%;
   padding: 0;
   margin: 0;
   z-index: -1;
 }
-main .main__article--container .main__article--h1 {
+main .banner .banner__h1 {
   position: absolute;
   color: white;
   top: 50%;
@@ -337,7 +325,7 @@ main .main__article--container .main__article--h1 {
   font-size: 1.5rem;
   line-height: 1;
 }
-main .main__article--container #main__img--hero-overlay {
+main .banner #banner__overlay {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -346,248 +334,223 @@ main article h2 {
   margin-bottom: 0;
   width: 100%;
 }
-main .main__section--photogallery-container {
+main .gallery {
   background-color: #fafafa;
 }
-main .main__section-comments-container h2 {
+main .comments h2 {
   margin-top: 0;
   margin-bottom: 0;
 }
-main .main__section-comments-container #main__form {
+main .comments #comments__form {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
   margin-bottom: 0.5rem;
 }
-main .main__section-comments-container #main__form div {
+main .comments #comments__form div {
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: left;
   width: 100%;
 }
-main .main__section-comments-container #main__form div section * {
+main .comments #comments__form div section * {
   margin: 1rem 0.5rem 1rem 0.5rem;
   display: block;
 }
-main .main__section-comments-container #main__form div section * input {
+main .comments #comments__form div section * input {
   margin: 1rem 0;
   width: 100%;
 }
-main .main__section-comments-container #main__form div section .main__form--image-format {
+main .comments #comments__form div section .comments__icon {
   background: url("../assets/images/mohan-muruge.jpg");
   background-size: cover;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container {
+main .comments #comments__form div .comments__inputs {
   width: 100%;
   margin-left: 0.5rem;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container * {
+main .comments #comments__form div .comments__inputs * {
   padding-right: 0;
   margin-left: 0;
   margin-right: 0;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container textarea {
+main .comments #comments__form div .comments__inputs textarea {
   width: 100%;
   height: 30%;
-  border: 1px #e1e1e1 solid;
+  border: 0.0625rem #e1e1e1 solid;
   resize: none;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container input,
-main .main__section-comments-container #main__form div .main_section--comment-container textarea {
-  border-radius: 4px;
-  border: 1px #e1e1e1 solid;
+main .comments #comments__form div .comments__inputs input,
+main .comments #comments__form div .comments__inputs textarea {
+  border-radius: 0.25rem;
+  border: 0.0625rem #e1e1e1 solid;
   padding: 0.5rem;
   font-family: "Avenir-Font";
   background-color: #fafafa;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container input:focus,
-main .main__section-comments-container #main__form div .main_section--comment-container textarea:focus {
-  border: 1px #000000 solid;
+main .comments #comments__form div .comments__inputs input:focus,
+main .comments #comments__form div .comments__inputs textarea:focus {
+  border: 0.0625rem #000000 solid;
   outline: none !important;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container input:invalid,
-main .main__section-comments-container #main__form div .main_section--comment-container textarea:invalid {
-  border: 1px red solid !important;
+main .comments #comments__form div .comments__inputs input:invalid,
+main .comments #comments__form div .comments__inputs textarea:invalid {
+  border: 0.0625rem red solid !important;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container label {
+main .comments #comments__form div .comments__inputs label {
   color: #afafaf;
   font-family: "Avenir-Font";
   font-weight: 600;
   font-size: 0.625rem;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container button {
+main .comments #comments__form div .comments__inputs button {
   background-color: #323232;
   color: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   border-style: none;
 }
-main .main__section-comments-container #main__form div .main_section--comment-container button:hover {
+main .comments #comments__form div .comments__inputs button:hover {
   background-color: #000000;
 }
-main .main__section-comments-container .solid {
-  border-top: 1px solid #e1e1e1;
-  width: 90%;
-  margin: auto;
-}
-main #main__article--comments-container {
+main #new-comments {
   padding: 0.5rem 1rem;
 }
-main #main__article--comments-container .main__div--blank-logo {
+main #new-comments .new-comments__logo {
   background-color: #e1e1e1;
   background-size: cover;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   padding: 0.5rem 1rem;
   margin: 0 0.5rem 1rem 0.5rem;
 }
-main #main__article--comments-container article {
+main #new-comments article {
   display: flex;
-  margin-top: 0.5rem;
+  padding: 1rem 0;
+  border-top: 0.0625rem solid #e1e1e1;
 }
-main #main__article--comments-container article div {
+main #new-comments article div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
-main #main__article--comments-container article div * {
+main #new-comments article div * {
   padding: 0.5rem;
   margin: 0;
   line-height: 0;
 }
-main #main__article--comments-container article div h3 {
-  width: 70%;
+main #new-comments article div h3 {
+  width: 50%;
   text-align: left;
   color: #323232;
   font-size: 0.75rem;
 }
-main #main__article--comments-container article div h4 {
-  width: 30%;
+main #new-comments article div h4 {
+  width: 50%;
   text-align: right;
   color: #afafaf;
   font-weight: 400;
   font-size: 0.625rem;
 }
-main #main__article--comments-container article div p {
+main #new-comments article div p {
   width: 100%;
   line-height: 1;
   color: #323232;
   font-size: 0.85rem;
 }
-main .main__section--shows-container {
+main .shows {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 1rem 1rem 1rem;
 }
-main .main__section--shows-container h2 {
+main .shows h2 {
   margin: 0;
   padding: 0;
 }
-main .main__section--shows-container div {
+main .shows div {
   width: 100%;
 }
-main .main__section--shows-container p {
+main .shows p {
   margin: 0.5rem 0;
   padding: 0;
 }
-main .main__section--shows-container button {
+main .shows button {
   background-color: #323232;
   color: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   margin: 1rem 0;
   border-style: none;
   width: 100%;
 }
-main .main__section--shows-container button:hover {
+main .shows button:hover {
   background-color: #000000;
 }
-main .main__section--shows-container .main__p--title-format {
+main .shows .shows__title {
   color: #afafaf;
   font-weight: 600;
 }
-main .main__section--shows-container .main__p--info-format {
+main .shows .shows__info {
   color: #323232;
   font-weight: 400;
   font-size: 0.8125rem;
 }
-main .main__section--shows-container .main__p--demi {
+main .shows .shows--demi {
   font-weight: 600;
 }
 
 /*  ----------------------- FOOTER --------------------------- */
-footer {
+.footer {
   background-color: #323232;
   padding: 0 1rem;
 }
-footer a {
-  text-decoration: none;
-}
-footer article {
+.footer__article {
   padding: 0.5rem 0;
 }
-footer h1,
-footer h2,
-footer h3,
-footer h4,
-footer p,
-footer a {
+.footer__a {
+  text-decoration: none;
+}
+.footer__h1, .footer__h2, .footer__h3, .footer__h4, .footer__p, .footer__a {
   color: white;
 }
-footer h2 {
+.footer__h2 {
   padding: 0.5rem 0;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
 }
-footer h3 {
+.footer__h3 {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: "Avenir-Font";
   font-weight: 600;
 }
-footer p {
+.footer__p {
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.125rem;
 }
-footer .footer__section--logos-container {
+.footer__logos {
   display: flex;
   flex-direction: row;
 }
-footer img {
+.footer__img {
   padding: 0.5rem 0.5rem 0.5rem 0;
   text-align: left;
 }
-footer .footer__h2--bandsite-logo-mobile {
-  position: absolute;
-  top: 0;
-  right: 0;
+.footer__h2-logo {
   color: white;
-  text-align: center;
-  padding-top: 3rem;
-}
-footer .footer__h2--bandsite-logo-not-mobile,
-footer .footer__h2--bandsite-logo-not-mobile-container {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-footer .footer__h2--bandsite-logo-mobile {
-  position: relative;
-  color: white;
-  text-align: left;
-  visibility: visible;
+  padding: 1rem 0;
 }
 
-main .main__article--container {
+main .banner {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -596,24 +559,24 @@ main .main__article--container {
   background-blend-mode: darken;
   background-size: cover;
 }
-main .main__article--container * {
+main .banner * {
   margin: 2rem 0 0 0;
   padding: 0;
   padding: 0 1rem;
   line-height: 1;
 }
-main .main__article--container p,
-main .main__article--container .main__article--h1 {
+main .banner p,
+main .banner .banner__h1 {
   width: 100%;
   color: #ffffff;
   position: relative;
   transform: none;
 }
-main .main__article--container p {
+main .banner p {
   font-weight: 400;
   font-size: 1rem;
 }
-main .main__article--container iframe {
+main .banner iframe {
   width: 100%;
   height: 100%;
   margin-bottom: 1rem;
@@ -621,65 +584,65 @@ main .main__article--container iframe {
 
 @media only screen and (min-width: 768px) {
   /*  ----------------------- HEADER --------------------------- */
-  header {
+  .header {
     display: flex;
     flex-direction: row;
   }
-  header h1 {
+  .header__h1 {
     padding: 1rem;
   }
-  header img {
+  .header__img {
     margin: 1.5rem;
   }
   /*  ----------------------- NAVIGATION --------------------------- */
-  nav {
+  .nav {
     width: 30%;
   }
-  nav ul {
+  .nav__ul {
     height: 100%;
   }
-  nav ul li {
+  .nav__li {
     padding: 1.25rem 0;
     line-height: 0.21vh;
   }
   /*  ----------------------- MAIN --------------------------- */
-  main .main__section--aboutmusicians-container {
+  main .musicians {
     padding: 0 3rem;
   }
-  main .main__section--aboutmusicians-container .main__article--phrases-container {
+  main .musicians .musicians__phrases {
     padding: 0;
     margin-bottom: 1rem;
   }
-  main .main__section--aboutmusicians-container img,
-  main .main__section--aboutmusicians-container .main__article--phrases-container,
-  main .main__section--aboutmusicians-container .main__article--paragraph-container {
+  main .musicians img,
+  main .musicians .musicians__phrases,
+  main .musicians .musicians__p {
     padding: 1rem 3rem;
   }
-  main .main__section--aboutmusicians-container h2 {
+  main .musicians h2 {
     font-family: "Avenir-Font";
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 2.75rem;
     padding-left: 0;
   }
-  main .main__section--aboutmusicians-container h3 {
+  main .musicians h3 {
     padding: 0;
     font-family: "Avenir-Font";
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
   }
-  main .main__section--aboutmusicians-container .main__h3--author-format {
+  main .musicians .musicians__author {
     font-weight: 400;
     padding: 0.5rem;
   }
-  main .main__section--aboutmusicians-container .main__article--paragraph-container {
+  main .musicians .musicians__p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  main .main__section--aboutmusicians-container .main__article--paragraph-container h4 {
+  main .musicians .musicians__p h4 {
     width: 100%;
     padding: 0;
     padding: 0;
@@ -688,7 +651,7 @@ main .main__article--container iframe {
     font-size: 2.25rem;
     line-height: 2.75rem;
   }
-  main .main__section--aboutmusicians-container .main__article--paragraph-container p {
+  main .musicians .musicians__p p {
     width: 50%;
     padding-left: 0;
     font-family: "Avenir-Font";
@@ -696,21 +659,21 @@ main .main__article--container iframe {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
-  main .main__article--container .main__article--h1 {
+  main .banner .banner__h1 {
     font-family: "Avenir-Font";
     font-weight: 600;
     font-size: 3.75rem;
     line-height: 4.25rem;
     padding-left: 3rem;
   }
-  main .main__section--photogallery-container {
+  main .gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 2rem 1rem 3rem;
   }
-  main .main__section--photogallery-container h2 {
+  main .gallery h2 {
     padding: 0.5rem 0;
     width: 100%;
     font-family: "Avenir-Font";
@@ -719,23 +682,23 @@ main .main__article--container iframe {
     line-height: 2.75rem;
     text-align: left;
   }
-  main .main__section--photogallery-container picture {
+  main .gallery picture {
     padding: 0;
     margin-bottom: 1rem;
     width: 30%;
   }
-  main .main__section--photogallery-container img {
+  main .gallery img {
     margin: 0;
     padding: 0;
   }
-  main .main__section-comments-container {
+  main .comments {
     padding: 0 2rem 1rem 3rem;
   }
-  main .main__section-comments-container #main__form div {
+  main .comments #comments__form div {
     padding: 0;
     margin: 0 0 1rem 0;
   }
-  main .main__section-comments-container h2 {
+  main .comments h2 {
     padding: 0.5rem 0;
     width: 100%;
     font-family: "Avenir-Font";
@@ -744,100 +707,76 @@ main .main__article--container iframe {
     line-height: 2.75rem;
     text-align: left;
   }
-  main .main__section-comments-container #main__article--comments-container {
+  main .comments #new-comments {
     margin: 1.5rem 0 0 0;
     padding: 0;
   }
   /*  ----------------------- FOOTER --------------------------- */
-  footer * {
+  .footer {
     padding: 0;
     margin: 0;
-    position: relative;
+    padding: 1rem 3rem;
   }
-  footer {
-    padding: 0;
-    margin: 0;
-    padding: 0 1rem;
-  }
-  footer section {
+  .footer__section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
     justify-content: left;
   }
-  footer section h2 {
-    width: 30%;
+  .footer__h2--flex {
     line-height: 1.5rem;
     line-height: 1;
   }
-  footer .footer__section--information-container {
+  .footer__information {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: space-between;
   }
-  footer .footer__section--information-container section {
+  .footer__section--flex {
     display: flex;
     flex-direction: column;
     width: 30%;
   }
-  footer .footer__section--information-container article {
-    width: 100%;
-    position: relative;
+  .footer__top {
+    justify-content: space-evenly;
   }
-  footer .footer__h2--bandsite-logo-not-mobile-container {
-    position: relative;
-    width: 70%;
-    visibility: unset;
+  .footer__logos {
+    justify-content: left;
   }
-  footer .footer__h2--bandsite-logo-not-mobile {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: white;
-    text-align: left;
-    visibility: unset;
-    line-height: 2;
-    font-weight: 400;
+  .footer--custom-width {
+    width: 33%;
   }
-  footer .footer__h2--bandsite-logo-mobile,
-  footer .footer__h2--bandsite-logo-mobile-container {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-    margin: 0;
-    padding: 0;
-  }
-  main .main__article--container iframe {
+  main .banner iframe {
     margin-bottom: 1rem;
     padding: 0 3rem;
   }
-  main .main__article--container p {
+  main .banner p {
     padding-left: 3rem;
   }
-  .main__shows--container {
+  .shows {
     padding: 1.5rem 3rem;
   }
-  .main__shows--container article h2 {
+  .shows article h2 {
     padding: 1.5rem 0%;
   }
-  .main__shows--container .main__section--shows-container {
+  .shows .shows__container {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 0;
   }
-  .main__shows--container .main__section--shows-container * {
+  .shows .shows__container * {
     padding: 0.5rem 0;
   }
-  .main__shows--container .main__section--shows-container article {
+  .shows .shows__container article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  .main__shows--container .main__section--shows-container article p,
-  .main__shows--container .main__section--shows-container article button {
+  .shows .shows__container article p,
+  .shows .shows__container article button {
     width: 25%;
     padding: 0.5rem 0;
     margin: 0;
@@ -845,67 +784,67 @@ main .main__article--container iframe {
 }
 @media only screen and (min-width: 1280px) {
   /*  ----------------------- MAIN --------------------------- */
-  main .main__article--container .main__article--h1 {
+  main .banner .banner__h1 {
     padding: 1rem 6rem;
   }
-  main .main__section--aboutmusicians-container {
+  main .musicians {
     padding: 1rem 6rem;
   }
-  main .main__section--aboutmusicians-container .main__article--phrases-container,
-  main .main__section--aboutmusicians-container .main__article--paragraph-container {
+  main .musicians .musicians__phrases,
+  main .musicians .musicians__p {
     padding: 0 3rem;
   }
-  main .main__section--photogallery-container {
+  main .gallery {
     padding: 1rem 6rem;
   }
-  main .main__section-comments-container {
+  main .comments {
     padding: 1rem 6rem;
   }
-  main .main__section-comments-container #main__form {
+  main .comments #comments__form {
     width: 40%;
     margin: auto;
     margin-top: 1.5rem;
   }
-  main .main__section-comments-container #main__article--comments-container {
+  main .comments #new-comments {
     width: 40%;
     margin: auto;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
   /*  ----------------------- FOOTER --------------------------- */
-  footer {
-    padding: 0 6rem;
+  .footer {
+    padding: 1.5rem 6rem;
   }
-  main .main__article--container iframe {
+  main .banner iframe {
     margin-bottom: 1rem;
     padding: 0 6rem;
   }
-  main .main__article--container p {
+  main .banner p {
     padding-left: 6rem;
   }
-  main .main__shows--container {
+  main .shows {
     display: flex;
     flex-direction: row;
     padding: 1.5rem 6rem;
   }
-  main .main__shows--container h2 {
+  main .shows h2 {
     padding: 0.5rem;
     margin: 0;
   }
-  main .main__shows--container .main__section--shows-container {
+  main .shows .shows {
     width: 100%;
     margin-left: 3rem;
   }
-  main .main__shows--container .main__section--shows-container .shows__row {
+  main .shows .shows .shows__row {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  main .main__shows--container .main__section--shows-container .shows__row--hover:hover {
+  main .shows .shows__row--hover:hover {
     background-color: #fafafa;
-    border-radius: 4px;
+    border-radius: 0.25rem;
   }
-  main .main__shows--container .main__section--shows-container .shows__row--selected {
+  main .shows .shows__row--selected {
     background-color: #e1e1e1;
-    border-radius: 4px;
+    border-radius: 0.25rem;
   }
 }/*# sourceMappingURL=shows.css.map */

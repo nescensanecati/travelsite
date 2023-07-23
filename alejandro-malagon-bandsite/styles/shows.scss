@@ -5,7 +5,7 @@
 @import "./partials/mobile_default";
 
 main {
-  .main__article--container {
+  .banner {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -23,7 +23,7 @@ main {
     }
 
     p,
-    .main__article--h1 {
+    .banner__h1 {
       width: 100%;
       color: $primaryColorWhite;
       position: relative;
@@ -47,7 +47,7 @@ main {
   @import "./partials/tablet";
 
   main {
-    .main__article--container {
+    .banner {
       iframe {
         margin-bottom: $doubleDefaultPadding;
         padding: 0 3rem;
@@ -59,7 +59,7 @@ main {
     }
   }
 
-  .main__shows--container {
+  .shows {
     padding: (3 * $defaultPadding) (6 * $defaultPadding);
 
     article {
@@ -67,7 +67,7 @@ main {
         padding: (3 * $defaultPadding) 0%;
       }
     }
-    .main__section--shows-container {
+    .shows__container {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -97,7 +97,7 @@ main {
   @import "./partials/desktop";
 
   main {
-    .main__article--container {
+    .banner {
       iframe {
         margin-bottom: $doubleDefaultPadding;
         padding: 0 6rem;
@@ -108,7 +108,7 @@ main {
       }
     }
 
-    .main__shows--container {
+    .shows {
       display: flex;
       flex-direction: row;
       padding: (3 * $defaultPadding) (6 * $doubleDefaultPadding);
@@ -118,7 +118,7 @@ main {
         margin: 0;
       }
 
-      .main__section--shows-container {
+      .shows {
         width: 100%;
         margin-left: (3 * $doubleDefaultPadding);
 
@@ -126,15 +126,16 @@ main {
           padding-left: (3 * $defaultPadding);
           padding-right: (3 * $defaultPadding);
         }
-        .shows__row--hover:hover {
-          background-color: $secondaryColorDarkAlabaster;
-          border-radius: 4px;
-        }
+      }
 
-        .shows__row--selected {
-          background-color: $secondaryColorDarkMercury;
-          border-radius: 4px;
-        }
+      .shows__row--hover:hover {
+        background-color: $secondaryColorDarkAlabaster;
+        border-radius: 0.25rem;
+      }
+
+      .shows__row--selected {
+        background-color: $secondaryColorDarkMercury;
+        border-radius: 0.25rem;
       }
     }
   }
