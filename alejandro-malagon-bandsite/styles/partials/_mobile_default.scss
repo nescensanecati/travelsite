@@ -30,9 +30,9 @@ body {
   }
 
   &__img {
-    height: 20px;
+    height: 1.25rem;
     margin: (2 * $defaultPadding) 0 (2 * $defaultPadding) 0;
-    width: 120px;
+    width: 7.5rem;
   }
 }
 
@@ -55,7 +55,7 @@ body {
     margin: 0 $doubleDefaultPadding;
     width: 50%;
     &:hover {
-      border-bottom: 3px $primaryColorWhite solid;
+      border-bottom: 0.1875rem $primaryColorWhite solid;
     }
   }
   &__ul {
@@ -63,7 +63,7 @@ body {
     flex-direction: row;
   }
   &--active {
-    border-bottom: 3px $primaryColorWhite solid;
+    border-bottom: 0.1875rem $primaryColorWhite solid;
     color: $primaryColorWhite;
     font-weight: $boldWeight;
   }
@@ -218,8 +218,8 @@ main {
             background: url("../assets/images/mohan-muruge.jpg");
             background-size: cover;
             border-radius: 50%;
-            width: 36px;
-            height: 36px;
+            width: 2.25rem;
+            height: 2.25rem;
           }
         }
 
@@ -236,25 +236,25 @@ main {
           textarea {
             width: 100%;
             height: 30%;
-            border: 1px $secondaryColorDarkMercury solid;
+            border: 0.0625rem $secondaryColorDarkMercury solid;
             resize: none;
           }
 
           input,
           textarea {
-            border-radius: 4px;
-            border: 1px $secondaryColorDarkMercury solid;
+            border-radius: 0.25rem;
+            border: 0.0625rem $secondaryColorDarkMercury solid;
             padding: $defaultPadding;
             font-family: $defaultFont;
             background-color: $secondaryColorDarkAlabaster;
 
             &:focus {
-              border: 1px $secondaryColorDarkBlack solid;
+              border: 0.0625rem $secondaryColorDarkBlack solid;
               outline: none !important;
             }
 
             &:invalid {
-              border: 1px red solid !important;
+              border: 0.0625rem red solid !important;
             }
           }
 
@@ -268,7 +268,7 @@ main {
           button {
             background-color: $primaryColorBlack;
             color: $primaryColorWhite;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             padding: $defaultPadding $doubleDefaultPadding;
             border-style: none;
 
@@ -288,8 +288,8 @@ main {
       background-color: $secondaryColorDarkMercury;
       background-size: cover;
       border-radius: 50%;
-      width: 36px;
-      height: 36px;
+      width: 2.25rem;
+      height: 2.25rem;
       padding: 0.5rem 1rem;
       margin: 0 0.5rem 1rem 0.5rem;
     }
@@ -297,7 +297,7 @@ main {
     article {
       display: flex;
       padding: $doubleDefaultPadding 0;
-      border-top: 1px solid $secondaryColorDarkMercury;
+      border-top: 0.0625rem solid $secondaryColorDarkMercury;
 
       div {
         display: flex;
@@ -359,7 +359,7 @@ main {
     & button {
       background-color: $primaryColorBlack;
       color: $primaryColorWhite;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       padding: $defaultPadding $doubleDefaultPadding;
       margin: $doubleDefaultPadding 0;
       border-style: none;

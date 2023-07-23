@@ -135,4 +135,4 @@ formEl.addEventListener('submit', handleFormSubmit);
 displayComment();
 
 bottomBandsiteLogo();
-addEventListener("resize", () => { bottomBandsiteLogo(); });
+addEventListener("resize", () => { location.reload(); bottomBandsiteLogo(); });

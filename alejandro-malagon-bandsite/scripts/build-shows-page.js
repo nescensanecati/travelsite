@@ -169,10 +169,8 @@ function bottomBandsiteLogo() {
 }
 
 renderShows();
-addEventListener("resize", () => { renderShows(); });
-
 bottomBandsiteLogo();
-addEventListener("resize", () => { bottomBandsiteLogo(); });
+addEventListener("resize", () => { location.reload(); renderShows(); bottomBandsiteLogo(); });
 
 setTimeout(() => {
     let prevRow = null;

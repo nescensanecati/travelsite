@@ -130,12 +130,12 @@ main {
 
       .shows__row--hover:hover {
         background-color: $secondaryColorDarkAlabaster;
-        border-radius: 4px;
+        border-radius: 0.25rem;
       }
 
       .shows__row--selected {
         background-color: $secondaryColorDarkMercury;
-        border-radius: 4px;
+        border-radius: 0.25rem;
       }
     }
   }
